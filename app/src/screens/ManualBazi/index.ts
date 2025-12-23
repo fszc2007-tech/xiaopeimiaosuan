@@ -1,0 +1,2 @@
+export { ManualBaziScreen } from './ManualBaziScreen';
+

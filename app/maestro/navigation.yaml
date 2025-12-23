@@ -1,0 +1,14 @@
+appId: com.xiaopei.app
+---
+# 导航测试
+- launchApp
+# 切换到档案标签
+- tapOn: "檔案"
+- assertVisible: "檔案"
+# 切换到小佩主页
+- tapOn: "小佩"
+- assertVisible: "小佩"
+# 切换到我的页面
+- tapOn: "我的"
+- assertVisible: "我的"
+

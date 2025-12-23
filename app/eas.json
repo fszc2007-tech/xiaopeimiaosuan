@@ -1,0 +1,42 @@
+{
+  "cli": {
+    "version": ">= 13.0.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_ENV": "preview",
+        "EXPO_PUBLIC_API_BASE_URL": "https://xiaopei-core-343578696044.asia-east2.run.app",
+        "EXPO_PUBLIC_APP_ENV_HEADER": "preview"
+      }
+    },
+    "production": {
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_ENV": "production",
+        "EXPO_PUBLIC_API_BASE_URL": "https://xiaopei-core-343578696044.asia-east2.run.app",
+        "EXPO_PUBLIC_APP_ENV_HEADER": "production"
+      }
+    },
+    "productionAab": {
+      "extends": "production",
+      "android": {
+        "buildType": "app-bundle"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
+

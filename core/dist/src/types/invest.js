@@ -1,0 +1,8 @@
+"use strict";
+/**
+ * 投资理财聊天上下文类型定义
+ *
+ * 对应 XIAOPEI_PROMPT_INVEST 中描述的字段结构
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+//# sourceMappingURL=invest.js.map

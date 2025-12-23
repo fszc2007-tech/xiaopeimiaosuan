@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "name": "@xiaopei/bazi-engine",
+  "version": "1.0.0",
+  "description": "XiaoPei Bazi calculation engine"
+}
+

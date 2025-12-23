@@ -1,0 +1,21 @@
+{
+  "name": "xiaopei-app",
+  "version": "1.0.0",
+  "description": "小佩命理 AI 助手 App",
+  "scripts": {
+    "check": "node scripts/check-and-fix.js",
+    "check:fix": "node scripts/check-and-fix.js --fix",
+    "check:clean": "node scripts/check-and-fix.js --clean",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@react-native-community/eslint-config": "^3.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "husky": "^8.0.0"
+  }
+}
+

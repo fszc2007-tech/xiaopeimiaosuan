@@ -1,0 +1,1 @@
+{"version":3,"file":"inlawDataService.d.ts","sourceRoot":"","sources":["../../../src/modules/inlaw/inlawDataService.ts"],"names":[],"mappings":"AAAA;;;;GAIG;AAGH,OAAO,EAAE,gBAAgB,EAAE,MAAM,mBAAmB,CAAC;AAarD;;;;;;;;GAQG;AACH,wBAAsB,6BAA6B,CAAC,MAAM,EAAE;IAC1D,cAAc,EAAE,MAAM,CAAC;IACvB,YAAY,EAAE,MAAM,CAAC;IACrB,GAAG,CAAC,EAAE,IAAI,CAAC;CACZ,GAAG,OAAO,CAAC,gBAAgB,CAAC,CA8B5B"}

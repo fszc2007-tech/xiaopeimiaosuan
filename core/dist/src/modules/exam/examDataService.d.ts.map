@@ -1,0 +1,1 @@
+{"version":3,"file":"examDataService.d.ts","sourceRoot":"","sources":["../../../../src/modules/exam/examDataService.ts"],"names":[],"mappings":"AAAA;;;;GAIG;AAGH,OAAO,EAAE,eAAe,EAAE,MAAM,kBAAkB,CAAC;AAanD;;;;;;;;GAQG;AACH,wBAAsB,4BAA4B,CAAC,MAAM,EAAE;IACzD,cAAc,EAAE,MAAM,CAAC;IACvB,YAAY,EAAE,MAAM,CAAC;IACrB,GAAG,CAAC,EAAE,IAAI,CAAC;CACZ,GAAG,OAAO,CAAC,eAAe,CAAC,CA8B3B"}

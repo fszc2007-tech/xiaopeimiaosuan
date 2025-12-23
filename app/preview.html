@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小佩 App - UI 优化预览</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      border: 0.5px solid #d0d9ff;
+      padding: 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(102, 126, 234, 0.1);
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 16px;
+    }
+
+    /* 五行分布图 */
+    .wuxing-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .wuxing-bar-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 40px;
+    }
+
+    .wuxing-label {
+      width: 36px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .wuxing-bar-wrapper {
+      flex: 1;
+      height: 32px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .wuxing-bar-bg {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+
+    .wuxing-bar {
+      height: 100%;
+      border-radius: 12px;
+      transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .wuxing-percentage {
+      width: 50px;
+      text-align: right;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* 日主强弱 */
+    .daymaster-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .daymaster-tag {
+      background: rgba(102, 126, 234, 0.1);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 14px;
+      font-weight: bold;
+      animation: fadeIn 0.5s ease-in;
+    }
+
+    .daymaster-bar-container {
+      height: 32px;
+      background: #f5f5f5;
+      border-radius: 16px;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 16px;
+    }
+
+    .daymaster-gradient {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(239, 68, 68, 0.3) 0%,
+        rgba(245, 158, 11, 0.3) 25%,
+        rgba(16, 185, 129, 0.3) 50%,
+        rgba(59, 130, 246, 0.3) 75%,
+        rgba(139, 92, 246, 0.3) 100%
+      );
+    }
+
+    .daymaster-indicator {
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 20px;
+      border-radius: 10px;
+      background: white;
+      border: 3px solid;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+      transition: left 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .daymaster-labels {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+
+    .daymaster-label {
+      font-size: 12px;
+      color: #999;
+      font-weight: 500;
+    }
+
+    .daymaster-label.active {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .legend {
+      margin-top: 16px;
+      padding: 12px;
+      background: rgba(102, 126, 234, 0.05);
+      border-radius: 8px;
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateX(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .wuxing-bar-container {
+      animation: slideIn 0.5s ease-out;
+    }
+
+    .wuxing-bar-container:nth-child(1) { animation-delay: 0.1s; opacity: 0; animation-fill-mode: forwards; }
+    .wuxing-bar-container:nth-child(2) { animation-delay: 0.2s; opacity: 0; animation-fill-mode: forwards; }
+    .wuxing-bar-container:nth-child(3) { animation-delay: 0.3s; opacity: 0; animation-fill-mode: forwards; }
+    .wuxing-bar-container:nth-child(4) { animation-delay: 0.4s; opacity: 0; animation-fill-mode: forwards; }
+    .wuxing-bar-container:nth-child(5) { animation-delay: 0.5s; opacity: 0; animation-fill-mode: forwards; }
+
+    .note {
+      background: #fff3cd;
+      border: 1px solid #ffc107;
+      border-radius: 8px;
+      padding: 12px;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #856404;
+    }
+
+    .note strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 小佩 App UI 优化预览</h1>
+
+    <!-- 五行分布图 -->
+    <div class="card">
+      <div class="card-title">五行分布</div>
+      <div class="subtitle">天干 + 藏干 + 地支本气综合占比</div>
+      
+      <div class="wuxing-chart">
+        <div class="wuxing-bar-container">
+          <div class="wuxing-label" style="color: #52b788;">木</div>
+          <div class="wuxing-bar-wrapper">
+            <div class="wuxing-bar-bg" style="background: #d8f3dc;"></div>
+            <div class="wuxing-bar" style="width: 15%; background: #52b788;"></div>
+          </div>
+          <div class="wuxing-percentage" style="color: #52b788;">15%</div>
+        </div>
+
+        <div class="wuxing-bar-container">
+          <div class="wuxing-label" style="color: #ff6b6b;">火</div>
+          <div class="wuxing-bar-wrapper">
+            <div class="wuxing-bar-bg" style="background: #ffe5e5;"></div>
+            <div class="wuxing-bar" style="width: 30%; background: #ff6b6b;"></div>
+          </div>
+          <div class="wuxing-percentage" style="color: #ff6b6b;">30%</div>
+        </div>
+
+        <div class="wuxing-bar-container">
+          <div class="wuxing-label" style="color: #d4a373;">土</div>
+          <div class="wuxing-bar-wrapper">
+            <div class="wuxing-bar-bg" style="background: #f5ebe0;"></div>
+            <div class="wuxing-bar" style="width: 25%; background: #d4a373;"></div>
+          </div>
+          <div class="wuxing-percentage" style="color: #d4a373;">25%</div>
+        </div>
+
+        <div class="wuxing-bar-container">
+          <div class="wuxing-label" style="color: #ffd700;">金</div>
+          <div class="wuxing-bar-wrapper">
+            <div class="wuxing-bar-bg" style="background: #fffacd;"></div>
+            <div class="wuxing-bar" style="width: 10%; background: #ffd700;"></div>
+          </div>
+          <div class="wuxing-percentage" style="color: #ffd700;">10%</div>
+        </div>
+
+        <div class="wuxing-bar-container">
+          <div class="wuxing-label" style="color: #4a90e2;">水</div>
+          <div class="wuxing-bar-wrapper">
+            <div class="wuxing-bar-bg" style="background: #e3f2fd;"></div>
+            <div class="wuxing-bar" style="width: 20%; background: #4a90e2;"></div>
+          </div>
+          <div class="wuxing-percentage" style="color: #4a90e2;">20%</div>
+        </div>
+      </div>
+
+      <div class="legend">
+        💡 百分比为综合计算结果，总和为 100%
+      </div>
+    </div>
+
+    <!-- 日主强弱 -->
+    <div class="card">
+      <div class="daymaster-header">
+        <div class="card-title">日主强弱</div>
+        <div class="daymaster-tag" style="color: #f59e0b;">身弱</div>
+      </div>
+
+      <div class="daymaster-bar-container">
+        <div class="daymaster-gradient"></div>
+        <div class="daymaster-indicator" style="left: 30%; border-color: #f59e0b;"></div>
+      </div>
+
+      <div class="daymaster-labels">
+        <div class="daymaster-label" style="color: #ef4444;">从弱</div>
+        <div class="daymaster-label active" style="color: #f59e0b;">身弱</div>
+        <div class="daymaster-label">平衡</div>
+        <div class="daymaster-label">身强</div>
+        <div class="daymaster-label">从强</div>
+      </div>
+    </div>
+
+    <!-- 配色说明 -->
+    <div class="card">
+      <div class="card-title">🎨 配色方案</div>
+      
+      <div style="margin-bottom: 16px;">
+        <strong style="font-size: 14px; display: block; margin-bottom: 8px;">五行配色：</strong>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span style="padding: 6px 12px; background: #d8f3dc; color: #52b788; border-radius: 8px; font-size: 12px; font-weight: bold;">木 - 翠绿</span>
+          <span style="padding: 6px 12px; background: #ffe5e5; color: #ff6b6b; border-radius: 8px; font-size: 12px; font-weight: bold;">火 - 火红</span>
+          <span style="padding: 6px 12px; background: #f5ebe0; color: #d4a373; border-radius: 8px; font-size: 12px; font-weight: bold;">土 - 土黄</span>
+          <span style="padding: 6px 12px; background: #fffacd; color: #ffd700; border-radius: 8px; font-size: 12px; font-weight: bold;">金 - 金色</span>
+          <span style="padding: 6px 12px; background: #e3f2fd; color: #4a90e2; border-radius: 8px; font-size: 12px; font-weight: bold;">水 - 水蓝</span>
+        </div>
+      </div>
+
+      <div>
+        <strong style="font-size: 14px; display: block; margin-bottom: 8px;">日主强弱渐变：</strong>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span style="padding: 6px 12px; background: rgba(239, 68, 68, 0.2); color: #ef4444; border-radius: 8px; font-size: 12px; font-weight: bold;">从弱 - 红</span>
+          <span style="padding: 6px 12px; background: rgba(245, 158, 11, 0.2); color: #f59e0b; border-radius: 8px; font-size: 12px; font-weight: bold;">身弱 - 橙</span>
+          <span style="padding: 6px 12px; background: rgba(16, 185, 129, 0.2); color: #10b981; border-radius: 8px; font-size: 12px; font-weight: bold;">平衡 - 绿</span>
+          <span style="padding: 6px 12px; background: rgba(59, 130, 246, 0.2); color: #3b82f6; border-radius: 8px; font-size: 12px; font-weight: bold;">身强 - 蓝</span>
+          <span style="padding: 6px 12px; background: rgba(139, 92, 246, 0.2); color: #8b5cf6; border-radius: 8px; font-size: 12px; font-weight: bold;">从强 - 紫</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      <strong>📱 关于实机预览：</strong>
+      这是一个快速的 HTML 预览版本，展示了优化后的 UI 效果。实际 React Native 应用中的效果会更加流畅，包含完整的动画和交互。
+      <br><br>
+      <strong>✨ 主要改进：</strong>
+      <ul style="margin-left: 20px; margin-top: 8px;">
+        <li>五行配色符合属性特征（金色闪亮、水色清澈等）</li>
+        <li>横向条形图，更易阅读</li>
+        <li>日主强弱使用彩虹渐变（红→橙→绿→蓝→紫）</li>
+        <li>动态彩色指示器</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    // 添加一些动画效果
+    window.addEventListener('load', () => {
+      // 延迟加载条形图动画
+      setTimeout(() => {
+        const bars = document.querySelectorAll('.wuxing-bar');
+        bars.forEach((bar, index) => {
+          setTimeout(() => {
+            bar.style.width = bar.style.width;
+          }, index * 100);
+        });
+      }, 100);
+
+      // 延迟加载指示器动画
+      setTimeout(() => {
+        const indicator = document.querySelector('.daymaster-indicator');
+        indicator.style.left = '30%';
+      }, 600);
+    });
+  </script>
+</body>
+</html>
+

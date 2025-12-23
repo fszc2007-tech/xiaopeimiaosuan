@@ -1,0 +1,322 @@
+/**
+ * Admin 用户管理服务
+ * 
+ * 功能：
+ * 1. 获取 C 端用户列表（分页、搜索）
+ * 2. 获取用户详情（含统计信息）
+ * 3. 注册测试用户
+ * 4. Cursor 测试账号管理
+ * 
+ * 遵循文档：
+ * - admin.doc/Admin后台最小需求功能文档.md
+ * - Phase 4 需求确认（最终版）
+ */
+
+import { v4 as uuidv4 } from 'uuid';
+import bcrypt from 'bcrypt';
+import { getPool } from '../../database/connection';
+import { FieldMapper } from '../../utils/fieldMapper';
+import crypto from 'crypto';
+
+// 生成邀请码
+function generateInviteCode(): string {
+  return crypto.randomBytes(4).toString('hex').toUpperCase();
+}
+import { generateRandomPassword } from '../../utils/encryption';
+import type { UserRow, ChartProfileRow, ConversationRow } from '../../types/database';
+import type {
+  AdminUserListDto,
+  AdminUserDetailDto,
+  AdminCreateUserRequestDto,
+  UserDto,
+  CursorTestAccountDto,
+} from '../../types/dto';
+
+/**
+ * Cursor 测试账号配置
+ */
+const CURSOR_TEST_ACCOUNT = {
+  email: 'cursor_test@xiaopei.com',
+  nickname: 'Cursor 测试账号',
+  fixedPasswordDev: 'Cursor@2024', // 开发环境固定密码
+} as const;
+
+/**
+ * 获取 C 端用户列表（分页）
+ * 
+ * @param page 页码（从 1 开始）
+ * @param pageSize 每页数量
+ * @param keyword 搜索关键词（手机号/昵称/邮箱）
+ * @returns 用户列表
+ */
+export async function getUserList(
+  page: number = 1,
+  pageSize: number = 20,
+  keyword?: string
+): Promise<AdminUserListDto> {
+  // ✅ 修复 MySQL 8 + mysql2 兼容性问题：将 LIMIT/OFFSET 参数转为字符串
+  const safePageSize = Math.max(1, Math.min(Number(pageSize) || 20, 100));
+  const offset = Math.max(0, (page - 1) * safePageSize);
+
+  // 构建查询条件
+  let whereClause = '1=1';
+  const params: any[] = [];
+
+  if (keyword) {
+    whereClause += ' AND (phone LIKE ? OR email LIKE ? OR nickname LIKE ?)';
+    const keywordPattern = `%${keyword}%`;
+    params.push(keywordPattern, keywordPattern, keywordPattern);
+  }
+
+  // 查询总数
+  const [countRows] = await getPool().query<any[]>(
+    `SELECT COUNT(*) as total FROM users WHERE ${whereClause}`,
+    params
+  );
+  const total = countRows[0].total;
+
+  // 查询列表
+  // ✅ 修复 MySQL 8 + mysql2 兼容性问题：直接拼接 LIMIT/OFFSET（已校验数字安全）
+  // 注意：LIMIT/OFFSET 直接拼接到 SQL 中，不使用占位符（避免 MySQL 8 兼容性问题）
+  const [rows] = await getPool().query<UserRow[]>(
+    `SELECT * FROM users WHERE ${whereClause} ORDER BY created_at DESC LIMIT ${safePageSize} OFFSET ${offset}`,
+    params
+  );
+
+  const items = rows.map((row: any) => FieldMapper.mapUser(row));
+
+  return {
+    items,
+    total,
+    page,
+    pageSize,
+  };
+}
+
+/**
+ * 获取用户详情（含统计信息）
+ * 
+ * @param userId 用户 ID
+ * @returns 用户详情
+ */
+export async function getUserDetail(userId: string): Promise<AdminUserDetailDto> {
+  // 1. 查询用户基本信息
+  const [userRows] = await getPool().query<UserRow[]>(
+    'SELECT * FROM users WHERE user_id = ?',
+    [userId]
+  );
+
+  if (userRows.length === 0) {
+    throw new Error('USER_NOT_FOUND');
+  }
+
+  const user = FieldMapper.mapUser(userRows[0]);
+
+  // 2. 查询命盘列表
+  const [chartRows] = await getPool().query<ChartProfileRow[]>(
+    'SELECT * FROM chart_profiles WHERE user_id = ? ORDER BY created_at DESC',
+    [userId]
+  );
+
+  const charts = chartRows.map((row: any) => FieldMapper.mapChartProfile(row));
+
+  // 3. 统计信息
+  const [chartCountRows] = await getPool().query<any[]>(
+    'SELECT COUNT(*) as count FROM chart_profiles WHERE user_id = ?',
+    [userId]
+  );
+
+  const [conversationCountRows] = await getPool().query<any[]>(
+    'SELECT COUNT(*) as count FROM conversations WHERE user_id = ?',
+    [userId]
+  );
+
+  const [lastActiveRows] = await getPool().query<ConversationRow[]>(
+    'SELECT created_at FROM conversations WHERE user_id = ? ORDER BY created_at DESC LIMIT 1',
+    [userId]
+  );
+
+  const stats = {
+    chartCount: chartCountRows[0].count,
+    conversationCount: conversationCountRows[0].count,
+    lastActiveAt: lastActiveRows.length > 0 ? lastActiveRows[0].created_at.toISOString() : undefined,
+  };
+
+  return {
+    user,
+    charts,
+    stats,
+  };
+}
+
+/**
+ * 注册测试用户（Admin 功能）
+ * 
+ * @param data 用户数据
+ * @returns 新用户信息
+ */
+export async function createTestUser(data: AdminCreateUserRequestDto): Promise<UserDto> {
+  // 1. 检查手机号/邮箱是否已存在
+  if (data.phone) {
+    const [existingRows] = await getPool().query<UserRow[]>(
+      'SELECT * FROM users WHERE phone = ?',
+      [data.phone]
+    );
+    if (existingRows.length > 0) {
+      throw new Error('PHONE_EXISTS');
+    }
+  }
+
+  if (data.email) {
+    const [existingRows] = await getPool().query<UserRow[]>(
+      'SELECT * FROM users WHERE email = ?',
+      [data.email]
+    );
+    if (existingRows.length > 0) {
+      throw new Error('EMAIL_EXISTS');
+    }
+  }
+
+  // 2. 哈希密码
+  const passwordHash = await bcrypt.hash(data.password, 10);
+
+  // 3. 生成 user_id
+  const userId = uuidv4();
+
+  // 4. 插入数据库
+  await getPool().query(
+    `INSERT INTO users (
+      user_id, phone, email, password_hash, app_region, nickname,
+      is_pro, created_at, updated_at
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW())`,
+    [
+      userId,
+      data.phone || null,
+      data.email || null,
+      passwordHash,
+      data.appRegion,
+      data.nickname || '新用户',
+      data.isPro || false,
+    ]
+  );
+
+  // 5. 查询并返回
+  const [rows] = await getPool().query<UserRow[]>(
+    'SELECT * FROM users WHERE user_id = ?',
+    [userId]
+  );
+
+  return FieldMapper.mapUser(rows[0]);
+}
+
+/**
+ * 获取或创建 Cursor 测试账号
+ * 
+ * @param isProduction 是否为生产环境
+ * @returns Cursor 测试账号信息
+ */
+export async function getOrCreateCursorTestAccount(
+  isProduction: boolean = false
+): Promise<CursorTestAccountDto> {
+  // 1. 查询是否已存在
+  const [existingRows] = await getPool().query<UserRow[]>(
+    'SELECT * FROM users WHERE email = ?',
+    [CURSOR_TEST_ACCOUNT.email]
+  );
+
+  if (existingRows.length > 0) {
+    // 已存在，返回账号信息（不返回密码）
+    const user = FieldMapper.mapUser(existingRows[0]);
+    return {
+      userId: user.userId,
+      email: user.email,
+      nickname: user.nickname,
+      isPro: user.isPro,
+      createdAt: user.createdAt,
+      exists: true,
+    };
+  }
+
+  // 2. 不存在，创建新账号
+  const userId = uuidv4();
+  const inviteCode = generateInviteCode();
+
+  // 生成密码
+  const password = isProduction
+    ? generateRandomPassword(16) // 生产环境：随机密码
+    : CURSOR_TEST_ACCOUNT.fixedPasswordDev; // 开发环境：固定密码
+
+  const passwordHash = await bcrypt.hash(password, 10);
+
+  // 3. 插入数据库
+  await getPool().query(
+    `INSERT INTO users (
+      user_id, email, password_hash, app_region, nickname, invite_code, 
+      is_pro, created_at, updated_at
+    ) VALUES (?, ?, ?, ?, ?, ?, TRUE, NOW(), NOW())`,
+    [
+      userId,
+      CURSOR_TEST_ACCOUNT.email,
+      passwordHash,
+      'CN', // 默认 CN
+      CURSOR_TEST_ACCOUNT.nickname,
+      inviteCode,
+    ]
+  );
+
+  // 4. 查询并返回（首次创建返回密码）
+  const [rows] = await getPool().query<UserRow[]>(
+    'SELECT * FROM users WHERE user_id = ?',
+    [userId]
+  );
+
+  const user = FieldMapper.mapUser(rows[0]);
+
+  return {
+    userId: user.userId,
+    email: user.email,
+    password, // ⚠️ 仅首次创建时返回
+    nickname: user.nickname,
+    isPro: user.isPro,
+    createdAt: user.createdAt,
+    exists: false,
+  };
+}
+
+/**
+ * 重置 Cursor 测试账号密码（仅 super_admin）
+ * 
+ * @param isProduction 是否为生产环境
+ * @returns 新密码（一次性返回）
+ */
+export async function resetCursorTestAccountPassword(
+  isProduction: boolean = false
+): Promise<{ password: string }> {
+  // 1. 查询账号是否存在
+  const [existingRows] = await getPool().query<UserRow[]>(
+    'SELECT * FROM users WHERE email = ?',
+    [CURSOR_TEST_ACCOUNT.email]
+  );
+
+  if (existingRows.length === 0) {
+    throw new Error('CURSOR_TEST_ACCOUNT_NOT_FOUND');
+  }
+
+  const userId = existingRows[0].user_id;
+
+  // 2. 生成新密码
+  const newPassword = isProduction
+    ? generateRandomPassword(16)
+    : CURSOR_TEST_ACCOUNT.fixedPasswordDev;
+
+  const passwordHash = await bcrypt.hash(newPassword, 10);
+
+  // 3. 更新数据库
+  await getPool().query(
+    'UPDATE users SET password_hash = ?, updated_at = NOW() WHERE user_id = ?',
+    [passwordHash, userId]
+  );
+
+  return { password: newPassword };
+}
+

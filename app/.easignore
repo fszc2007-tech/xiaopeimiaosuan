@@ -1,0 +1,55 @@
+# EAS Build 忽略文件
+
+# 系统文件和目录
+.DS_Store
+.Trash
+*.log
+Library/
+Containers/
+Application Support/
+
+# Git
+.git
+
+# 开发工具
+.vscode
+.cursor
+.idea
+.github
+
+# 依赖和缓存
+node_modules
+.expo
+.cache
+*.tsbuildinfo
+
+# 测试
+__tests__
+__mocks__
+coverage
+e2e
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+
+# 文档
+*.md
+docs/
+
+# 本地配置
+.env
+.env.*
+!.env.example
+
+# 构建产物
+dist/
+build/
+android/
+ios/
+
+# 临时文件
+*.tmp
+*.temp
+*.swp
+*~

@@ -1,0 +1,158 @@
+[
+  {
+    "name": "正印格案例（标杆）",
+    "description": "癸卯 甲子 甲子 己巳 - 正印格，水木偏重但有流通",
+    "bazi": {
+      "year": {"stem": "癸", "branch": "卯"},
+      "month": {"stem": "甲", "branch": "子"},
+      "day": {"stem": "甲", "branch": "子"},
+      "hour": {"stem": "己", "branch": "巳"}
+    },
+    "expected": {
+      "totalRange": [60, 75],
+      "level": "中下清·需运扶助",
+      "details": {
+        "patternPurity": [20, 25],
+        "yongshenStrength": [14, 18],
+        "wuxingFlow": [10, 14],
+        "shishenHarmony": [8, 12],
+        "tiaohouBalance": [5, 7]
+      }
+    },
+    "notes": "这是标杆案例，必须满足预期范围"
+  },
+  {
+    "name": "正官格案例",
+    "description": "正官格，官印相生",
+    "bazi": {
+      "year": {"stem": "甲", "branch": "子"},
+      "month": {"stem": "辛", "branch": "未"},
+      "day": {"stem": "甲", "branch": "寅"},
+      "hour": {"stem": "癸", "branch": "酉"}
+    },
+    "expected": {
+      "totalRange": [70, 85],
+      "level": "中清·瑕疵可控",
+      "details": {
+        "patternPurity": [22, 28],
+        "yongshenStrength": [18, 22],
+        "wuxingFlow": [12, 16],
+        "shishenHarmony": [10, 14],
+        "tiaohouBalance": [6, 8]
+      }
+    }
+  },
+  {
+    "name": "正财格案例",
+    "description": "正财格，财官双美",
+    "bazi": {
+      "year": {"stem": "乙", "branch": "丑"},
+      "month": {"stem": "戊", "branch": "寅"},
+      "day": {"stem": "甲", "branch": "子"},
+      "hour": {"stem": "辛", "branch": "未"}
+    },
+    "expected": {
+      "totalRange": [65, 80],
+      "level": "中下清·需运扶助",
+      "details": {
+        "patternPurity": [20, 26],
+        "yongshenStrength": [16, 20],
+        "wuxingFlow": [10, 14],
+        "shishenHarmony": [9, 13],
+        "tiaohouBalance": [6, 8]
+      }
+    }
+  },
+  {
+    "name": "食神格案例",
+    "description": "食神格，食神生财",
+    "bazi": {
+      "year": {"stem": "丙", "branch": "午"},
+      "month": {"stem": "甲", "branch": "午"},
+      "day": {"stem": "甲", "branch": "寅"},
+      "hour": {"stem": "己", "branch": "巳"}
+    },
+    "expected": {
+      "totalRange": [60, 75],
+      "level": "中下清·需运扶助",
+      "details": {
+        "patternPurity": [18, 24],
+        "yongshenStrength": [14, 18],
+        "wuxingFlow": [8, 12],
+        "shishenHarmony": [8, 12],
+        "tiaohouBalance": [4, 6]
+      }
+    }
+  },
+  {
+    "name": "从格案例",
+    "description": "从弱格，形成气势",
+    "bazi": {
+      "year": {"stem": "庚", "branch": "申"},
+      "month": {"stem": "庚", "branch": "申"},
+      "day": {"stem": "甲", "branch": "寅"},
+      "hour": {"stem": "庚", "branch": "申"}
+    },
+    "expected": {
+      "totalRange": [50, 70],
+      "level": "微浊·多经磨练",
+      "details": {
+        "patternPurity": [15, 22],
+        "yongshenStrength": [12, 18],
+        "wuxingFlow": [5, 11],
+        "shishenHarmony": [6, 10],
+        "tiaohouBalance": [4, 6]
+      }
+    },
+    "notes": "从格虽然偏重但形成气势，五行流通应该给基础分"
+  },
+  {
+    "name": "专旺格案例",
+    "description": "木专旺，形成气势",
+    "bazi": {
+      "year": {"stem": "甲", "branch": "寅"},
+      "month": {"stem": "甲", "branch": "寅"},
+      "day": {"stem": "甲", "branch": "寅"},
+      "hour": {"stem": "乙", "branch": "卯"}
+    },
+    "expected": {
+      "totalRange": [55, 70],
+      "level": "微浊·多经磨练",
+      "details": {
+        "patternPurity": [18, 24],
+        "yongshenStrength": [10, 16],
+        "wuxingFlow": [5, 11],
+        "shishenHarmony": [6, 10],
+        "tiaohouBalance": [4, 6]
+      }
+    },
+    "notes": "专旺格虽然偏重但形成气势，五行流通应该给基础分"
+  },
+  {
+    "name": "五行均衡案例",
+    "description": "五行相对均衡，有完整流通链",
+    "bazi": {
+      "year": {"stem": "甲", "branch": "子"},
+      "month": {"stem": "丙", "branch": "寅"},
+      "day": {"stem": "戊", "branch": "午"},
+      "hour": {"stem": "庚", "branch": "申"}
+    },
+    "expected": {
+      "totalRange": [75, 90],
+      "level": "中上清·略有微瑕",
+      "details": {
+        "patternPurity": [24, 30],
+        "yongshenStrength": [18, 22],
+        "wuxingFlow": [14, 18],
+        "shishenHarmony": [12, 15],
+        "tiaohouBalance": [7, 9]
+      }
+    },
+    "notes": "五行均衡且有完整流通链，应该得分较高"
+  }
+]
+
+
+
+
+

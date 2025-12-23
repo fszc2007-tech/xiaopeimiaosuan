@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AppiumAUT>
+  <XCUIElementTypeApplication type="XCUIElementTypeApplication" name="小佩妙算" label="小佩妙算" enabled="true" visible="true" accessible="false" x="0" y="0" width="402" height="874" index="0" traits="" processId="68060" bundleId="com.xiaopei.app">
+    <XCUIElementTypeWindow type="XCUIElementTypeWindow" enabled="true" visible="true" accessible="false" x="0" y="0" width="402" height="874" index="0" traits="">
+      <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="0" y="0" width="402" height="874" index="0" traits="">
+        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="0" y="0" width="402" height="874" index="0" traits="">
+          <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="-402" y="-874" width="1206" height="2622" index="0" traits=""/>
+          <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="0" y="0" width="402" height="874" index="1" traits=""/>
+        </XCUIElementTypeOther>
+      </XCUIElementTypeOther>
+      <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="0" width="402" height="874" index="1" traits="">
+        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="-402" y="-874" width="1206" height="2622" index="0" traits=""/>
+        <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="62" width="402" height="812" index="1" traits="">
+          <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="62" width="402" height="812" index="0" traits="">
+            <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="62" width="402" height="812" index="0" traits="">
+              <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="62" width="402" height="812" index="0" traits="">
+                <XCUIElementTypeTable type="XCUIElementTypeTable" enabled="true" visible="true" accessible="false" x="0" y="62" width="402" height="718" index="0" traits="">
+                  <XCUIElementTypeCell type="XCUIElementTypeCell" enabled="true" visible="true" accessible="true" x="0" y="62" width="402" height="136" index="0" traits="">
+                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="No script URL provided. Make sure the packager is running or you have embedded a JS bundle in your application bundle.&#10;&#10;unsanitizedScriptURLString = (null)" name="redbox-error" label="No script URL provided. Make sure the packager is running or you have embedded a JS bundle in your application bundle.&#10;&#10;unsanitizedScriptURLString = (null)" enabled="true" visible="true" accessible="true" x="20" y="62" width="362" height="136" index="0" traits="StaticText"/>
+                  </XCUIElementTypeCell>
+                  <XCUIElementTypeOther type="XCUIElementTypeOther" value="0%" name="Vertical scroll bar, 1 page" label="Vertical scroll bar, 1 page" enabled="true" visible="false" accessible="false" x="369" y="100" width="30" height="680" index="1" traits="Adjustable">
+                    <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="396" y="770" width="3" height="7" index="0" traits=""/>
+                  </XCUIElementTypeOther>
+                  <XCUIElementTypeOther type="XCUIElementTypeOther" value="0%" name="Horizontal scroll bar, 1 page" label="Horizontal scroll bar, 1 page" enabled="true" visible="false" accessible="false" x="0" y="747" width="402" height="30" index="2" traits="Adjustable">
+                    <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="false" accessible="false" x="392" y="774" width="7" height="3" index="0" traits=""/>
+                  </XCUIElementTypeOther>
+                </XCUIElementTypeTable>
+                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="779" width="402" height="1" index="1" traits=""/>
+                <XCUIElementTypeOther type="XCUIElementTypeOther" enabled="true" visible="true" accessible="false" x="0" y="780" width="402" height="94" index="2" traits="">
+                  <XCUIElementTypeButton type="XCUIElementTypeButton" name="redbox-dismiss" label="Dismiss (ESC)" enabled="true" visible="true" accessible="true" x="0" y="780" width="101" height="60" index="0" traits="Button">
+                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Dismiss (ESC)" name="Dismiss (ESC)" label="Dismiss (ESC)" enabled="true" visible="true" accessible="false" x="27" y="794" width="47" height="32" index="0" traits="StaticText"/>
+                  </XCUIElementTypeButton>
+                  <XCUIElementTypeButton type="XCUIElementTypeButton" name="redbox-reload" label="Reload (⌘R)" enabled="true" visible="true" accessible="true" x="100" y="780" width="101" height="60" index="1" traits="Button">
+                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Reload (⌘R)" name="Reload (⌘R)" label="Reload (⌘R)" enabled="true" visible="true" accessible="false" x="130" y="794" width="42" height="32" index="0" traits="StaticText"/>
+                  </XCUIElementTypeButton>
+                  <XCUIElementTypeButton type="XCUIElementTypeButton" name="redbox-copy" label="Copy (⌥⌘C)" enabled="true" visible="true" accessible="true" x="201" y="780" width="101" height="60" index="2" traits="Button">
+                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Copy (⌥⌘C)" name="Copy (⌥⌘C)" label="Copy (⌥⌘C)" enabled="true" visible="true" accessible="false" x="229" y="794" width="45" height="32" index="0" traits="StaticText"/>
+                  </XCUIElementTypeButton>
+                  <XCUIElementTypeButton type="XCUIElementTypeButton" name="redbox-extra" label="Extra Info (⌘E)" enabled="true" visible="true" accessible="true" x="301" y="780" width="101" height="60" index="3" traits="Button">
+                    <XCUIElementTypeStaticText type="XCUIElementTypeStaticText" value="Extra Info (⌘E)" name="Extra Info (⌘E)" label="Extra Info (⌘E)" enabled="true" visible="true" accessible="false" x="322" y="794" width="59" height="32" index="0" traits="StaticText"/>
+                  </XCUIElementTypeButton>
+                </XCUIElementTypeOther>
+              </XCUIElementTypeOther>
+            </XCUIElementTypeOther>
+          </XCUIElementTypeOther>
+        </XCUIElementTypeOther>
+      </XCUIElementTypeOther>
+    </XCUIElementTypeWindow>
+  </XCUIElementTypeApplication>
+</AppiumAUT>

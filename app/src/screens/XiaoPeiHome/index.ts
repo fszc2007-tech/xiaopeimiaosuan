@@ -1,0 +1,2 @@
+export { XiaoPeiHomeScreen } from './XiaoPeiHomeScreen';
+

@@ -1,0 +1,32 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🔍 运行代码检查..."
+
+# 检查是否有禁止的导入
+echo "检查是否引入了 core/engine..."
+if grep -r "from.*core/engine\|import.*core/engine" src/ --include="*.ts" --include="*.tsx" 2>/dev/null; then
+  echo "❌ 错误: 前端代码中禁止引入 core/engine，违反安全规范！"
+  echo "请使用 API 调用代替，参考: security/前端开发安全规范.md"
+  exit 1
+fi
+
+# 检查是否有 prompt 相关的字符串常量
+echo "检查是否有 prompt 模板..."
+if grep -r "你是\"小佩\"\|PROMPT.*=.*\`" src/ --include="*.ts" --include="*.tsx" 2>/dev/null; then
+  echo "❌ 错误: 前端代码中禁止包含 prompt 模板，违反安全规范！"
+  echo "请使用 API 调用代替，参考: security/前端开发安全规范.md"
+  exit 1
+fi
+
+# 检查是否有 blocks 计算相关的函数
+echo "检查是否有 blocks 计算..."
+if grep -r "computeBlocks\|calculateBlocks\|blocks_json" src/ --include="*.ts" --include="*.tsx" 2>/dev/null; then
+  echo "❌ 错误: 前端代码中禁止进行 blocks 计算，违反安全规范！"
+  echo "请使用 API 调用代替，参考: security/前端开发安全规范.md"
+  exit 1
+fi
+
+echo "✅ 代码检查通过"
+exit 0
+

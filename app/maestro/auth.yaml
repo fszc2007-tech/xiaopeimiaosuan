@@ -1,0 +1,16 @@
+appId: com.xiaopei.app
+---
+# 认证流程测试
+- launchApp
+- assertVisible: 
+    text: "登录"
+    timeout: 5000
+- tapOn: "登录"
+- inputText: "13800138000", into: "手机号"
+- tapOn: "发送验证码"
+- inputText: "123456", into: "验证码"
+- tapOn: "登录"
+- assertVisible: 
+    text: "首页"
+    timeout: 10000
+

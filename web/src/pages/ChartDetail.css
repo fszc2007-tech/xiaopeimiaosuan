@@ -1,0 +1,493 @@
+/* 命盤詳情頁面樣式 */
+
+.chart-detail-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+}
+
+/* 頭部 */
+.detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.back-button {
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  color: #667eea;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.back-button:hover {
+  opacity: 0.7;
+}
+
+.detail-header h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+/* Tab 切換 */
+.detail-tabs {
+  display: flex;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.detail-tab {
+  flex: 1;
+  padding: 14px;
+  border: none;
+  background: none;
+  color: #6b7280;
+  font-size: 15px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.detail-tab:hover {
+  color: #667eea;
+}
+
+.detail-tab.active {
+  color: #667eea;
+  border-bottom-color: #667eea;
+  font-weight: 600;
+}
+
+/* 內容區域 */
+.detail-content {
+  padding: 20px;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* 信息區塊 */
+.info-section {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.info-section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 16px 0;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-item .label {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.info-item .value {
+  font-size: 16px;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+/* 日主卡片 */
+.day-master-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+}
+
+.day-master-card .summary {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 四柱容器 */
+.pillars-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.pillar-card {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 16px 8px;
+  text-align: center;
+}
+
+.pillar-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.pillar-stem {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 4px;
+}
+
+.pillar-branch {
+  font-size: 24px;
+  font-weight: 600;
+  color: #667eea;
+}
+
+/* 開發中提示 */
+.coming-soon {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.coming-soon p {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 8px 0;
+}
+
+.coming-soon .hint {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* 加載和錯誤狀態 */
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.loading-container p,
+.error-container p {
+  margin-top: 16px;
+  color: #6b7280;
+}
+
+.error-container button {
+  margin-top: 20px;
+}
+
+/* 四柱八字表格（完整版） */
+.four-pillars-table {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.pillar-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.pillar-header {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.pillar-hidden {
+  font-size: 12px;
+  color: #9ca3af;
+  display: flex;
+  gap: 4px;
+}
+
+.pillar-shensha {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+}
+
+.shensha-tag {
+  padding: 2px 6px;
+  background: #fef3c7;
+  color: #92400e;
+  font-size: 10px;
+  border-radius: 4px;
+}
+
+/* 區塊頭部 */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.one-click-read {
+  padding: 4px 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 12px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.info-section.clickable {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.info-section.clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 命格總評指標 */
+.mingge-indicators {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.indicator-item {
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.indicator-item .label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.indicator-item .value {
+  font-size: 16px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* 用神格局 */
+.yongshen-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.yongshen-main {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.yongshen-main .label {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.yongshen-main .value {
+  font-size: 16px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* 時間坐標 */
+.time-coordinate-content .summary {
+  font-size: 14px;
+  color: #374151;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* 當前大運卡片 */
+.current-luck-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.luck-stem-branch {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.luck-age-range {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+.current-luck-card .summary {
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 12px 0 0 0;
+  line-height: 1.6;
+}
+
+/* 大運時間軸列表 */
+.luck-cycles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.luck-cycle-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: white;
+  border: 2px solid #f3f4f6;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.luck-cycle-item:hover {
+  border-color: #667eea;
+  transform: translateX(4px);
+}
+
+.luck-cycle-item.current {
+  border-color: #667eea;
+  background: #f5f7ff;
+}
+
+.luck-index {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  flex-shrink: 0;
+}
+
+.luck-cycle-item.current .luck-index {
+  background: #667eea;
+  color: white;
+}
+
+.luck-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.luck-cycle-item .luck-stem-branch {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.luck-age {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.current-badge {
+  padding: 4px 12px;
+  background: #667eea;
+  color: white;
+  font-size: 12px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+/* 未來十年流年 */
+.annual-luck-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.annual-luck-item {
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.annual-year {
+  font-size: 14px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.annual-stem-branch {
+  font-size: 18px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.annual-rating {
+  font-size: 16px;
+  color: #fbbf24;
+}
+
+/* 響應式 */
+@media (min-width: 768px) {
+  .chart-detail-page {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .pillars-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .mingge-indicators {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .annual-luck-list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+

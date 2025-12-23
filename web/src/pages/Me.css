@@ -1,0 +1,214 @@
+/* 個人中心頁面樣式 */
+
+.me-page {
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding-bottom: 40px;
+}
+
+/* 頭部 */
+.me-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.me-header h1 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+/* 用戶信息卡片 */
+.user-card {
+  position: relative;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: white;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  background: #f3f4f6;
+}
+
+.user-info {
+  text-align: center;
+}
+
+.user-info h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.user-info .username {
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 4px 0;
+}
+
+.user-info .contact {
+  font-size: 14px;
+  opacity: 0.8;
+  margin: 4px 0;
+}
+
+.pro-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* 功能菜單 */
+.menu-section {
+  padding: 20px;
+}
+
+.menu-section h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #6b7280;
+  margin: 0 0 12px 0;
+  padding: 0 4px;
+}
+
+.menu-list {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.menu-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  border: none;
+  border-bottom: 1px solid #f3f4f6;
+  background: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu-item:last-child {
+  border-bottom: none;
+}
+
+.menu-item:hover {
+  background: #f9fafb;
+}
+
+.menu-icon {
+  font-size: 20px;
+  width: 32px;
+  text-align: center;
+}
+
+.menu-label {
+  flex: 1;
+  text-align: left;
+  font-size: 16px;
+  color: #1f2937;
+  margin-left: 12px;
+}
+
+.menu-arrow {
+  font-size: 20px;
+  color: #9ca3af;
+}
+
+/* 升級按鈕 */
+.upgrade-button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.upgrade-button:hover {
+  transform: translateY(-2px);
+}
+
+/* 登出按鈕 */
+.logout-menu-button {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #fee2e2;
+  border-radius: 12px;
+  background: white;
+  color: #dc2626;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logout-menu-button:hover {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+/* 版本信息 */
+.version-info {
+  text-align: center;
+  padding: 20px;
+  color: #9ca3af;
+}
+
+.version-info p {
+  font-size: 12px;
+  margin: 4px 0;
+}
+
+/* 響應式 */
+@media (min-width: 768px) {
+  .me-page {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+
