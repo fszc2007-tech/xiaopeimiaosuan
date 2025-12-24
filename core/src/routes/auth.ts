@@ -83,6 +83,9 @@ registerApi({
  * 请求验证码
  */
 router.post('/request-otp', async (req: Request, res: Response, next: NextFunction) => {
+  // #region agent log
+  console.log('[DEBUG] OTP request received:', JSON.stringify({body: req.body, hypothesisId: 'C,D'}));
+  // #endregion
   try {
     const { phone, email, region, countryCode } = req.body;
     
@@ -111,6 +114,9 @@ router.post('/request-otp', async (req: Request, res: Response, next: NextFuncti
       } as ApiResponse);
     }
     
+    // #region agent log
+    console.log('[DEBUG] Calling authService.requestOTP:', JSON.stringify({phone, region, countryCode, hypothesisId: 'D'}));
+    // #endregion
     const result = await authService.requestOTP({ 
       phone, 
       email, 
@@ -118,6 +124,9 @@ router.post('/request-otp', async (req: Request, res: Response, next: NextFuncti
       countryCode,
       clientIp 
     });
+    // #region agent log
+    console.log('[DEBUG] OTP result received:', JSON.stringify({success: true, hasResult: !!result, hypothesisId: 'D'}));
+    // #endregion
     
     res.json({
       success: true,
@@ -319,18 +328,10 @@ router.post('/third_party_login', async (req: Request, res: Response, next: Next
       } as ApiResponse);
     }
     
-    if (!app_region || !['CN', 'HK'].includes(app_region)) {
-      return res.status(400).json({
-        success: false,
-        error: {
-          code: 'INVALID_REGION',
-          message: 'app_region 必须是 CN 或 HK',
-        },
-      } as ApiResponse);
-    }
-    
     // 注意：已移除地区限制，Google 登录全球可用
-    // 原限制代码已删除，app_region 参数仅用于日志/统计
+    // app_region 参数现在是可选的，仅用于日志/统计
+    // 如果未提供，默认为 'HK'
+    const effectiveRegion = app_region || 'HK';
     
     // 调用对应的第三方登录服务
     let result;
@@ -338,7 +339,7 @@ router.post('/third_party_login', async (req: Request, res: Response, next: Next
       // #region agent log
       log({location: 'auth.ts:third_party_login:beforeGoogleLogin', message: 'Calling googleLogin service', data: {}, sessionId: 'debug-session', hypothesisId: 'E'});
       // #endregion
-      result = await thirdPartyAuthService.googleLogin({ idToken, app_region });
+      result = await thirdPartyAuthService.googleLogin({ idToken, app_region: effectiveRegion });
       // #region agent log
       log({location: 'auth.ts:third_party_login:afterGoogleLogin', message: 'googleLogin service returned', data: {hasResult: !!result, hasToken: !!result?.token}, sessionId: 'debug-session', hypothesisId: 'E'});
       // #endregion

@@ -72,6 +72,9 @@ export async function requestOTP(params: {
   countryCode?: string;  // 新增：国家代码（如 "+86", "+852"）
   clientIp?: string;     // 新增：客户端 IP（用于限流）
 }): Promise<RequestOtpResponseDto> {
+  // #region agent log
+  console.log('[DEBUG] requestOTP called:', JSON.stringify({params, hypothesisId: 'D'}));
+  // #endregion
   const { phone, email, region, countryCode: inputCountryCode, clientIp } = params;
   
   // 验证输入：手机号或邮箱至少提供一个
@@ -135,7 +138,13 @@ export async function requestOTP(params: {
   );
   
   // 7. 调用腾讯云短信服务发送验证码
+  // #region agent log
+  console.log('[DEBUG] About to send SMS:', JSON.stringify({normalizedPhone: normalizedPhone.replace(/\d(?=\d{4})/g, '*'), codeLength: code.length, hypothesisId: 'D'}));
+  // #endregion
   const smsResult = await sendVerificationCode(normalizedPhone, code);
+  // #region agent log
+  console.log('[DEBUG] SMS result received:', JSON.stringify({smsResult, hypothesisId: 'D'}));
+  // #endregion
   
   if (!smsResult.success) {
     console.error(`[Auth] SMS send failed: ${smsResult.errorCode} - ${smsResult.errorMessage}`);

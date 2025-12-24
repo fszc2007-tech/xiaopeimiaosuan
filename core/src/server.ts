@@ -8,6 +8,7 @@ import express, { Application } from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { createConnection } from './database/connection';
+import { createRedisConnection } from './database/redis';
 
 // 加载环境变量
 dotenv.config();
@@ -162,6 +163,19 @@ async function startServer() {
     // 连接数据库
     await createConnection();
     console.log('[Database] Connected successfully');
+    
+    // 尝试初始化 Redis（如果配置了 XIAOPEI_REDIS_URL）
+    if (process.env.XIAOPEI_REDIS_URL) {
+      try {
+        await createRedisConnection();
+        console.log('[Redis] Connected successfully');
+      } catch (error) {
+        console.warn('[Redis] Failed to connect, rate limiting will be disabled:', error instanceof Error ? error.message : error);
+        // Redis 连接失败不影响服务器启动，限流服务会降级处理
+      }
+    } else {
+      console.log('[Redis] XIAOPEI_REDIS_URL not configured, rate limiting will be disabled');
+    }
     
     // 启动服务器（监听所有网络接口）
     app.listen(PORT, '0.0.0.0', () => {

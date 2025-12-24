@@ -36,7 +36,10 @@ export const GoogleLoginSheet: React.FC<GoogleLoginSheetProps> = ({
   const maxSheetHeight = screenHeight * 0.5;
   const baseHeight = screenHeight * 0.45;
   // 华为 Mate 40 等设备适配：确保高度不超过屏幕 50%，并预留底部安全区域
-  const sheetHeight = Math.min(baseHeight, maxSheetHeight - insets.bottom);
+  // 确保 sheetHeight 不会太小（至少保留 30% 的屏幕高度）
+  const minSheetHeight = screenHeight * 0.3;
+  const calculatedHeight = Math.max(minSheetHeight, maxSheetHeight - insets.bottom);
+  const sheetHeight = Math.min(baseHeight, calculatedHeight);
   
   const translateY = useRef(new Animated.Value(sheetHeight)).current;
   const opacity = useRef(new Animated.Value(0)).current;

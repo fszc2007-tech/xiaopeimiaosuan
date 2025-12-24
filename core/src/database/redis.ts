@@ -77,11 +77,10 @@ export async function createRedisConnection(): Promise<RedisClientType> {
 
 /**
  * 获取 Redis 客户端
+ * 
+ * @returns Redis 客户端，如果未初始化则返回 null（用于降级处理）
  */
-export function getRedisClient(): RedisClientType {
-  if (!client) {
-    throw new Error('[Redis] Client not initialized. Call createRedisConnection() first.');
-  }
+export function getRedisClient(): RedisClientType | null {
   return client;
 }
 

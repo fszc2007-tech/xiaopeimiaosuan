@@ -71,6 +71,12 @@ export async function checkPhoneRateLimit(
   
   const redis = getRedisClient();
   
+  // ✅ Redis 不可用时降级处理：允许请求通过（避免短信发送失败）
+  if (!redis) {
+    console.warn(`[rateLimitService] ⚠️ Redis 未初始化，跳过限流检查 (${phone})`);
+    return { allowed: true };
+  }
+  
   // 1 分钟限流：1 条
   const key1m = `sms:rl:1m:${scene}:${phone}`;
   const result1m = await executeRateLimitScript(redis, key1m, 1, 60);
@@ -137,6 +143,12 @@ export async function checkIpRateLimit(ip: string): Promise<RateLimitResult> {
   }
   
   const redis = getRedisClient();
+  
+  // ✅ Redis 不可用时降级处理：允许请求通过
+  if (!redis) {
+    console.warn(`[rateLimitService] ⚠️ Redis 未初始化，跳过 IP 限流检查 (${ip})`);
+    return { allowed: true };
+  }
   
   const key = `sms:rl:ip:1h:${ip}`;
   const limit = 20;  // 可以从配置读取
