@@ -73,6 +73,10 @@ if (ENV.ENABLE_LOG) {
   console.log('[apiClient] 🔗 创建 axios 实例，baseURL:', API_BASE_URL);
 }
 
+// ⚠️ P0 诊断：生产环境也强制打印一次（用于排查）
+console.warn('[API CLIENT DIAGNOSTIC] 🔗 baseURL:', API_BASE_URL);
+console.warn('[API CLIENT DIAGNOSTIC] 🌍 环境:', ENV.APP_ENV);
+
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,
   timeout: ENV.API_TIMEOUT,

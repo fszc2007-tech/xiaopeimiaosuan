@@ -43,3 +43,9 @@ if (ENV.ENABLE_LOG) {
   console.log('[ENV Config] 🎭 Mock iOS 订阅:', ENV.MOCK_IOS_SUBSCRIPTION ? '✅ 开启' : '❌ 关闭');
 }
 
+// ⚠️ P0 诊断：生产环境也强制打印一次（用于排查）
+// 使用 console.warn 确保在 React Native 日志中可见
+console.warn('[ENV DIAGNOSTIC] 🔍 API_BASE_URL:', ENV.API_BASE_URL);
+console.warn('[ENV DIAGNOSTIC] 🔍 EXPO_PUBLIC_API_BASE_URL:', process.env.EXPO_PUBLIC_API_BASE_URL || '❌ 未设置');
+console.warn('[ENV DIAGNOSTIC] 🔍 APP_ENV:', ENV.APP_ENV);
+

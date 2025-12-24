@@ -9,14 +9,12 @@
  */
 
 import React, { useEffect, useRef } from 'react';
-import { View, Text, StyleSheet, Modal, Pressable, Animated, Dimensions } from 'react-native';
+import { View, Text, StyleSheet, Modal, Pressable, Animated, Dimensions, Platform } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { colors, fontSizes, fontWeights, spacing, radius } from '@/theme';
 import { Logo } from '@/components/common';
 import { GoogleSignInButton } from './GoogleSignInButton';
-
-const { height: screenHeight } = Dimensions.get('window');
-const SHEET_HEIGHT = screenHeight * 0.45;
 
 interface GoogleLoginSheetProps {
   visible: boolean;
@@ -31,7 +29,13 @@ export const GoogleLoginSheet: React.FC<GoogleLoginSheetProps> = ({
   onSuccess,
   onError,
 }) => {
-  const translateY = useRef(new Animated.Value(SHEET_HEIGHT)).current;
+  const insets = useSafeAreaInsets();
+  // 获取屏幕高度（考虑安全区域和华为 Mate 40 等设备）
+  const { height: screenHeight } = Dimensions.get('window');
+  const baseHeight = screenHeight * 0.45;
+  const sheetHeight = Math.min(baseHeight, screenHeight * 0.5);
+  
+  const translateY = useRef(new Animated.Value(sheetHeight)).current;
   const opacity = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -54,7 +58,7 @@ export const GoogleLoginSheet: React.FC<GoogleLoginSheetProps> = ({
       // 关闭动画
       Animated.parallel([
         Animated.timing(translateY, {
-          toValue: SHEET_HEIGHT,
+          toValue: sheetHeight,
           duration: 250,
           useNativeDriver: true,
         }),
@@ -65,13 +69,13 @@ export const GoogleLoginSheet: React.FC<GoogleLoginSheetProps> = ({
         }),
       ]).start();
     }
-  }, [visible]);
+  }, [visible, sheetHeight]);
 
   const handleClose = () => {
     // 先播放关闭动画，再调用 onClose
     Animated.parallel([
       Animated.timing(translateY, {
-        toValue: SHEET_HEIGHT,
+        toValue: sheetHeight,
         duration: 250,
         useNativeDriver: true,
       }),
@@ -101,7 +105,10 @@ export const GoogleLoginSheet: React.FC<GoogleLoginSheetProps> = ({
       <Animated.View
         style={[
           styles.sheet,
-          { transform: [{ translateY }] },
+          { 
+            transform: [{ translateY }],
+            height: sheetHeight,
+          },
         ]}
       >
         {/* 头部 */}
@@ -150,10 +157,13 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    height: SHEET_HEIGHT,
     backgroundColor: '#FFFFFF',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
+    // 华为 Mate 40 等设备适配：使用 maxHeight 限制最大高度
+    maxHeight: '50%',
+    // 确保内容不会被底部安全区域遮挡
+    overflow: 'hidden',
   },
   header: {
     flexDirection: 'row',

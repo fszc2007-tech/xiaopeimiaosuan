@@ -41,7 +41,9 @@ export interface LoginRequest {
 export interface RequestOtpRequest {
   phone?: string;
   email?: string;
-  purpose: 'login' | 'reset_password';
+  purpose?: 'login' | 'reset_password';
+  region?: 'cn' | 'hk' | 'mo' | 'tw' | 'intl';
+  countryCode?: string;
 }
 
 export interface RequestOtpResponse {

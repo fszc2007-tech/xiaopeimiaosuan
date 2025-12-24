@@ -36,10 +36,14 @@ const getGoogleConfig = () => {
 
 export const GOOGLE_CONFIG = getGoogleConfig();
 
-// 启动时打印配置（开发模式）
+// 启动时打印配置（开发模式 + 生产环境诊断）
 if (__DEV__) {
   console.log('[Google Config] 🔑 Web Client ID:', GOOGLE_CONFIG.webClientId);
   console.log('[Google Config] 📱 iOS Client ID:', GOOGLE_CONFIG.iosClientId);
   console.log('[Google Config] 🤖 Android Client ID:', GOOGLE_CONFIG.androidClientId);
 }
+
+// ⚠️ P0 诊断：生产环境也强制打印一次（用于排查）
+console.warn('[GOOGLE CONFIG DIAGNOSTIC] 🔍 Web Client ID:', GOOGLE_CONFIG.webClientId);
+console.warn('[GOOGLE CONFIG DIAGNOSTIC] 🔍 Environment:', process.env.EXPO_PUBLIC_ENV || 'development');
 

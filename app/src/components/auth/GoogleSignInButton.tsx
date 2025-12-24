@@ -103,6 +103,8 @@ export const GoogleSignInButton: React.FC<GoogleSignInButtonProps> = ({
       
       setInitialized(true);
       
+      // ⚠️ P0 诊断：生产环境也打印初始化状态
+      console.warn('[GoogleSignIn DIAGNOSTIC] ✅ 初始化成功');
       if (__DEV__) {
         console.log('[GoogleSignIn] ✅ 初始化成功');
       }

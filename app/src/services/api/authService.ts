@@ -29,6 +29,11 @@ export const authService = {
       ...params,
       region: params.region || 'cn', // 默认使用 cn
     };
+    
+    // ⚠️ P0 诊断：打印请求参数（用于排查）
+    console.warn('[SMS REQUEST DIAGNOSTIC] 📱 请求参数:', JSON.stringify(requestParams));
+    console.warn('[SMS REQUEST DIAGNOSTIC] 🔗 API Base URL:', process.env.EXPO_PUBLIC_API_BASE_URL || '❌ 未设置');
+    
     return post<RequestOtpResponse>('/api/v1/auth/request-otp', requestParams);
   },
 
