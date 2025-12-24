@@ -58,9 +58,15 @@ app.use(cors({
   credentials: true,
 }));
 
-// 设置响应头：确保 UTF-8 编码
+// 设置响应头：确保 UTF-8 编码（仅对 JSON 响应）
+// 注意：不要全局设置 Content-Type，否则会覆盖静态文件（如 PDF）的正确 MIME 类型
 app.use((_req, res, next) => {
-  res.setHeader('Content-Type', 'application/json; charset=utf-8');
+  // 只对 JSON API 响应设置 Content-Type，静态文件由 express.static 自动处理
+  const originalJson = res.json;
+  res.json = function(body: any) {
+    res.setHeader('Content-Type', 'application/json; charset=utf-8');
+    return originalJson.call(this, body);
+  };
   next();
 });
 
@@ -73,6 +79,12 @@ app.use((req, _res, next) => {
   console.log(`[Request] ${req.method} ${req.path}`);
   next();
 });
+
+// ===== 静态文件服务 =====
+import path from 'path';
+
+// 提供 public 目录下的静态文件（如 PDF 文档）
+app.use('/public', express.static(path.join(__dirname, '../public')));
 
 // ===== 路由注册 =====
 

@@ -32,8 +32,11 @@ export const GoogleLoginSheet: React.FC<GoogleLoginSheetProps> = ({
   const insets = useSafeAreaInsets();
   // 获取屏幕高度（考虑安全区域和华为 Mate 40 等设备）
   const { height: screenHeight } = Dimensions.get('window');
+  // 计算弹窗高度：不超过屏幕的 50%，并考虑底部安全区域
+  const maxSheetHeight = screenHeight * 0.5;
   const baseHeight = screenHeight * 0.45;
-  const sheetHeight = Math.min(baseHeight, screenHeight * 0.5);
+  // 华为 Mate 40 等设备适配：确保高度不超过屏幕 50%，并预留底部安全区域
+  const sheetHeight = Math.min(baseHeight, maxSheetHeight - insets.bottom);
   
   const translateY = useRef(new Animated.Value(sheetHeight)).current;
   const opacity = useRef(new Animated.Value(0)).current;
@@ -120,7 +123,7 @@ export const GoogleLoginSheet: React.FC<GoogleLoginSheetProps> = ({
         </View>
 
         {/* 内容区域 */}
-        <View style={styles.content}>
+        <View style={[styles.content, { paddingBottom: Math.max(insets.bottom, spacing.lg) }]}>
           {/* Logo */}
           <View style={styles.logoContainer}>
             <Logo size="large" />
@@ -160,9 +163,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    // 华为 Mate 40 等设备适配：使用 maxHeight 限制最大高度
-    maxHeight: '50%',
-    // 确保内容不会被底部安全区域遮挡
+    // 华为 Mate 40 等设备适配：确保内容不会被底部安全区域遮挡
     overflow: 'hidden',
   },
   header: {
