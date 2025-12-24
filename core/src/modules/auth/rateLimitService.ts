@@ -215,6 +215,12 @@ async function executeRateLimitScript(
 export async function rollbackRateLimit(phone: string, scene: string): Promise<void> {
   const redis = getRedisClient();
   
+  // Redis 不可用时直接返回
+  if (!redis) {
+    console.warn(`[rateLimitService] Redis 未初始化，无法回滚限流 (${phone})`);
+    return;
+  }
+  
   const keys = [
     `sms:rl:1m:${scene}:${phone}`,
     `sms:rl:1h:${scene}:${phone}`,
@@ -240,6 +246,15 @@ export async function getRateLimitStatus(
   scene: string
 ): Promise<{ window1m: number; window1h: number; window24h: number }> {
   const redis = getRedisClient();
+  
+  // Redis 不可用时返回 0
+  if (!redis) {
+    return {
+      window1m: 0,
+      window1h: 0,
+      window24h: 0,
+    };
+  }
   
   const key1m = `sms:rl:1m:${scene}:${phone}`;
   const key1h = `sms:rl:1h:${scene}:${phone}`;
