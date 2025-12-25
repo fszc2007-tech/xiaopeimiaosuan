@@ -139,7 +139,7 @@ export const GoogleLoginSheet: React.FC<GoogleLoginSheetProps> = ({
 
           {/* 提示文字 */}
           <Text style={styles.description}>
-            使用谷歌賬戶創建賬戶
+            使用 Google 賬戶創建賬戶
           </Text>
 
           {/* Google 登录按钮 */}
