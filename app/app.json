@@ -2,7 +2,7 @@
   "expo": {
     "name": "小佩妙算",
     "slug": "xiaopei-app",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -40,7 +40,7 @@
         "backgroundColor": "#ffffff"
       },
       "package": "tech.dawnai.xiaopei.app",
-      "versionCode": 5
+      "versionCode": 6
     },
     "web": {
       "favicon": "./assets/favicon.png",
