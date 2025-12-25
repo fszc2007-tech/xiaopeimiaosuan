@@ -36,6 +36,9 @@ export interface LoginRequest {
   otp?: string;
   password?: string;
   appRegion: 'CN' | 'HK';
+  code?: string; // 验证码
+  channel?: 'cn' | 'hk'; // 渠道
+  countryCode?: string; // 国家代码（如 "+86", "+852"）
 }
 
 export interface RequestOtpRequest {

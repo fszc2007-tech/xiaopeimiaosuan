@@ -13,6 +13,7 @@ import {
   Pressable,
   Platform,
 } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { CheckCircle, XCircle, AlertCircle, Info } from 'lucide-react-native';
 import { colors, fontSizes, fontWeights, spacing, radius, shadows } from '@/theme';
 
@@ -35,6 +36,8 @@ export const MessageDialog: React.FC<MessageDialogProps> = ({
   confirmText = '確定',
   onConfirm,
 }) => {
+  const insets = useSafeAreaInsets();
+  
   // 根据类型选择图标和颜色
   const getIconAndColor = () => {
     switch (type) {
@@ -80,7 +83,18 @@ export const MessageDialog: React.FC<MessageDialogProps> = ({
       onRequestClose={onConfirm}
     >
       <Pressable style={styles.overlay} onPress={onConfirm}>
-        <Pressable style={styles.dialog} onPress={(e) => e.stopPropagation()}>
+        <Pressable 
+          style={[
+            styles.dialog,
+            { 
+              marginBottom: insets.bottom + spacing.lg,
+              // 宽度适配验证码输入框：6个框(52*6) + 5个gap(8*5) + 左右padding(16*2) = 312 + 40 + 32 = 384
+              width: 384,
+              maxWidth: '90%',
+            }
+          ]} 
+          onPress={(e) => e.stopPropagation()}
+        >
           {/* 图标 */}
           <View style={[styles.iconContainer, { backgroundColor }]}>
             <Icon color={iconColor} size={32} />
@@ -113,7 +127,7 @@ const styles = StyleSheet.create({
   overlay: {
     flex: 1,
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'center',
     paddingHorizontal: spacing.lg,
   },
@@ -121,8 +135,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.cardBg,
     borderRadius: radius.xl,
     padding: spacing.xl,
-    width: '100%',
-    maxWidth: 320,
     alignItems: 'center',
     ...shadows.card,
   },

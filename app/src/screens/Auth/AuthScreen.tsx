@@ -167,15 +167,16 @@ export const AuthScreen: React.FC = () => {
     
     try {
       // 构造 E.164 格式手机号
-      const fullPhone = `${countryCode.code}${phone}`;
-      const region = countryCode.code === '+86' ? 'cn' : 'hk';
+      const fullPhone = `${countryCode}${phone}`;
+      const region = countryCode === '+86' ? 'cn' : 'hk';
       
-      console.log('📱 发送验证码请求:', { fullPhone, region });
+      console.log('📱 发送验证码请求:', { fullPhone, region, countryCode });
       
       // 调用真实 API 发送验证码
       await authService.requestOtp({
         phone: fullPhone,
         region,
+        countryCode, // ✅ 传递 countryCode 确保后端规范化一致
       });
       
       console.log('✅ 验证码发送成功');
@@ -238,11 +239,12 @@ export const AuthScreen: React.FC = () => {
       const fullPhone = `${countryCode}${phone}`;
       const region = countryCode === '+86' ? 'cn' : 'hk';
       
-      console.log('📱 发送验证码请求:', { fullPhone, region });
+      console.log('📱 发送验证码请求:', { fullPhone, region, countryCode });
       
       await authService.requestOtp({
         phone: fullPhone,
         region,
+        countryCode, // ✅ 传递 countryCode 确保后端规范化一致
       });
       
       console.log('✅ 验证码发送成功');
@@ -286,6 +288,7 @@ export const AuthScreen: React.FC = () => {
         phone: fullPhone,
         code: otpValue,
         channel,
+        countryCode, // ✅ 传递 countryCode 确保后端规范化一致
       });
       
       console.log('✅ 登录成功:', {
@@ -331,6 +334,7 @@ export const AuthScreen: React.FC = () => {
       await authService.requestOtp({
         phone: fullPhone,
         region,
+        countryCode, // ✅ 传递 countryCode 确保后端规范化一致
       });
       
       setCountdown(60);
@@ -414,14 +418,15 @@ export const AuthScreen: React.FC = () => {
     
     try {
       // 构造 E.164 格式手机号
-      const fullPhone = `${countryCode.code}${phone}`;
-      const channel = countryCode.code === '+86' ? 'cn' : 'hk';
+      const fullPhone = `${countryCode}${phone}`;
+      const channel = countryCode === '+86' ? 'cn' : 'hk';
       
-      console.log('📞 调用登录 API:', { fullPhone, channel });
+      console.log('📞 调用登录 API:', { fullPhone, channel, countryCode });
       
       const response = await authService.loginOrRegister({
         phone: fullPhone,
         code: otp,
+        countryCode, // ✅ 传递 countryCode 确保后端规范化一致
         channel,
       });
       

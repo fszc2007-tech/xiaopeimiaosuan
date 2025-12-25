@@ -130,8 +130,8 @@ export const GoogleLoginSheet: React.FC<GoogleLoginSheetProps> = ({
 
         {/* 内容区域 */}
         {/* ⚠️ 关键修复：paddingBottom 需要足够大，确保按钮在安全区域之上 */}
-        {/* 使用 insets.bottom + spacing.lg 作为底部内边距，确保按钮完全可见 */}
-        <View style={[styles.content, { paddingBottom: insets.bottom + spacing.lg }]}>
+        {/* 增加更多底部间距，避免被 Android 底部导航栏遮挡 */}
+        <View style={[styles.content, { paddingBottom: insets.bottom + spacing.xl + spacing.md }]}>
           {/* Logo */}
           <View style={styles.logoContainer}>
             <Logo size="large" />
