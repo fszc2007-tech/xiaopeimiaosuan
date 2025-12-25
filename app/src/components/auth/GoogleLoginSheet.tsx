@@ -10,7 +10,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import { View, Text, StyleSheet, Modal, Pressable, Animated, Dimensions, Platform } from 'react-native';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useSafeAreaInsets, SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { colors, fontSizes, fontWeights, spacing, radius } from '@/theme';
 import { Logo } from '@/components/common';
@@ -38,8 +38,10 @@ export const GoogleLoginSheet: React.FC<GoogleLoginSheetProps> = ({
   // 华为 Mate 40 等设备适配：确保高度不超过屏幕 50%，并预留底部安全区域
   // 确保 sheetHeight 不会太小（至少保留 30% 的屏幕高度）
   const minSheetHeight = screenHeight * 0.3;
+  // ⚠️ 关键修复：sheetHeight 需要加上 insets.bottom，确保弹窗底部在安全区域之上
+  // 这样按钮就不会被底部导航栏遮挡
   const calculatedHeight = Math.max(minSheetHeight, maxSheetHeight - insets.bottom);
-  const sheetHeight = Math.min(baseHeight, calculatedHeight);
+  const sheetHeight = Math.min(baseHeight, calculatedHeight) + insets.bottom;
   
   const translateY = useRef(new Animated.Value(sheetHeight)).current;
   const opacity = useRef(new Animated.Value(0)).current;
@@ -102,21 +104,22 @@ export const GoogleLoginSheet: React.FC<GoogleLoginSheetProps> = ({
       animationType="none"
       onRequestClose={handleClose}
     >
-      {/* 遮罩层 */}
-      <Animated.View style={[styles.overlay, { opacity }]}>
-        <Pressable style={styles.overlayPressable} onPress={handleClose} />
-      </Animated.View>
+      <SafeAreaView style={{ flex: 1 }} edges={[]}>
+        {/* 遮罩层 */}
+        <Animated.View style={[styles.overlay, { opacity }]}>
+          <Pressable style={styles.overlayPressable} onPress={handleClose} />
+        </Animated.View>
 
-      {/* 底部弹窗 */}
-      <Animated.View
-        style={[
-          styles.sheet,
-          { 
-            transform: [{ translateY }],
-            height: sheetHeight,
-          },
-        ]}
-      >
+        {/* 底部弹窗 */}
+        <Animated.View
+          style={[
+            styles.sheet,
+            { 
+              transform: [{ translateY }],
+              height: sheetHeight,
+            },
+          ]}
+        >
         {/* 头部 */}
         <View style={styles.header}>
           <Text style={styles.title}>通過 Google 登錄</Text>
@@ -126,7 +129,9 @@ export const GoogleLoginSheet: React.FC<GoogleLoginSheetProps> = ({
         </View>
 
         {/* 内容区域 */}
-        <View style={[styles.content, { paddingBottom: Math.max(insets.bottom, spacing.lg) }]}>
+        {/* ⚠️ 关键修复：paddingBottom 需要足够大，确保按钮在安全区域之上 */}
+        {/* 使用 insets.bottom + spacing.lg 作为底部内边距，确保按钮完全可见 */}
+        <View style={[styles.content, { paddingBottom: insets.bottom + spacing.lg }]}>
           {/* Logo */}
           <View style={styles.logoContainer}>
             <Logo size="large" />
@@ -146,6 +151,7 @@ export const GoogleLoginSheet: React.FC<GoogleLoginSheetProps> = ({
           </View>
         </View>
       </Animated.View>
+      </SafeAreaView>
     </Modal>
   );
 };
@@ -160,6 +166,8 @@ const styles = StyleSheet.create({
   },
   sheet: {
     position: 'absolute',
+    // ⚠️ 关键修复：bottom 设置为 0，但 sheetHeight 已经包含了 insets.bottom
+    // 这样弹窗底部会在安全区域之上，按钮不会被遮挡
     bottom: 0,
     left: 0,
     right: 0,

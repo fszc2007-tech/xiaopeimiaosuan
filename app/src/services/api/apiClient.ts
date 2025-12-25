@@ -170,39 +170,33 @@ apiClient.interceptors.response.use(
     };
     
     console.error('[API Response Error]', errorInfo);
-
-    // #region agent log
-    // Debug-mode NDJSON log (no secrets)
-    fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        sessionId: 'debug-session',
-        runId: 'run1',
-        hypothesisId: 'H1',
-        location: 'apiClient.ts:responseError',
-        message: 'API response error captured',
-        data: {
-          baseURL: errorInfo.baseURL,
-          url: errorInfo.url,
-          method: errorInfo.method,
-          status: errorInfo.status,
-          errorCode: (errorInfo.data as any)?.error?.code,
-          errorMessage: (errorInfo.data as any)?.error?.message,
-        },
-        timestamp: Date.now(),
-      }),
-    }).catch(() => {});
-    // #endregion
     
     // 如果是网络错误，提供更详细的诊断信息
     if (!error.response) {
+      const isTimeout = error.code === 'ECONNABORTED' || error.message.includes('timeout');
+      const baseURL = error.config?.baseURL || ENV.API_BASE_URL;
+      const fullUrl = `${baseURL}${error.config?.url || ''}`;
+      
       console.error('[API Network Error] 网络连接失败，请检查：');
-      console.error('  1. API Base URL:', error.config?.baseURL || ENV.API_BASE_URL);
+      console.error('  1. API Base URL:', baseURL);
       console.error('  2. 请求 URL:', error.config?.url);
-      console.error('  3. 完整 URL:', `${error.config?.baseURL || ENV.API_BASE_URL}${error.config?.url || ''}`);
+      console.error('  3. 完整 URL:', fullUrl);
       console.error('  4. 错误代码:', error.code);
       console.error('  5. 错误消息:', error.message);
+      
+      // 超时错误的特殊提示
+      if (isTimeout) {
+        console.error('  ⚠️ 请求超时，可能原因：');
+        console.error('     - 后端服务未运行或无法访问');
+        console.error('     - 网络连接问题（真机测试时，localhost 无法访问，请设置 EXPO_PUBLIC_API_BASE_URL 为电脑的局域网 IP）');
+        console.error('     - 后端处理时间过长（Google Token 验证可能需要更长时间）');
+        console.error('  💡 解决方案：');
+        if (baseURL.includes('localhost')) {
+          console.error('     - 真机测试：在 app/.env.local 中设置 EXPO_PUBLIC_API_BASE_URL=http://<你的电脑IP>:3000');
+          console.error('     - 获取电脑 IP：运行 ifconfig | grep "inet " | grep -v 127.0.0.1');
+        }
+        console.error('     - 检查后端服务：curl http://localhost:3000/health');
+      }
     }
     
     // 统一错误处理

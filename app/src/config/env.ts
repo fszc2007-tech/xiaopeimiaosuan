@@ -9,14 +9,22 @@
 // 当前环境
 const APP_ENV = process.env.EXPO_PUBLIC_ENV || 'development';
 
-// API Base URL：生产环境从环境变量读取，开发环境默认 localhost
+// API Base URL：支持环境变量覆盖，开发环境默认 localhost
 const getApiBaseUrl = (): string => {
-  // 1. 优先使用环境变量（EAS Build 注入）
+  // 优先使用环境变量（适用于所有环境，包括开发环境）
+  // 开发环境真机测试时，可以通过设置 EXPO_PUBLIC_API_BASE_URL 来使用局域网 IP
   if (process.env.EXPO_PUBLIC_API_BASE_URL) {
     return process.env.EXPO_PUBLIC_API_BASE_URL;
   }
   
-  // 2. 开发环境默认使用 localhost
+  // 开发环境：未设置环境变量时，默认使用 localhost（适用于 iOS 模拟器）
+  if (APP_ENV === 'development') {
+    return 'http://localhost:3000';
+  }
+  
+  // 生产/预览环境：必须设置环境变量
+  // 兜底：默认使用 localhost（不推荐，生产环境应该明确配置）
+  console.warn('[ENV] ⚠️ 生产/预览环境未设置 EXPO_PUBLIC_API_BASE_URL，使用默认 localhost');
   return 'http://localhost:3000';
 };
 
@@ -26,7 +34,7 @@ export const ENV = {
   
   // API 地址
   API_BASE_URL: getApiBaseUrl(),
-  API_TIMEOUT: 30000, // 30秒
+  API_TIMEOUT: 60000, // 60秒（Google Token 验证可能需要更长时间）
   
   // 日志开关：开发和预览环境开启，生产环境关闭
   ENABLE_LOG: APP_ENV !== 'production',
