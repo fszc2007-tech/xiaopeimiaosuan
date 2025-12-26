@@ -257,7 +257,7 @@ router.get('/shensha/:code', async (req, res, next) => {
             });
         }
         // #region agent log
-        fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ location: 'bazi.ts:250', message: 'Sending shensha reading response', data: { code: reading.code, name: reading.name, nameLength: reading.name?.length, nameBytes: Buffer.from(reading.name || '').length, summaryPreview: reading.summary?.substring(0, 50), timestamp: Date.now(), sessionId: 'debug-session', runId: 'run1', hypothesisId: 'H1' } }) }).catch(() => { });
+        fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ location: 'bazi.ts:250', message: 'Sending shensha reading response', data: { code: reading.code, name: reading.name, nameLength: reading.name?.length || 0, nameBytes: Buffer.from(reading.name || '').length, summaryPreview: (reading.summary || '').substring(0, 50), timestamp: Date.now(), sessionId: 'debug-session', runId: 'run1', hypothesisId: 'H1' } }) }).catch(() => { });
         // #endregion
         // 确保响应使用 UTF-8 编码
         res.setHeader('Content-Type', 'application/json; charset=utf-8');
