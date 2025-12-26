@@ -18,8 +18,7 @@ async function checkShenshaEncoding() {
     const [tableInfo]: any = await pool.query(`
       SELECT 
         TABLE_NAME,
-        TABLE_COLLATION,
-        TABLE_CHARSET
+        TABLE_COLLATION
       FROM information_schema.TABLES 
       WHERE TABLE_SCHEMA = DATABASE() 
         AND TABLE_NAME = 'shensha_readings'
@@ -27,10 +26,13 @@ async function checkShenshaEncoding() {
     
     if (tableInfo.length > 0) {
       console.log(`   表名: ${tableInfo[0].TABLE_NAME}`);
-      console.log(`   字符集: ${tableInfo[0].TABLE_CHARSET}`);
       console.log(`   排序规则: ${tableInfo[0].TABLE_COLLATION}`);
       
-      if (tableInfo[0].TABLE_CHARSET !== 'utf8mb4') {
+      // 从排序规则推断字符集
+      const charset = tableInfo[0].TABLE_COLLATION?.split('_')[0] || 'unknown';
+      console.log(`   字符集: ${charset}`);
+      
+      if (charset !== 'utf8mb4') {
         console.log(`   ⚠️  字符集不是 utf8mb4！`);
       } else {
         console.log(`   ✅ 字符集正确`);
