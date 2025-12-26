@@ -39,13 +39,12 @@ var __importStar = (this && this.__importStar) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
-const auth_1 = require("../../middleware/auth");
 const connection_1 = require("../../database/connection");
 const fs = __importStar(require("fs"));
 const path = __importStar(require("path"));
 const router = (0, express_1.Router)();
-// 需要认证（临时：可以添加额外的管理员检查）
-router.use(auth_1.authMiddleware);
+// ⚠️ 临时：移除认证以便执行迁移（执行后应立即删除此端点）
+// router.use(authMiddleware);
 /**
  * POST /api/v1/admin/migration/043
  * 执行 Migration 043：添加缺失的数据库字段

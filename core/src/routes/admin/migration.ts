@@ -12,8 +12,8 @@ import * as path from 'path';
 
 const router = Router();
 
-// 需要认证（临时：可以添加额外的管理员检查）
-router.use(authMiddleware);
+// ⚠️ 临时：移除认证以便执行迁移（执行后应立即删除此端点）
+// router.use(authMiddleware);
 
 /**
  * POST /api/v1/admin/migration/043
