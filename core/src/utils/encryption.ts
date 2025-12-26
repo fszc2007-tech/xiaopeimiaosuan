@@ -14,11 +14,15 @@ const SALT_LENGTH = 64;
 const TAG_LENGTH = 16;
 const KEY_LENGTH = 32;
 
-// 从环境变量获取加密密钥
-const ENCRYPTION_KEY = process.env.XIAOPEI_ENCRYPTION_KEY;
-
-if (!ENCRYPTION_KEY) {
-  console.warn('[Encryption] XIAOPEI_ENCRYPTION_KEY not set. Encryption will fail.');
+/**
+ * 获取加密密钥（延迟获取，确保环境变量已加载）
+ */
+function getEncryptionKey(): string {
+  const key = process.env.XIAOPEI_ENCRYPTION_KEY;
+  if (!key) {
+    throw new Error('[Encryption] XIAOPEI_ENCRYPTION_KEY not configured. Please set the environment variable.');
+  }
+  return key;
 }
 
 /**
@@ -35,9 +39,7 @@ function deriveKey(password: string, salt: Buffer): Buffer {
  * @returns 加密后的字符串（格式：salt:iv:tag:encrypted）
  */
 export function encryptApiKey(apiKey: string): string {
-  if (!ENCRYPTION_KEY) {
-    throw new Error('[Encryption] ENCRYPTION_KEY not configured');
-  }
+  const ENCRYPTION_KEY = getEncryptionKey();
   
   // 生成随机 salt 和 IV
   const salt = crypto.randomBytes(SALT_LENGTH);
@@ -72,9 +74,7 @@ export function encryptApiKey(apiKey: string): string {
  * @returns 原始 API Key
  */
 export function decryptApiKey(encrypted: string): string {
-  if (!ENCRYPTION_KEY) {
-    throw new Error('[Encryption] ENCRYPTION_KEY not configured');
-  }
+  const ENCRYPTION_KEY = getEncryptionKey();
   
   // 解析加密字符串
   const parts = encrypted.split(':');

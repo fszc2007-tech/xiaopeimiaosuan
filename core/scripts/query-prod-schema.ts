@@ -14,10 +14,10 @@ dotenv.config();
 async function queryProdSchema() {
   console.log('🔍 查询生产环境数据库表结构...\n');
   
-  // 通过 Cloud SQL Proxy 连接（本地 3306 端口）
+  // 通过 Cloud SQL Proxy 连接（本地 3307 端口）
   const connection = await mysql.createConnection({
     host: '127.0.0.1',
-    port: 3306,
+    port: 3307,
     user: 'xiaopei_prod',
     password: process.env.XIAOPEI_MYSQL_PASSWORD || '',
     database: 'xiaopei',
