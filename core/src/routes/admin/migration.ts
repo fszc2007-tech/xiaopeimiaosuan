@@ -25,8 +25,8 @@ router.post('/043', async (req: Request, res: Response) => {
     
     const pool = getPool();
     
-    // 读取迁移文件
-    const migrationPath = path.join(__dirname, '../../database/migrations/043_add_missing_fields.sql');
+    // 读取迁移文件（在 Docker 容器中，使用 src 路径）
+    const migrationPath = path.join(__dirname, '../../src/database/migrations/043_add_missing_fields.sql');
     const sql = fs.readFileSync(migrationPath, 'utf-8');
     
     // 分割 SQL 语句
