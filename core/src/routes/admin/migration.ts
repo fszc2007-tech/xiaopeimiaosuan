@@ -171,13 +171,20 @@ ALTER TABLE day_stem_readings MODIFY COLUMN stem VARCHAR(10) NOT NULL;`;
         results.push({ statement: i + 1, status: 'success' });
         console.log(`[Migration 045 API] ✅ 语句 ${i + 1} 执行成功`);
       } catch (error: any) {
-        if (error.code === 'ER_DUP_FIELDNAME' || error.message?.includes('Duplicate')) {
+        // MODIFY COLUMN 操作不应该被跳过，只有 ADD COLUMN 才可能因为字段已存在而跳过
+        if (statement.includes('ADD COLUMN') && (error.code === 'ER_DUP_FIELDNAME' || error.message?.includes('Duplicate'))) {
           results.push({ statement: i + 1, status: 'skipped', reason: '字段已存在' });
           console.log(`[Migration 045 API] ⚠️ 语句 ${i + 1} 字段已存在，跳过`);
+        } else if (statement.includes('MODIFY COLUMN') && error.message?.includes('same as before')) {
+          results.push({ statement: i + 1, status: 'skipped', reason: '字段类型已正确' });
+          console.log(`[Migration 045 API] ⚠️ 语句 ${i + 1} 字段类型已正确，跳过`);
         } else {
           results.push({ statement: i + 1, status: 'error', error: error.message });
           console.error(`[Migration 045 API] ❌ 语句 ${i + 1} 执行失败:`, error.message);
-          throw error;
+          // 对于 MODIFY COLUMN，即使失败也继续执行其他语句
+          if (!statement.includes('MODIFY COLUMN')) {
+            throw error;
+          }
         }
       }
     }
