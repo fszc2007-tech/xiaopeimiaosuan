@@ -128,26 +128,57 @@ async function subscribe(userId, plan) {
  */
 async function getProStatus(userId) {
     const pool = (0, connection_1.getPool)();
-    // ✅ 完整处理：字段已通过 Migration 043 添加，直接使用
-    const [rows] = await pool.execute('SELECT is_pro, pro_expires_at, pro_plan FROM users WHERE user_id = ?', [userId]);
-    if (rows.length === 0) {
-        throw new Error('USER_NOT_FOUND');
+    // #region agent log
+    fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ location: 'proService.ts:157', message: 'Before SELECT users - checking table structure', data: { userId }, timestamp: Date.now(), sessionId: 'debug-session', runId: 'run1', hypothesisId: 'B' }) }).catch(() => { });
+    // #endregion
+    // 🔍 诊断：先检查表结构
+    let tableStructure;
+    try {
+        const [structureRows] = await pool.execute(`SHOW COLUMNS FROM users WHERE Field IN ('pro_expires_at', 'pro_plan')`);
+        tableStructure = structureRows;
+        // #region agent log
+        fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ location: 'proService.ts:165', message: 'Users table structure check result', data: { foundFields: structureRows.map((r) => r.Field), count: structureRows.length }, timestamp: Date.now(), sessionId: 'debug-session', runId: 'run1', hypothesisId: 'B' }) }).catch(() => { });
+        // #endregion
     }
-    const user = rows[0];
-    // Pro 功能列表（根据文档定义）
-    const proFeatures = [
-        '无限次数排盘',
-        '无限次数对话',
-        '深度解读（DeepSeek Thinking 模式）',
-        '高级分析报告',
-        '优先客服支持',
-    ];
-    return {
-        isPro: user.is_pro || false,
-        expiresAt: user.pro_expires_at ? user.pro_expires_at.toISOString() : undefined,
-        plan: user.pro_plan || undefined,
-        features: user.is_pro ? proFeatures : [],
-    };
+    catch (error) {
+        // #region agent log
+        fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ location: 'proService.ts:169', message: 'Users table structure check failed', data: { error: error.message, code: error.code }, timestamp: Date.now(), sessionId: 'debug-session', runId: 'run1', hypothesisId: 'B' }) }).catch(() => { });
+        // #endregion
+    }
+    // ✅ 完整处理：字段已通过 Migration 043 添加，直接使用
+    // #region agent log
+    fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ location: 'proService.ts:174', message: 'Attempting SELECT with pro fields', data: { tableStructureFields: tableStructure?.map((r) => r.Field) || [] }, timestamp: Date.now(), sessionId: 'debug-session', runId: 'run1', hypothesisId: 'B' }) }).catch(() => { });
+    // #endregion
+    try {
+        const [rows] = await pool.execute('SELECT is_pro, pro_expires_at, pro_plan FROM users WHERE user_id = ?', [userId]);
+        // #region agent log
+        fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ location: 'proService.ts:189', message: 'SELECT successful', data: { rowCount: rows.length }, timestamp: Date.now(), sessionId: 'debug-session', runId: 'run1', hypothesisId: 'B' }) }).catch(() => { });
+        // #endregion
+        if (rows.length === 0) {
+            throw new Error('USER_NOT_FOUND');
+        }
+        const user = rows[0];
+        // Pro 功能列表（根据文档定义）
+        const proFeatures = [
+            '无限次数排盘',
+            '无限次数对话',
+            '深度解读（DeepSeek Thinking 模式）',
+            '高级分析报告',
+            '优先客服支持',
+        ];
+        return {
+            isPro: user.is_pro || false,
+            expiresAt: user.pro_expires_at ? user.pro_expires_at.toISOString() : undefined,
+            plan: user.pro_plan || undefined,
+            features: user.is_pro ? proFeatures : [],
+        };
+    }
+    catch (error) {
+        // #region agent log
+        fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ location: 'proService.ts:210', message: 'SELECT failed - field missing', data: { error: error.message, code: error.code, sqlState: error.sqlState, missingField: error.message.match(/Unknown column '(\w+)'/)?.[1] }, timestamp: Date.now(), sessionId: 'debug-session', runId: 'run1', hypothesisId: 'B' }) }).catch(() => { });
+        // #endregion
+        throw error;
+    }
 }
 /**
  * 获取用户的订阅历史

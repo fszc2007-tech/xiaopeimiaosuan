@@ -376,13 +376,47 @@ router.post('/:conversationId/messages', createRateLimitMiddleware('chat'), asyn
       conversationId = uuidv4();
       const title = message.substring(0, 50) + (message.length > 50 ? '...' : '');
       
+      // #region agent log
+      fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'conversation.ts:379',message:'Before INSERT conversations - checking table structure',data:{conversationId,userId,chartId,topic,source,title:title.substring(0,20)},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
+      // #endregion
+      
+      // 🔍 诊断：先检查表结构
+      let tableStructure: any;
+      try {
+        const [structureRows]: any = await pool.query(
+          `SHOW COLUMNS FROM conversations WHERE Field IN ('source', 'title', 'last_message_at')`
+        );
+        tableStructure = structureRows;
+        // #region agent log
+        fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'conversation.ts:390',message:'Table structure check result',data:{foundFields:structureRows.map((r:any)=>r.Field),count:structureRows.length},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
+        // #endregion
+      } catch (error: any) {
+        // #region agent log
+        fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'conversation.ts:395',message:'Table structure check failed',data:{error:error.message,code:error.code},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
+        // #endregion
+      }
+      
       // ✅ 完整处理：字段已通过 Migration 043 添加，直接使用
-      await pool.query(
-        `INSERT INTO conversations 
-        (conversation_id, user_id, chart_profile_id, topic, source, first_question, title, created_at, updated_at, last_message_at) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW(), NOW())`,
-        [conversationId, userId, chartId, topic || null, source || null, message, title]
-      );
+      // #region agent log
+      fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'conversation.ts:400',message:'Attempting INSERT with all fields',data:{hasSource:!!source,hasTitle:!!title,tableStructureFields:tableStructure?.map((r:any)=>r.Field)||[]},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
+      // #endregion
+      
+      try {
+        await pool.query(
+          `INSERT INTO conversations 
+          (conversation_id, user_id, chart_profile_id, topic, source, first_question, title, created_at, updated_at, last_message_at) 
+          VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW(), NOW())`,
+          [conversationId, userId, chartId, topic || null, source || null, message, title]
+        );
+        // #region agent log
+        fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'conversation.ts:410',message:'INSERT successful',data:{conversationId},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
+        // #endregion
+      } catch (error: any) {
+        // #region agent log
+        fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'conversation.ts:413',message:'INSERT failed - field missing',data:{error:error.message,code:error.code,sqlState:error.sqlState,missingField:error.message.match(/Unknown column '(\w+)'/)?.[1]},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'A'})}).catch(()=>{});
+        // #endregion
+        throw error;
+      }
     } else {
       // 验证对话是否存在且属于当前用户
       const [convRows] = await pool.query<any[]>(
