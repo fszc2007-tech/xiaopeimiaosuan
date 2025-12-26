@@ -42,7 +42,14 @@ export async function getShenshaReading(
   const pool = getPool();
   
   // 确保使用 utf8mb4 字符集查询（防止乱码）
+  // #region agent log
+  fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'shenshaReadingService.ts:45',message:'Setting utf8mb4 charset before query',data:{shenshaCode,pillarType,gender},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'})}).catch(()=>{});
+  // #endregion
   await pool.execute('SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci');
+  
+  // #region agent log
+  fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'shenshaReadingService.ts:48',message:'Querying shensha_readings table',data:{shenshaCode,pillarType,gender},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'})}).catch(()=>{});
+  // #endregion
   
   if (pillarType) {
     // 查询特定柱位的解读
@@ -56,6 +63,9 @@ export async function getShenshaReading(
     
     if (genderRows.length > 0) {
       const row: ShenshaReadingRow = genderRows[0];
+      // #region agent log
+      fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'shenshaReadingService.ts:59',message:'Found reading data',data:{shenshaCode:row.shensha_code,name:row.name,nameLength:row.name?.length,nameBytes:Buffer.from(row.name||'').length,badgeText:row.badge_text,summaryPreview:row.summary?.substring(0,50),timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'})}).catch(()=>{});
+      // #endregion
       return {
         code: row.shensha_code,
         name: row.name,
