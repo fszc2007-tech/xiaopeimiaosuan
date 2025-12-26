@@ -100,14 +100,14 @@ async function checkShenshaEncoding() {
         @@character_set_client as client,
         @@character_set_connection as connection,
         @@character_set_results as results,
-        @@character_set_database as database,
+        @@character_set_database as db_charset,
         @@character_set_server as server
     `);
     
     console.log(`   客户端: ${charsetInfo[0].client}`);
     console.log(`   连接: ${charsetInfo[0].connection}`);
     console.log(`   结果: ${charsetInfo[0].results}`);
-    console.log(`   数据库: ${charsetInfo[0].database}`);
+    console.log(`   数据库: ${charsetInfo[0].db_charset}`);
     console.log(`   服务器: ${charsetInfo[0].server}`);
     
     if (charsetInfo[0].connection !== 'utf8mb4' || charsetInfo[0].results !== 'utf8mb4') {
