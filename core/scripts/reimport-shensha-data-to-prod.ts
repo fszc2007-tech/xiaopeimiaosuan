@@ -59,29 +59,42 @@ async function reimportShenshaData() {
     const [deleteResult]: any = await prodPool.query('DELETE FROM shensha_readings');
     console.log(`✅ 已删除 ${deleteResult.affectedRows} 条记录\n`);
     
-    // 2. 从开发环境读取数据
-    console.log('📤 从开发环境读取神煞数据...');
-    const [devRows]: any = await devPool.query(`
-      SELECT 
-        reading_id,
-        shensha_code,
-        pillar_type,
-        gender,
-        name,
-        badge_text,
-        type,
-        short_title,
-        summary,
-        bullet_points,
-        for_this_position,
-        recommended_questions,
-        is_active,
-        sort_order
-      FROM shensha_readings
-      ORDER BY shensha_code, pillar_type, gender
-    `);
+    // 2. 从导出的 JSON 文件读取数据（如果开发环境数据库为空）
+    const fs = require('fs');
+    const path = require('path');
+    const jsonPath = path.join(__dirname, '../data/shensha_readings_export.json');
     
-    console.log(`✅ 读取到 ${devRows.length} 条数据\n`);
+    let devRows: any[] = [];
+    
+    if (fs.existsSync(jsonPath)) {
+      console.log('📤 从导出的 JSON 文件读取神煞数据...');
+      const jsonData = fs.readFileSync(jsonPath, 'utf8');
+      devRows = JSON.parse(jsonData);
+      console.log(`✅ 从 JSON 文件读取到 ${devRows.length} 条数据\n`);
+    } else {
+      console.log('📤 从开发环境数据库读取神煞数据...');
+      const [dbRows]: any = await devPool.query(`
+        SELECT 
+          reading_id,
+          shensha_code,
+          pillar_type,
+          gender,
+          name,
+          badge_text,
+          type,
+          short_title,
+          summary,
+          bullet_points,
+          for_this_position,
+          recommended_questions,
+          is_active,
+          sort_order
+        FROM shensha_readings
+        ORDER BY shensha_code, pillar_type, gender
+      `);
+      devRows = dbRows;
+      console.log(`✅ 从数据库读取到 ${devRows.length} 条数据\n`);
+    }
     
     // 3. 插入到生产环境（分批处理）
     const BATCH_SIZE = 50;
