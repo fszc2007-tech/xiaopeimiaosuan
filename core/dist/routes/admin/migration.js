@@ -4,44 +4,9 @@
  *
  * ⚠️ 警告：此路由仅用于紧急修复，执行后应立即删除
  */
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || (function () {
-    var ownKeys = function(o) {
-        ownKeys = Object.getOwnPropertyNames || function (o) {
-            var ar = [];
-            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
-            return ar;
-        };
-        return ownKeys(o);
-    };
-    return function (mod) {
-        if (mod && mod.__esModule) return mod;
-        var result = {};
-        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
-        __setModuleDefault(result, mod);
-        return result;
-    };
-})();
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const connection_1 = require("../../database/connection");
-const fs = __importStar(require("fs"));
-const path = __importStar(require("path"));
 const router = (0, express_1.Router)();
 // ⚠️ 临时：移除认证以便执行迁移（执行后应立即删除此端点）
 // router.use(authMiddleware);
@@ -53,10 +18,19 @@ router.post('/043', async (req, res) => {
     try {
         console.log('[Migration 043 API] 开始执行...');
         const pool = (0, connection_1.getPool)();
-        // 读取迁移文件（在 Docker 容器中，从 dist 目录回到项目根，然后进入 src）
-        // __dirname 在容器中是 /app/dist/routes/admin，需要回到 /app/src/database/migrations
-        const migrationPath = path.join(__dirname, '../../../src/database/migrations/043_add_missing_fields.sql');
-        const sql = fs.readFileSync(migrationPath, 'utf-8');
+        // 直接使用 SQL 内容（避免文件路径问题）
+        const sql = `-- Migration 043: 添加缺失的数据库字段
+ALTER TABLE conversations 
+  ADD COLUMN source VARCHAR(32) NULL COMMENT '来源：app/admin/script' AFTER topic;
+ALTER TABLE conversations 
+  ADD COLUMN title VARCHAR(200) NULL COMMENT '对话标题' AFTER first_question;
+ALTER TABLE conversations 
+  ADD COLUMN last_message_at DATETIME NULL COMMENT '最后消息时间' AFTER updated_at;
+ALTER TABLE users 
+  ADD COLUMN pro_expires_at DATETIME NULL COMMENT 'Pro 到期时间' AFTER is_pro;
+ALTER TABLE users 
+  ADD COLUMN pro_plan ENUM('yearly', 'monthly', 'quarterly', 'lifetime') NULL COMMENT 'Pro 方案类型' AFTER pro_expires_at;
+CREATE INDEX idx_pro_expires_at ON users(pro_expires_at);`;
         // 分割 SQL 语句
         const lines = sql.split('\n');
         const statements = [];
