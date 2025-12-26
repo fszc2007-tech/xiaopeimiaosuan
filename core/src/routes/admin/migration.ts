@@ -23,6 +23,9 @@ router.get('/shensha-sample', async (req: Request, res: Response) => {
   try {
     const pool = getPool();
     
+    // 确保使用 UTF-8 编码查询
+    await pool.execute('SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci');
+    
     // 查询一条神煞数据
     const [rows]: any = await pool.query(`
       SELECT 
