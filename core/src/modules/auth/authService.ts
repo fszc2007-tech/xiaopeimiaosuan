@@ -128,14 +128,73 @@ export async function requestOTP(params: {
   const codeId = uuidv4();
   const pool = getPool();
   const { ttlMinutes } = otpConfig;
-  const expiresAt = new Date(Date.now() + ttlMinutes * 60 * 1000);
   
   // 6. 保存验证码到数据库（MySQL）
-  await pool.execute(
-    `INSERT INTO verification_codes (code_id, phone, email, code, code_type, expires_at, is_used) 
-     VALUES (?, ?, ?, ?, 'login', ?, FALSE)`,
-    [codeId, normalizedPhone, null, code, expiresAt]
+  // 注意：verification_codes 表已删除 email 字段（migration 008），只保留 phone
+  
+  // 🔍 诊断：统计同一手机号在 2 分钟内的发送次数（检查自动重发/重复发送）
+  const [recentSends]: any = await pool.execute(
+    `SELECT code_id, code, created_at 
+     FROM verification_codes 
+     WHERE phone = ? 
+       AND created_at > DATE_SUB(NOW(), INTERVAL 2 MINUTE)
+     ORDER BY created_at DESC`,
+    [normalizedPhone]
   );
+  
+  // 🔍 诊断：记录数据库指纹（检查读写分离/复制延迟）
+  const [dbFingerprint]: any = await pool.execute(
+    `SELECT DATABASE() AS db, @@hostname AS host, @@server_id AS sid, @@read_only AS ro, @@time_zone AS tz, NOW() AS db_now`
+  );
+  
+  // 查询实际插入的 expires_at（用于日志）
+  const [insertedRow]: any = await pool.execute(
+    `SELECT expires_at FROM verification_codes WHERE code_id = ?`,
+    [codeId]
+  );
+  const actualExpiresAt = insertedRow[0]?.expires_at;
+  
+  console.log(`[OTP-SEND] DB Fingerprint & Recent Sends:`, {
+    requestId: codeId,
+    db: dbFingerprint[0]?.db,
+    host: dbFingerprint[0]?.host,
+    serverId: dbFingerprint[0]?.sid,
+    readOnly: dbFingerprint[0]?.ro,
+    timeZone: dbFingerprint[0]?.tz,
+    normalizedPhone: normalizedPhone.replace(/\d(?=\d{4})/g, '*'),
+    expiresAt: actualExpiresAt ? new Date(actualExpiresAt).toISOString() : 'N/A',
+    dbNow: dbFingerprint[0]?.db_now ? new Date(dbFingerprint[0].db_now).toISOString() : new Date().toISOString(),
+    appNow: new Date().toISOString(),
+    timeDiffMs: dbFingerprint[0]?.db_now ? new Date().getTime() - new Date(dbFingerprint[0].db_now).getTime() : 0,
+    recentSendCount: recentSends.length,
+    recentSends: recentSends.map((r: any) => ({
+      codeId: r.code_id,
+      code: r.code,
+      createdAt: r.created_at,
+      timeDiffMs: new Date().getTime() - new Date(r.created_at).getTime(),
+    })),
+  });
+  
+  // 🔍 修复：使用数据库 DATE_ADD 函数生成 expires_at，确保时区一致
+  await pool.execute(
+    `INSERT INTO verification_codes (code_id, phone, code, code_type, expires_at, is_used) 
+     VALUES (?, ?, ?, 'login', DATE_ADD(NOW(), INTERVAL ? MINUTE), FALSE)`,
+    [codeId, normalizedPhone, code, ttlMinutes]
+  );
+  
+  // 查询实际插入的 expires_at（用于日志）
+  const [insertedRow]: any = await pool.execute(
+    `SELECT expires_at FROM verification_codes WHERE code_id = ?`,
+    [codeId]
+  );
+  const actualExpiresAt = insertedRow[0]?.expires_at;
+  
+  // 更新 expiresAt 变量用于日志（从数据库查询实际值）
+  const [insertedRow]: any = await pool.execute(
+    `SELECT expires_at FROM verification_codes WHERE code_id = ?`,
+    [codeId]
+  );
+  const actualExpiresAt = insertedRow[0]?.expires_at;
   
   // 7. 调用腾讯云短信服务发送验证码
   // #region agent log
@@ -216,6 +275,19 @@ export async function loginOrRegister(params: {
   const pool = getPool();
   
   // 2. 验证验证码（从数据库查询）
+  
+  // 🔍 诊断：记录数据库指纹（检查读写分离/复制延迟）
+  const [dbFingerprint]: any = await pool.execute(
+    `SELECT DATABASE() AS db, @@hostname AS host, @@server_id AS sid, @@read_only AS ro, @@time_zone AS tz`
+  );
+  const fingerprint = {
+    db: dbFingerprint[0]?.db,
+    host: dbFingerprint[0]?.host,
+    serverId: dbFingerprint[0]?.sid,
+    readOnly: dbFingerprint[0]?.ro,
+    timeZone: dbFingerprint[0]?.tz,
+  };
+  
   const [codeRows]: any = await pool.execute(
     `SELECT * FROM verification_codes 
      WHERE phone = ? 
@@ -229,6 +301,34 @@ export async function loginOrRegister(params: {
   );
   
   if (codeRows.length === 0) {
+    // 🔍 诊断：查询失败时，打印候选记录（按 phone 查最近 5 条）
+    const [candidateRows]: any = await pool.execute(
+      `SELECT id, phone, code, code_type, is_used, created_at, expires_at 
+       FROM verification_codes 
+       WHERE phone = ? 
+       ORDER BY created_at DESC 
+       LIMIT 5`,
+      [normalizedPhone]
+    );
+    
+    console.log(`[OTP-VERIFY-FAIL] No matching code found:`, {
+      requestId: `verify-${Date.now()}`,
+      dbFingerprint: fingerprint,
+      normalizedPhone: normalizedPhone.replace(/\d(?=\d{4})/g, '*'),
+      inputCode: code,
+      candidateCount: candidateRows.length,
+      candidates: candidateRows.map((r: any) => ({
+        code: r.code,
+        codeType: r.code_type,
+        isUsed: r.is_used,
+        createdAt: r.created_at,
+        expiresAt: r.expires_at,
+        expired: new Date(r.expires_at) <= new Date(),
+        timeDiff: new Date().getTime() - new Date(r.created_at).getTime(),
+      })),
+      dbNow: new Date().toISOString(),
+    });
+    
     // 检查是否过期
     const [expiredCodes]: any = await pool.execute(
       `SELECT * FROM verification_codes 
@@ -252,6 +352,14 @@ export async function loginOrRegister(params: {
     
     throw new Error(getErrorMessage('CODE_MISMATCH', errorRegion));
   }
+  
+  // 🔍 诊断：验证成功时也记录指纹
+  console.log(`[OTP-VERIFY-SUCCESS] Code verified:`, {
+    requestId: `verify-${Date.now()}`,
+    dbFingerprint: fingerprint,
+    normalizedPhone: normalizedPhone.replace(/\d(?=\d{4})/g, '*'),
+    codeId: codeRows[0].code_id,
+  });
   
   const codeRow = codeRows[0];
   
@@ -281,10 +389,11 @@ export async function loginOrRegister(params: {
     const userId = uuidv4();
     const nickname = `用户${normalizedPhone.slice(-4)}`;
     
+    // 注意：users 表已删除 email 字段（migration 008），只保留 phone
     await pool.execute(
-      `INSERT INTO users (user_id, nickname, phone, email, app_region, is_pro) 
-       VALUES (?, ?, ?, ?, ?, FALSE)`,
-      [userId, nickname, normalizedPhone, null, channel.toUpperCase()]
+      `INSERT INTO users (user_id, nickname, phone, app_region, is_pro) 
+       VALUES (?, ?, ?, ?, FALSE)`,
+      [userId, nickname, normalizedPhone, channel.toUpperCase()]
     );
     
     // 重新查询用户信息

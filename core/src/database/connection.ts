@@ -15,10 +15,10 @@ export async function createConnection(): Promise<mysql.Pool> {
   const mysqlHost = process.env.XIAOPEI_MYSQL_HOST || 'localhost';
   const isUnixSocket = mysqlHost.startsWith('/');
   
-  // 连接池限制：生产环境默认 3，开发环境默认 10
+  // 连接池限制：生产环境默认 15（支持 concurrency 5-10），开发环境默认 10
   const connectionLimit = parseInt(
     process.env.MYSQL_CONNECTION_LIMIT || 
-    (process.env.NODE_ENV === 'production' ? '3' : '10')
+    (process.env.NODE_ENV === 'production' ? '15' : '10')
   );
 
   pool = mysql.createPool({

@@ -34,9 +34,10 @@ import type {
 
 /**
  * Cursor 测试账号配置
+ * 注意：users 表已删除 email 字段（migration 008），改用 phone 作为唯一标识
  */
 const CURSOR_TEST_ACCOUNT = {
-  email: 'cursor_test@xiaopei.com',
+  phone: '+8613800000000', // 使用固定手机号作为测试账号标识
   nickname: 'Cursor 测试账号',
   fixedPasswordDev: 'Cursor@2024', // 开发环境固定密码
 } as const;
@@ -63,9 +64,10 @@ export async function getUserList(
   const params: any[] = [];
 
   if (keyword) {
-    whereClause += ' AND (phone LIKE ? OR email LIKE ? OR nickname LIKE ?)';
+    // 注意：users 表已删除 email 字段（migration 008），只搜索 phone 和 nickname
+    whereClause += ' AND (phone LIKE ? OR nickname LIKE ?)';
     const keywordPattern = `%${keyword}%`;
-    params.push(keywordPattern, keywordPattern, keywordPattern);
+    params.push(keywordPattern, keywordPattern);
   }
 
   // 查询总数
@@ -167,14 +169,10 @@ export async function createTestUser(data: AdminCreateUserRequestDto): Promise<U
     }
   }
 
+  // 注意：users 表已删除 email 字段（migration 008），不再检查 email 重复
+  // 如果 data.email 存在，可以记录到日志但不影响创建流程
   if (data.email) {
-    const [existingRows] = await getPool().query<UserRow[]>(
-      'SELECT * FROM users WHERE email = ?',
-      [data.email]
-    );
-    if (existingRows.length > 0) {
-      throw new Error('EMAIL_EXISTS');
-    }
+    console.warn('[AdminUserService] email field is deprecated, ignoring:', data.email);
   }
 
   // 2. 哈希密码
@@ -184,15 +182,15 @@ export async function createTestUser(data: AdminCreateUserRequestDto): Promise<U
   const userId = uuidv4();
 
   // 4. 插入数据库
+  // 注意：users 表已删除 email 字段（migration 008），只保留 phone
   await getPool().query(
     `INSERT INTO users (
-      user_id, phone, email, password_hash, app_region, nickname,
+      user_id, phone, password_hash, app_region, nickname,
       is_pro, created_at, updated_at
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW())`,
+    ) VALUES (?, ?, ?, ?, ?, ?, NOW(), NOW())`,
     [
       userId,
       data.phone || null,
-      data.email || null,
       passwordHash,
       data.appRegion,
       data.nickname || '新用户',
@@ -218,10 +216,10 @@ export async function createTestUser(data: AdminCreateUserRequestDto): Promise<U
 export async function getOrCreateCursorTestAccount(
   isProduction: boolean = false
 ): Promise<CursorTestAccountDto> {
-  // 1. 查询是否已存在
+  // 1. 查询是否已存在（使用 phone 作为唯一标识）
   const [existingRows] = await getPool().query<UserRow[]>(
-    'SELECT * FROM users WHERE email = ?',
-    [CURSOR_TEST_ACCOUNT.email]
+    'SELECT * FROM users WHERE phone = ?',
+    [CURSOR_TEST_ACCOUNT.phone]
   );
 
   if (existingRows.length > 0) {
@@ -229,7 +227,8 @@ export async function getOrCreateCursorTestAccount(
     const user = FieldMapper.mapUser(existingRows[0]);
     return {
       userId: user.userId,
-      email: user.email,
+      // 注意：users 表已删除 email 字段（migration 008），返回 phone 代替
+      phone: user.phone,
       nickname: user.nickname,
       isPro: user.isPro,
       createdAt: user.createdAt,
@@ -249,14 +248,15 @@ export async function getOrCreateCursorTestAccount(
   const passwordHash = await bcrypt.hash(password, 10);
 
   // 3. 插入数据库
+  // 注意：users 表已删除 email 字段（migration 008），使用 phone 作为唯一标识
   await getPool().query(
     `INSERT INTO users (
-      user_id, email, password_hash, app_region, nickname, invite_code, 
+      user_id, phone, password_hash, app_region, nickname, invite_code, 
       is_pro, created_at, updated_at
     ) VALUES (?, ?, ?, ?, ?, ?, TRUE, NOW(), NOW())`,
     [
       userId,
-      CURSOR_TEST_ACCOUNT.email,
+      CURSOR_TEST_ACCOUNT.phone,
       passwordHash,
       'CN', // 默认 CN
       CURSOR_TEST_ACCOUNT.nickname,
@@ -274,7 +274,8 @@ export async function getOrCreateCursorTestAccount(
 
   return {
     userId: user.userId,
-    email: user.email,
+    // 注意：users 表已删除 email 字段（migration 008），返回 phone 代替
+    phone: user.phone,
     password, // ⚠️ 仅首次创建时返回
     nickname: user.nickname,
     isPro: user.isPro,
@@ -292,10 +293,10 @@ export async function getOrCreateCursorTestAccount(
 export async function resetCursorTestAccountPassword(
   isProduction: boolean = false
 ): Promise<{ password: string }> {
-  // 1. 查询账号是否存在
+  // 1. 查询账号是否存在（使用 phone 作为唯一标识）
   const [existingRows] = await getPool().query<UserRow[]>(
-    'SELECT * FROM users WHERE email = ?',
-    [CURSOR_TEST_ACCOUNT.email]
+    'SELECT * FROM users WHERE phone = ?',
+    [CURSOR_TEST_ACCOUNT.phone]
   );
 
   if (existingRows.length === 0) {

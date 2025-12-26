@@ -14,7 +14,7 @@ import { RowDataPacket } from 'mysql2';
 export interface UserRow extends RowDataPacket {
   user_id: string;
   phone?: string;
-  email?: string;
+  // 注意：email 字段已删除（migration 008），不再使用
   username?: string;              // H5 用戶名登錄
   password_hash?: string;
   password_set: boolean;          // 是否已設置密碼

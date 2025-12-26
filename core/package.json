@@ -12,6 +12,7 @@
     "db:init": "mysql -u root < src/database/migrations/001_create_tables.sql",
     "docs:generate": "ts-node scripts/generateApiDocs.ts",
     "check:api-paths": "ts-node scripts/checkApiPaths.ts",
+    "db:stats": "ts-node scripts/check-database-stats.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

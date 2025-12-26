@@ -251,7 +251,8 @@ async function deleteUserData(userId: string): Promise<void> {
     await anonymizeSubscriptions(connection, userId);
     
     // ===== 9. 設置 tombstone =====
-    await setUserTombstone(connection, userId, user.phone, user.email);
+    // 注意：users 表已删除 email 字段（migration 008），只传递 phone
+    await setUserTombstone(connection, userId, user.phone);
     
     // ===== 10. 記錄審計日誌 =====
     const duration = Date.now() - startTime;
@@ -309,17 +310,17 @@ async function anonymizeSubscriptions(connection: PoolConnection, userId: string
  * - 清除所有 PII
  * - 保留 user_id 和 deleted_at
  */
+// 注意：users 表已删除 email 字段（migration 008），只处理 phone
 async function setUserTombstone(
   connection: PoolConnection, 
   userId: string,
-  originalPhone?: string,
-  originalEmail?: string
+  originalPhone?: string
 ): Promise<void> {
   // 生成佔位符（確保唯一性）
   const randomSuffix = crypto.randomBytes(8).toString('hex');
   const phoneReplacement = `deleted_${userId.substring(0, 8)}_${randomSuffix}`;
-  const emailReplacement = `deleted_${userId.substring(0, 8)}_${randomSuffix}@deleted.invalid`;
   
+  // 注意：users 表已删除 email 字段（migration 008），只保留 phone
   await connection.execute(
     `UPDATE users SET
       status = 'DELETED',
@@ -328,7 +329,6 @@ async function setUserTombstone(
       delete_scheduled_at = NULL,
       -- 清除 PII
       phone = ?,
-      email = ?,
       nickname = NULL,
       avatar = NULL,
       password_hash = NULL,
@@ -338,7 +338,6 @@ async function setUserTombstone(
     WHERE user_id = ?`,
     [
       originalPhone ? phoneReplacement : null,
-      originalEmail ? emailReplacement : null,
       userId
     ]
   );

@@ -10,6 +10,8 @@ config.resolver = {
   alias: {
     '@': path.resolve(__dirname, 'src'),
   },
+  // 支持 Markdown 文件
+  assetExts: [...config.resolver.assetExts, 'md'],
 };
 
 module.exports = config;

@@ -35,6 +35,9 @@ COPY --from=builder /app/dist ./dist
 # 复制 engine 目录（八字计算引擎）
 COPY --from=builder /app/engine ./engine
 
+# 复制 public 目录（静态文件：PDF 文档等）
+COPY --from=builder /app/public ./public
+
 # 健康检查
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
   CMD wget --no-verbose --tries=1 --spider http://localhost:8080/health || exit 1

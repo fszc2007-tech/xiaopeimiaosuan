@@ -413,6 +413,13 @@ export const AuthScreen: React.FC = () => {
       return;
     }
     
+    // 🔍 诊断：提交前强制净化 OTP（只保留 0-9，校验长度必须为 6）
+    const cleanedOtp = otp.replace(/[^0-9]/g, '');
+    if (cleanedOtp.length !== 6) {
+      setError('驗證碼必須為 6 位數字');
+      return;
+    }
+    
     setLoading(true);
     setError('');
     
@@ -425,7 +432,7 @@ export const AuthScreen: React.FC = () => {
       
       const response = await authService.loginOrRegister({
         phone: fullPhone,
-        code: otp,
+        code: cleanedOtp, // ✅ 使用净化后的 OTP
         countryCode, // ✅ 传递 countryCode 确保后端规范化一致
         channel,
       });

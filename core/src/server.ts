@@ -144,8 +144,29 @@ app.use((_req, res) => {
 
 // 全局错误处理
 app.use((err: any, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+  // #region agent log
+  const fs = require('fs');
+  const logPath = '/Users/gaoxuxu/Desktop/xiaopei-app/.cursor/debug.log';
+  const log = (data: any) => {
+    try {
+      fs.appendFileSync(logPath, JSON.stringify({...data, timestamp: Date.now()}) + '\n');
+    } catch (e) {}
+  };
+  log({location: 'server.ts:globalErrorHandler', message: 'Global error handler triggered', data: {errorMessage: err?.message, errorCode: err?.code, errorName: err?.name, errorStatus: err?.status, headersSent: res.headersSent, url: _req.url, method: _req.method}, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'D'});
+  // #endregion
   console.error('[Error]', err);
   
+  // 如果响应头已经发送，不能再次发送
+  if (res.headersSent) {
+    // #region agent log
+    log({location: 'server.ts:globalErrorHandler:headersSent', message: 'Response headers already sent in global error handler', data: {errorMessage: err?.message}, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'C,D'});
+    // #endregion
+    return;
+  }
+  
+  // #region agent log
+  log({location: 'server.ts:globalErrorHandler:sendingResponse', message: 'Sending error response from global handler', data: {status: err.status || 500, headersSent: res.headersSent}, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'D'});
+  // #endregion
   res.status(err.status || 500).json({
     success: false,
     error: {
@@ -154,6 +175,9 @@ app.use((err: any, _req: express.Request, res: express.Response, _next: express.
       details: process.env.NODE_ENV === 'development' ? err.stack : undefined,
     },
   });
+  // #region agent log
+  log({location: 'server.ts:globalErrorHandler:responseSent', message: 'Error response sent from global handler', data: {headersSent: res.headersSent}, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'D'});
+  // #endregion
 });
 
 // ===== 启动服务器 =====

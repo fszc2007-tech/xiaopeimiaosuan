@@ -9,7 +9,7 @@
  */
 
 import React, { useState, useRef, useEffect } from 'react';
-import { View, TextInput, StyleSheet } from 'react-native';
+import { View, TextInput, StyleSheet, Platform } from 'react-native';
 import { colors, spacing, radius, fontSizes, fontWeights } from '@/theme';
 
 interface OtpInputProps {
@@ -281,6 +281,11 @@ const styles = StyleSheet.create({
     fontSize: fontSizes['2xl'],
     fontWeight: fontWeights.bold,
     color: '#1A1A1A',
+    fontFamily: Platform.select({
+      ios: 'System',
+      android: 'sans-serif',
+      default: 'System',
+    }),
   },
 });
 
