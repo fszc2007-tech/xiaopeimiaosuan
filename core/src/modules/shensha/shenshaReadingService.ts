@@ -41,15 +41,8 @@ export async function getShenshaReading(
 ): Promise<ShenshaReadingDto | null> {
   const pool = getPool();
   
-  // 确保使用 utf8mb4 字符集查询（防止乱码）
-  // #region agent log
-  fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'shenshaReadingService.ts:45',message:'Setting utf8mb4 charset before query',data:{shenshaCode,pillarType,gender},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'})}).catch(()=>{});
-  // #endregion
-  await pool.execute('SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci');
-  
-  // #region agent log
-  fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'shenshaReadingService.ts:48',message:'Querying shensha_readings table',data:{shenshaCode,pillarType,gender},timestamp:Date.now(),sessionId:'debug-session',runId:'run1',hypothesisId:'H1'})}).catch(()=>{});
-  // #endregion
+  // 注意：连接池已在创建时设置了 charset: 'utf8mb4'，不需要再次执行 SET NAMES
+  // 十神服务没有执行 SET NAMES 但显示正常，说明连接池的 charset 配置已足够
   
   if (pillarType) {
     // 查询特定柱位的解读
