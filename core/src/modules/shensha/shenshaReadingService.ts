@@ -41,6 +41,9 @@ export async function getShenshaReading(
 ): Promise<ShenshaReadingDto | null> {
   const pool = getPool();
   
+  // 确保使用 utf8mb4 字符集查询（防止乱码）
+  await pool.execute('SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci');
+  
   if (pillarType) {
     // 查询特定柱位的解读
     // 先查指定性別，若找不到則查通用（all）
