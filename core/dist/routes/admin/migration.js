@@ -55,6 +55,70 @@ router.get('/schema', async (req, res) => {
     }
 });
 /**
+ * POST /api/v1/admin/migration/044
+ * 执行 Migration 044：修复神煞解读表编码问题
+ */
+router.post('/044', async (req, res) => {
+    try {
+        console.log('[Migration 044 API] 开始执行...');
+        const pool = (0, connection_1.getPool)();
+        // 直接使用 SQL 内容
+        const sql = `-- Migration 044: 修复神煞解读表编码问题
+ALTER TABLE shensha_readings 
+  CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE shensha_readings 
+  MODIFY COLUMN name VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '神煞名称（中文）',
+  MODIFY COLUMN badge_text VARCHAR(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '徽标文本（如 吉神、帶挑戰、桃花）',
+  MODIFY COLUMN short_title VARCHAR(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci COMMENT '短标题（一句话概括特征）',
+  MODIFY COLUMN summary TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '一句话总结（使用核心含义）',
+  MODIFY COLUMN for_this_position TEXT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '针对所在柱位的具体说明';`;
+        // 分割 SQL 语句
+        const statements = sql
+            .split(';')
+            .map(s => s.trim())
+            .filter(s => s.length > 0 && !s.startsWith('--'));
+        const results = [];
+        for (let i = 0; i < statements.length; i++) {
+            const statement = statements[i];
+            if (statement.length === 0)
+                continue;
+            try {
+                console.log(`[Migration 044 API] 执行语句 ${i + 1}/${statements.length}...`);
+                await pool.execute(statement);
+                results.push({ statement: i + 1, status: 'success' });
+                console.log(`[Migration 044 API] ✅ 语句 ${i + 1} 执行成功`);
+            }
+            catch (error) {
+                if (error.code === 'ER_DUP_FIELDNAME' || error.message?.includes('Duplicate')) {
+                    results.push({ statement: i + 1, status: 'skipped', reason: '已存在' });
+                    console.log(`[Migration 044 API] ⚠️ 语句 ${i + 1} 已存在，跳过`);
+                }
+                else {
+                    results.push({ statement: i + 1, status: 'error', error: error.message });
+                    console.error(`[Migration 044 API] ❌ 语句 ${i + 1} 执行失败:`, error.message);
+                    throw error;
+                }
+            }
+        }
+        console.log('[Migration 044 API] ✅ 迁移完成！');
+        res.json({
+            success: true,
+            message: 'Migration 044 执行完成',
+            results,
+        });
+    }
+    catch (error) {
+        console.error('[Migration 044 API] ❌ 迁移失败:', error);
+        res.status(500).json({
+            success: false,
+            error: {
+                code: 'MIGRATION_FAILED',
+                message: error.message || '迁移执行失败',
+            },
+        });
+    }
+});
+/**
  * POST /api/v1/admin/migration/043
  * 执行 Migration 043：添加缺失的数据库字段
  */
