@@ -11,6 +11,50 @@ const router = (0, express_1.Router)();
 // ⚠️ 临时：移除认证以便执行迁移（执行后应立即删除此端点）
 // router.use(authMiddleware);
 /**
+ * GET /api/v1/admin/migration/schema
+ * 获取数据库表结构（用于比对）
+ */
+router.get('/schema', async (req, res) => {
+    try {
+        const pool = (0, connection_1.getPool)();
+        // 获取所有表
+        const [tables] = await pool.query('SHOW TABLES');
+        const tableKey = Object.keys(tables[0])[0];
+        const tableNames = tables.map((row) => row[tableKey]);
+        // 获取每张表的结构
+        const schemas = {};
+        for (const tableName of tableNames) {
+            const [columns] = await pool.query(`DESCRIBE ${tableName}`);
+            schemas[tableName] = {
+                columns: columns.map((col) => ({
+                    field: col.Field,
+                    type: col.Type,
+                    null: col.Null,
+                    key: col.Key,
+                    default: col.Default,
+                    extra: col.Extra,
+                })),
+            };
+        }
+        res.json({
+            success: true,
+            data: {
+                tables: tableNames,
+                schemas,
+            },
+        });
+    }
+    catch (error) {
+        res.status(500).json({
+            success: false,
+            error: {
+                code: 'QUERY_FAILED',
+                message: error.message || '查询失败',
+            },
+        });
+    }
+});
+/**
  * POST /api/v1/admin/migration/043
  * 执行 Migration 043：添加缺失的数据库字段
  */
