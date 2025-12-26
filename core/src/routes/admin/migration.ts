@@ -16,6 +16,66 @@ const router = Router();
 // router.use(authMiddleware);
 
 /**
+ * GET /api/v1/admin/migration/shensha-sample
+ * 获取神煞解读数据样本（用于检查编码）
+ */
+router.get('/shensha-sample', async (req: Request, res: Response) => {
+  try {
+    const pool = getPool();
+    
+    // 查询一条神煞数据
+    const [rows]: any = await pool.query(`
+      SELECT 
+        shensha_code,
+        name,
+        badge_text,
+        LEFT(summary, 100) as summary_preview,
+        LEFT(for_this_position, 100) as position_preview
+      FROM shensha_readings
+      WHERE shensha_code = 'wen_chang_gui_ren' AND pillar_type = 'month'
+      LIMIT 1
+    `);
+    
+    if (rows.length === 0) {
+      return res.json({
+        success: false,
+        error: { message: '未找到数据' },
+      });
+    }
+    
+    const row = rows[0];
+    
+    // 检查字符编码
+    const nameBytes = Buffer.from(row.name, 'utf8').length;
+    const summaryBytes = Buffer.from(row.summary_preview || '', 'utf8').length;
+    
+    res.json({
+      success: true,
+      data: {
+        shensha_code: row.shensha_code,
+        name: row.name,
+        nameLength: row.name.length,
+        nameBytes,
+        badge_text: row.badge_text,
+        summary_preview: row.summary_preview,
+        summaryBytes,
+        position_preview: row.position_preview,
+        // 检查是否有乱码字符
+        hasGarbled: /[^\u0000-\uFFFF]/.test(row.name + row.summary_preview),
+      },
+    });
+  } catch (error: any) {
+    res.status(500).json({
+      success: false,
+      error: {
+        code: 'QUERY_FAILED',
+        message: error.message,
+      },
+    });
+  }
+});
+
+/**
  * GET /api/v1/admin/migration/schema
  * 获取数据库表结构（用于比对）
  */

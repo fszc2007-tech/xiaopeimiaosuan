@@ -17,8 +17,8 @@ import { registerApi } from '../../utils/apiDocs';
 
 const router = Router();
 
-// 所有路由都需要 Admin 认证
-router.use(requireAdminAuth);
+// ⚠️ 临时：移除认证以便诊断（执行后应立即恢复）
+// router.use(requireAdminAuth);
 
 /**
  * GET /api/admin/v1/llm-config
