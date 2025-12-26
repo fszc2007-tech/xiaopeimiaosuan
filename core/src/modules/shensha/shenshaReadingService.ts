@@ -34,6 +34,29 @@ export interface ShenshaReadingDto {
  * @param gender 性別（必填，male/female，排盤時必然有性別）
  * @returns 解读内容，如果不存在则返回 null
  */
+/**
+ * 修复可能的双重编码问题
+ * 如果数据是 UTF-8 字节被错误解释为 Latin-1，需要修复
+ */
+function fixEncoding(str: string | null | undefined): string {
+  if (!str) return '';
+  // 如果字符串长度异常（正常中文应该 <= 10），可能是双重编码
+  // 或者包含乱码字符，尝试修复
+  if (str.length > 10 || /[^\u0000-\u00FF]/.test(str)) {
+    try {
+      // 尝试修复：将 Latin-1 字节重新解释为 UTF-8
+      const fixed = Buffer.from(str, 'latin1').toString('utf8');
+      // 如果修复后包含中文，说明修复成功
+      if (/[\u4e00-\u9fa5]/.test(fixed)) {
+        return fixed;
+      }
+    } catch (e) {
+      // 修复失败，返回原值
+    }
+  }
+  return str;
+}
+
 export async function getShenshaReading(
   shenshaCode: string,
   pillarType: PillarType | undefined,
@@ -56,37 +79,37 @@ export async function getShenshaReading(
     
     if (genderRows.length > 0) {
       const row: ShenshaReadingRow = genderRows[0];
-      // #region agent log
-      const nameStr = row.name || '';
-      const summaryStr = row.summary || '';
-      const logData = {
-        location: 'shenshaReadingService.ts:59',
-        message: 'Found reading data',
-        data: {
-          shenshaCode: row.shensha_code,
-          name: nameStr,
-          nameLength: nameStr.length,
-          badgeText: row.badge_text || '',
-          summaryPreview: summaryStr.substring(0, 50),
-        },
-        timestamp: Date.now(),
-        sessionId: 'debug-session',
-        runId: 'run1',
-        hypothesisId: 'H1',
+      
+      // 修复可能的双重编码问题
+      // 如果数据是 UTF-8 字节被错误解释为 Latin-1，需要修复
+      const fixEncoding = (str: string | null | undefined): string => {
+        if (!str) return '';
+        // 检查是否包含乱码字符（UTF-8 字节被解释为 Latin-1）
+        if (/[^\u0000-\u00FF]/.test(str) || str.length > 10) {
+          // 尝试修复：将 Latin-1 字节重新解释为 UTF-8
+          try {
+            const fixed = Buffer.from(str, 'latin1').toString('utf8');
+            if (/[\u4e00-\u9fa5]/.test(fixed)) {
+              return fixed;
+            }
+          } catch (e) {
+            // 修复失败，返回原值
+          }
+        }
+        return str;
       };
-      fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(logData) }).catch(() => {});
-      // #endregion
+      
       return {
         code: row.shensha_code,
-        name: row.name,
-        badge_text: row.badge_text || '',
+        name: fixEncoding(row.name),
+        badge_text: fixEncoding(row.badge_text) || '',
         type: row.type,
-        short_title: row.short_title || '',
-        summary: row.summary,
+        short_title: fixEncoding(row.short_title) || '',
+        summary: fixEncoding(row.summary),
         bullet_points: row.bullet_points || [],
         pillar_explanation: [{
           pillar: row.pillar_type,
-          text: row.for_this_position,
+          text: fixEncoding(row.for_this_position),
         }],
         recommended_questions: row.recommended_questions || [],
       };
@@ -107,15 +130,15 @@ export async function getShenshaReading(
     const row: ShenshaReadingRow = allRows[0];
     return {
       code: row.shensha_code,
-      name: row.name,
-      badge_text: row.badge_text || '',
+      name: fixEncoding(row.name),
+      badge_text: fixEncoding(row.badge_text) || '',
       type: row.type,
-      short_title: row.short_title || '',
-      summary: row.summary,
+      short_title: fixEncoding(row.short_title) || '',
+      summary: fixEncoding(row.summary),
       bullet_points: row.bullet_points || [],
       pillar_explanation: [{
         pillar: row.pillar_type,
-        text: row.for_this_position,
+        text: fixEncoding(row.for_this_position),
       }],
       recommended_questions: row.recommended_questions || [],
     };
@@ -139,15 +162,15 @@ export async function getShenshaReading(
       const firstRow: ShenshaReadingRow = genderRows[0];
       return {
         code: firstRow.shensha_code,
-        name: firstRow.name,
-        badge_text: firstRow.badge_text || '',
+        name: fixEncoding(firstRow.name),
+        badge_text: fixEncoding(firstRow.badge_text) || '',
         type: firstRow.type,
-        short_title: firstRow.short_title || '',
-        summary: firstRow.summary,
+        short_title: fixEncoding(firstRow.short_title) || '',
+        summary: fixEncoding(firstRow.summary),
         bullet_points: firstRow.bullet_points || [],
         pillar_explanation: genderRows.map((row: ShenshaReadingRow) => ({
           pillar: row.pillar_type,
-          text: row.for_this_position,
+          text: fixEncoding(row.for_this_position),
         })),
         recommended_questions: firstRow.recommended_questions || [],
       };
@@ -174,15 +197,15 @@ export async function getShenshaReading(
     const firstRow: ShenshaReadingRow = allRows[0];
     return {
       code: firstRow.shensha_code,
-      name: firstRow.name,
-      badge_text: firstRow.badge_text || '',
+      name: fixEncoding(firstRow.name),
+      badge_text: fixEncoding(firstRow.badge_text) || '',
       type: firstRow.type,
-      short_title: firstRow.short_title || '',
-      summary: firstRow.summary,
+      short_title: fixEncoding(firstRow.short_title) || '',
+      summary: fixEncoding(firstRow.summary),
       bullet_points: firstRow.bullet_points || [],
       pillar_explanation: allRows.map((row: ShenshaReadingRow) => ({
         pillar: row.pillar_type,
-        text: row.for_this_position,
+        text: fixEncoding(row.for_this_position),
       })),
       recommended_questions: firstRow.recommended_questions || [],
     };
