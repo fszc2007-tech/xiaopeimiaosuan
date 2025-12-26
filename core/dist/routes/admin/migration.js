@@ -119,6 +119,71 @@ ALTER TABLE shensha_readings
     }
 });
 /**
+ * POST /api/v1/admin/migration/045
+ * 执行 Migration 045：修复开发和生产环境表结构差异
+ */
+router.post('/045', async (req, res) => {
+    try {
+        console.log('[Migration 045 API] 开始执行...');
+        const pool = (0, connection_1.getPool)();
+        // 直接使用 SQL 内容
+        const sql = `-- Migration 045: 修复开发和生产环境表结构差异
+ALTER TABLE conversations MODIFY COLUMN title VARCHAR(255) NULL;
+ALTER TABLE conversations MODIFY COLUMN source VARCHAR(50) NULL;
+ALTER TABLE users ADD COLUMN username VARCHAR(64) NULL UNIQUE COMMENT '用户名' AFTER updated_at;
+ALTER TABLE users ADD COLUMN password_set TINYINT(1) NOT NULL DEFAULT 0 COMMENT '是否设置密码' AFTER username;
+ALTER TABLE users ADD COLUMN invite_code VARCHAR(20) NULL COMMENT '邀请码' AFTER password_set;
+ALTER TABLE users ADD COLUMN invited_by VARCHAR(36) NULL COMMENT '邀请人ID' AFTER invite_code;
+ALTER TABLE users ADD COLUMN last_login_at DATETIME NULL COMMENT '最后登录时间' AFTER invited_by;
+ALTER TABLE users ADD COLUMN avatar_url VARCHAR(255) NULL COMMENT '头像URL' AFTER last_login_at;
+ALTER TABLE day_stem_readings MODIFY COLUMN stem VARCHAR(10) NOT NULL;`;
+        // 分割 SQL 语句
+        const statements = sql
+            .split(';')
+            .map(s => s.trim())
+            .filter(s => s.length > 0 && !s.startsWith('--'));
+        const results = [];
+        for (let i = 0; i < statements.length; i++) {
+            const statement = statements[i];
+            if (statement.length === 0)
+                continue;
+            try {
+                console.log(`[Migration 045 API] 执行语句 ${i + 1}/${statements.length}...`);
+                await pool.execute(statement);
+                results.push({ statement: i + 1, status: 'success' });
+                console.log(`[Migration 045 API] ✅ 语句 ${i + 1} 执行成功`);
+            }
+            catch (error) {
+                if (error.code === 'ER_DUP_FIELDNAME' || error.message?.includes('Duplicate')) {
+                    results.push({ statement: i + 1, status: 'skipped', reason: '字段已存在' });
+                    console.log(`[Migration 045 API] ⚠️ 语句 ${i + 1} 字段已存在，跳过`);
+                }
+                else {
+                    results.push({ statement: i + 1, status: 'error', error: error.message });
+                    console.error(`[Migration 045 API] ❌ 语句 ${i + 1} 执行失败:`, error.message);
+                    throw error;
+                }
+            }
+        }
+        console.log('[Migration 045 API] ✅ 迁移完成！');
+        res.json({
+            success: true,
+            message: 'Migration 045 执行完成',
+            results,
+        });
+    }
+    catch (error) {
+        console.error('[Migration 045 API] ❌ 迁移失败:', error);
+        res.status(500).json({
+            success: false,
+            error: {
+                code: 'MIGRATION_FAILED',
+                message: error.message || '迁移执行失败',
+            },
+        });
+    }
+});
+/**
  * POST /api/v1/admin/migration/043
  * 执行 Migration 043：添加缺失的数据库字段
  */
