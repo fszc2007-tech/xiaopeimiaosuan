@@ -11,6 +11,7 @@ import llmRoutes from './llm';
 import systemRoutes from './systemSettings';
 import feedbacksRoutes from './feedbacks';
 import membershipRoutes from './membership';
+import migrationRoutes from './migration';
 
 const router = Router();
 
@@ -21,6 +22,7 @@ router.use('/llm-config', llmRoutes);
 router.use('/system', systemRoutes);
 router.use('/feedbacks', feedbacksRoutes);
 router.use('/membership', membershipRoutes);
+router.use('/migration', migrationRoutes);
 
 export default router;
 

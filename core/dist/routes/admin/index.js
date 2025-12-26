@@ -15,6 +15,7 @@ const llm_1 = __importDefault(require("./llm"));
 const systemSettings_1 = __importDefault(require("./systemSettings"));
 const feedbacks_1 = __importDefault(require("./feedbacks"));
 const membership_1 = __importDefault(require("./membership"));
+const migration_1 = __importDefault(require("./migration"));
 const router = (0, express_1.Router)();
 // 挂载子路由
 router.use('/auth', auth_1.default);
@@ -23,5 +24,6 @@ router.use('/llm-config', llm_1.default);
 router.use('/system', systemSettings_1.default);
 router.use('/feedbacks', feedbacks_1.default);
 router.use('/membership', membership_1.default);
+router.use('/migration', migration_1.default);
 exports.default = router;
 //# sourceMappingURL=index.js.map
