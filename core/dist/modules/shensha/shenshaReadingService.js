@@ -35,7 +35,9 @@ async function getShenshaReading(shenshaCode, pillarType, gender) {
         if (genderRows.length > 0) {
             const row = genderRows[0];
             // #region agent log
-            fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ location: 'shenshaReadingService.ts:59', message: 'Found reading data', data: { shenshaCode: row.shensha_code, name: row.name, nameLength: row.name?.length || 0, nameBytes: Buffer.from(row.name || '').length, badgeText: row.badge_text || '', summaryPreview: (row.summary || '').substring(0, 50), timestamp: Date.now(), sessionId: 'debug-session', runId: 'run1', hypothesisId: 'H1' } }) }).catch(() => { });
+            const nameStr = row.name || '';
+            const summaryStr = row.summary || '';
+            fetch('http://127.0.0.1:7243/ingest/a96a12ed-318a-4e03-9333-94a90fa8074e', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ location: 'shenshaReadingService.ts:59', message: 'Found reading data', data: { shenshaCode: row.shensha_code, name: nameStr, nameLength: nameStr.length, nameBytes: Buffer.from(nameStr).length, badgeText: row.badge_text || '', summaryPreview: summaryStr.substring(0, 50), timestamp: Date.now(), sessionId: 'debug-session', runId: 'run1', hypothesisId: 'H1' } }) }).catch(() => { });
             // #endregion
             return {
                 code: row.shensha_code,
