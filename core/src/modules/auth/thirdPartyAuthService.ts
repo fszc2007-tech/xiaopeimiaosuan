@@ -194,7 +194,7 @@ export async function googleLogin(params: {
     // #region agent log
     log({location: 'thirdPartyAuthService.ts:googleLogin:beforeQuery', message: 'Querying auth_identities table', data: {provider: 'google', sub: providerUserInfo.sub}, sessionId: 'debug-session', hypothesisId: 'B,C'});
     // #endregion
-    const [identityRows] = await connection.query<any[]>(
+    const [identityRows]: any = await connection.query(
       'SELECT * FROM auth_identities WHERE provider = ? AND provider_user_id = ?',
       ['google', providerUserInfo.sub]
     );
@@ -231,7 +231,7 @@ export async function googleLogin(params: {
       }
       
       // 2.2 返回关联的用户
-      const [userRows] = await connection.query<UserRow[]>(
+      const [userRows]: any = await connection.query(
         'SELECT * FROM users WHERE user_id = ?',
         [identityRows[0].user_id]
       );

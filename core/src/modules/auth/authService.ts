@@ -147,6 +147,13 @@ export async function requestOTP(params: {
     `SELECT DATABASE() AS db, @@hostname AS host, @@server_id AS sid, @@read_only AS ro, @@time_zone AS tz, NOW() AS db_now`
   );
   
+  // 🔍 修复：使用数据库 DATE_ADD 函数生成 expires_at，确保时区一致
+  await pool.execute(
+    `INSERT INTO verification_codes (code_id, phone, code, code_type, expires_at, is_used) 
+     VALUES (?, ?, ?, 'login', DATE_ADD(NOW(), INTERVAL ? MINUTE), FALSE)`,
+    [codeId, normalizedPhone, code, ttlMinutes]
+  );
+  
   // 查询实际插入的 expires_at（用于日志）
   const [insertedRow]: any = await pool.execute(
     `SELECT expires_at FROM verification_codes WHERE code_id = ?`,
@@ -174,27 +181,6 @@ export async function requestOTP(params: {
       timeDiffMs: new Date().getTime() - new Date(r.created_at).getTime(),
     })),
   });
-  
-  // 🔍 修复：使用数据库 DATE_ADD 函数生成 expires_at，确保时区一致
-  await pool.execute(
-    `INSERT INTO verification_codes (code_id, phone, code, code_type, expires_at, is_used) 
-     VALUES (?, ?, ?, 'login', DATE_ADD(NOW(), INTERVAL ? MINUTE), FALSE)`,
-    [codeId, normalizedPhone, code, ttlMinutes]
-  );
-  
-  // 查询实际插入的 expires_at（用于日志）
-  const [insertedRow]: any = await pool.execute(
-    `SELECT expires_at FROM verification_codes WHERE code_id = ?`,
-    [codeId]
-  );
-  const actualExpiresAt = insertedRow[0]?.expires_at;
-  
-  // 更新 expiresAt 变量用于日志（从数据库查询实际值）
-  const [insertedRow]: any = await pool.execute(
-    `SELECT expires_at FROM verification_codes WHERE code_id = ?`,
-    [codeId]
-  );
-  const actualExpiresAt = insertedRow[0]?.expires_at;
   
   // 7. 调用腾讯云短信服务发送验证码
   // #region agent log
