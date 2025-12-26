@@ -376,12 +376,28 @@ router.post('/:conversationId/messages', createRateLimitMiddleware('chat'), asyn
       conversationId = uuidv4();
       const title = message.substring(0, 50) + (message.length > 50 ? '...' : '');
       
-      await pool.query(
-        `INSERT INTO conversations 
-        (conversation_id, user_id, chart_profile_id, topic, source, first_question, title, created_at, updated_at, last_message_at) 
-        VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW(), NOW())`,
-        [conversationId, userId, chartId, topic || null, source || null, message, title]
-      );
+      // 🔍 修复：检查 source 字段是否存在，如果不存在则只插入存在的字段
+      try {
+        await pool.query(
+          `INSERT INTO conversations 
+          (conversation_id, user_id, chart_profile_id, topic, source, first_question, title, created_at, updated_at, last_message_at) 
+          VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW(), NOW())`,
+          [conversationId, userId, chartId, topic || null, source || null, message, title]
+        );
+      } catch (error: any) {
+        // 如果 source 字段不存在，降级为不插入 source
+        if (error.code === 'ER_BAD_FIELD_ERROR' && error.message?.includes('source')) {
+          console.warn('[Conversation] source field not found, inserting without source');
+          await pool.query(
+            `INSERT INTO conversations 
+            (conversation_id, user_id, chart_profile_id, topic, first_question, title, created_at, updated_at, last_message_at) 
+            VALUES (?, ?, ?, ?, ?, ?, NOW(), NOW(), NOW())`,
+            [conversationId, userId, chartId, topic || null, message, title]
+          );
+        } else {
+          throw error;
+        }
+      }
     } else {
       // 验证对话是否存在且属于当前用户
       const [convRows] = await pool.query<any[]>(

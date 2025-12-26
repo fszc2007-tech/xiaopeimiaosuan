@@ -154,10 +154,32 @@ export async function subscribe(
  */
 export async function getProStatus(userId: string): Promise<ProStatusDto> {
   const pool = getPool();
-  const [rows]: any = await pool.execute(
-    'SELECT is_pro, pro_expires_at, pro_plan FROM users WHERE user_id = ?',
-    [userId]
-  );
+  // 🔍 修复：检查字段是否存在，如果不存在则只查询 is_pro
+  let rows: any[];
+  try {
+    const result: any = await pool.execute(
+      'SELECT is_pro, pro_expires_at, pro_plan FROM users WHERE user_id = ?',
+      [userId]
+    );
+    rows = result[0];
+  } catch (error: any) {
+    // 如果字段不存在，只查询 is_pro
+    if (error.code === 'ER_BAD_FIELD_ERROR' && error.message?.includes('pro_expires_at')) {
+      console.warn('[ProService] pro_expires_at field not found, querying is_pro only');
+      const result: any = await pool.execute(
+        'SELECT is_pro FROM users WHERE user_id = ?',
+        [userId]
+      );
+      rows = result[0];
+      // 设置默认值
+      if (rows.length > 0) {
+        rows[0].pro_expires_at = null;
+        rows[0].pro_plan = null;
+      }
+    } else {
+      throw error;
+    }
+  }
 
   if (rows.length === 0) {
     throw new Error('USER_NOT_FOUND');
