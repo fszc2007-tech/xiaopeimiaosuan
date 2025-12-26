@@ -45,10 +45,32 @@ export function createRateLimitMiddleware(apiType: ApiType) {
 
       // 3. 查询用户信息（包括 Pro 状态）
       const pool = getPool();
-      const [userRows]: any = await pool.query(
-        'SELECT is_pro, pro_expires_at, pro_plan FROM users WHERE user_id = ?',
-        [userId]
-      );
+      // 🔍 修复：检查字段是否存在，如果不存在则只查询 is_pro
+      let userRows: any[];
+      try {
+        const result: any = await pool.query(
+          'SELECT is_pro, pro_expires_at, pro_plan FROM users WHERE user_id = ?',
+          [userId]
+        );
+        userRows = result[0];
+      } catch (error: any) {
+        // 如果字段不存在，只查询 is_pro
+        if (error.code === 'ER_BAD_FIELD_ERROR' && error.message?.includes('pro_expires_at')) {
+          console.warn('[RateLimit] pro_expires_at field not found, querying is_pro only');
+          const result: any = await pool.query(
+            'SELECT is_pro FROM users WHERE user_id = ?',
+            [userId]
+          );
+          userRows = result[0];
+          // 设置默认值
+          if (userRows.length > 0) {
+            userRows[0].pro_expires_at = null;
+            userRows[0].pro_plan = null;
+          }
+        } else {
+          throw error;
+        }
+      }
 
       if (userRows.length === 0) {
         res.status(404).json({
@@ -155,10 +177,31 @@ export async function getRateLimitStatus(
   const pool = getPool();
 
   // 1. 检查 Pro 状态
-  const [userRows]: any = await pool.query(
-    'SELECT is_pro, pro_expires_at, pro_plan FROM users WHERE user_id = ?',
-    [userId]
-  );
+  let userRows: any[];
+  try {
+    const result: any = await pool.query(
+      'SELECT is_pro, pro_expires_at, pro_plan FROM users WHERE user_id = ?',
+      [userId]
+    );
+    userRows = result[0];
+  } catch (error: any) {
+    // 如果字段不存在，只查询 is_pro
+    if (error.code === 'ER_BAD_FIELD_ERROR' && error.message?.includes('pro_expires_at')) {
+      console.warn('[RateLimit] pro_expires_at field not found, querying is_pro only');
+      const result: any = await pool.query(
+        'SELECT is_pro FROM users WHERE user_id = ?',
+        [userId]
+      );
+      userRows = result[0];
+      // 设置默认值
+      if (userRows.length > 0) {
+        userRows[0].pro_expires_at = null;
+        userRows[0].pro_plan = null;
+      }
+    } else {
+      throw error;
+    }
+  }
 
   if (userRows.length === 0) {
     throw new Error('USER_NOT_FOUND');
