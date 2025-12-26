@@ -1,0 +1,4146 @@
+[
+  {
+    "reading_id": "b99ddcf4-0fc7-490f-852f-6b4fe63a22a6",
+    "shensha_code": "ba_zhuan",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "八專",
+    "badge_text": "執著",
+    "type": "neutral",
+    "short_title": "祖业丰厚",
+    "summary": "代表坐拥财禄、情欲旺盛、意志不坚。为淫欲煞，吉则享现成之福，凶则沉迷酒色。",
+    "bullet_points": [
+      "祖业丰厚，能得遗产",
+      "但自身早年易沉溺于享受，不思进取"
+    ],
+    "for_this_position": "年柱見八專，多主原生家庭某些觀念或生活方式相對極端或強烈，命主自小就感受到「非黑即白」的氣息。長大後一旦認定某個信念或目標，往往難以輕易動搖。若能把這股執著用在正向方向，可成為專家型人物。",
+    "recommended_questions": [
+      "八专對我的影響是什麼？",
+      "年柱的八专會如何影響我？",
+      "我該如何善用八专？",
+      "八专需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "b815cb0d-2ed2-4cf6-9cef-6f348eb5d5d5",
+    "shensha_code": "ba_zhuan",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "八專",
+    "badge_text": "執著",
+    "type": "neutral",
+    "short_title": "青中年时期精力旺盛",
+    "summary": "代表坐拥财禄、情欲旺盛、意志不坚。为淫欲煞，吉则享现成之福，凶则沉迷酒色。",
+    "bullet_points": [
+      "青中年时期精力旺盛，但易将精力用于不当之处，需防桃花劫"
+    ],
+    "for_this_position": "八專落月柱，象徵在職場與日常生活中，命主做事風格偏一條路走到底，不喜三心二意。對專業要求極高，易成為完美主義者。適合從事需要高度專精與堅持的行業，但要留心對自己與他人要求過頭，造成壓力與人際緊張。",
+    "recommended_questions": [
+      "八专對我的影響是什麼？",
+      "月柱的八专會如何影響我？",
+      "我該如何善用八专？",
+      "八专需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "c1a2d22d-de70-4172-8aaf-5faa6917ac8f",
+    "shensha_code": "ba_zhuan",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "八專",
+    "badge_text": "執著",
+    "type": "neutral",
+    "short_title": "自身情欲强",
+    "summary": "代表坐拥财禄、情欲旺盛、意志不坚。为淫欲煞，吉则享现成之福，凶则沉迷酒色。",
+    "bullet_points": [
+      "自身情欲强，配偶体格丰盈",
+      "婚姻中需防因情欲问题导致不和"
+    ],
+    "for_this_position": "日柱見八專，多主在感情與人生選擇上，一旦認定就難以回頭。對伴侶極度專一，但若遇人不淑，容易在關係中投入過多而難以抽身。學會在愛與自愛之間找到平衡，不把所有人生押在一段感情上，是這顆星的重要功課。",
+    "recommended_questions": [
+      "八专對我的影響是什麼？",
+      "日柱的八专會如何影響我？",
+      "我該如何善用八专？",
+      "八专需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "dc9590f2-5f09-4df0-a8a5-59e397b82bc2",
+    "shensha_code": "ba_zhuan",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "八專",
+    "badge_text": "執著",
+    "type": "neutral",
+    "short_title": "晚年仍不乏桃花",
+    "summary": "代表坐拥财禄、情欲旺盛、意志不坚。为淫欲煞，吉则享现成之福，凶则沉迷酒色。",
+    "bullet_points": [
+      "晚年仍不乏桃花，但需注意身体健康，防止过度消耗"
+    ],
+    "for_this_position": "八專坐時柱，多與中晚年人生方向與子女發展相關。晚年可能仍深陷某一領域或興趣中，很難完全放下工作模式。子女或晚輩中，也有人在興趣或職涯上非常極致。若能在執著之外多一點彈性，晚景會更自在舒坦。",
+    "recommended_questions": [
+      "八专對我的影響是什麼？",
+      "时柱的八专會如何影響我？",
+      "我該如何善用八专？",
+      "八专需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8391a432-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "bai_hu",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "白虎",
+    "badge_text": "血光",
+    "type": "inauspicious",
+    "short_title": "家族波折，風險敏感",
+    "summary": "白虎為四柱神煞中的凶煞，主意外傷害、血光、手術、官非、刑責、驚嚇。",
+    "bullet_points": [
+      "原生家庭或家族層面曾經歷較多波折與驚險",
+      "長輩有意外傷災、官非糾紛",
+      "對「風險」和「安全感」特別敏感"
+    ],
+    "for_this_position": "年柱見白虎，多主原生家庭或家族層面曾經歷較多波折與驚險，例如長輩有意外傷災、官非糾紛、行業本身帶風險（軍警、工程、醫護、駕駛等）。命主自小耳濡目染，對「風險」和「安全感」特別敏感，有時也會帶著對災禍的隱性焦慮。若行運再逢凶星，宜特別留意家族層面的健康、車關與法律文書；若有吉星扶持，則多為在動盪環境中鍛鍊抗壓與生存能力。",
+    "recommended_questions": [
+      "白虎對我的影響是什麼？",
+      "年柱的白虎會如何影響我？",
+      "我該如何防範血光之災？",
+      "白虎需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8391fcd4-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "bai_hu",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "白虎",
+    "badge_text": "血光",
+    "type": "inauspicious",
+    "short_title": "職場風險，危機處理",
+    "summary": "白虎為四柱神煞中的凶煞，主意外傷害、血光、手術、官非、刑責、驚嚇。",
+    "bullet_points": [
+      "在成長過程與職場環境中，多身處壓力與變化較大的場域",
+      "工作性質容易牽涉風險、責任與生死攸關",
+      "適合養成「安全意識＋合規思維」"
+    ],
+    "for_this_position": "白虎落月柱，象徵命主在成長過程與職場環境中，多身處壓力與變化較大的場域。工作性質容易牽涉風險、責任與生死攸關，如醫護、軍警、消防、工程、金融風控等；或常要面對投訴、責任追究、突發狀況。用得好，能培養臨危不亂、處理危機的專業能力；用不好，則容易因粗心、逞強或違規而惹禍。特別適合養成「安全意識＋合規思維」，把白虎變成「危機處理專家」而不是「出事的人」。",
+    "recommended_questions": [
+      "白虎對我的職場有何影響？",
+      "月柱的白虎如何影響工作？",
+      "我適合什麼工作？",
+      "如何避免職場意外？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8392202e-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "bai_hu",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "白虎",
+    "badge_text": "血光",
+    "type": "inauspicious",
+    "short_title": "個人安全，情緒管理",
+    "summary": "白虎為四柱神煞中的凶煞，主意外傷害、血光、手術、官非、刑責、驚嚇。",
+    "bullet_points": [
+      "在生活與感情婚姻中，需要特別重視安全、健康與情緒管理",
+      "個性上可能偏直接、行動力強",
+      "容易小傷小痛不在意，累積成大問題"
+    ],
+    "for_this_position": "日柱見白虎，主命主本人在生活與感情婚姻中，需要特別重視安全、健康與情緒管理。個性上可能偏直接、行動力強，有時對危險的評估略顯樂觀，容易小傷小痛不在意，累積成大問題。感情與家庭中，則宜避免衝動言行，把矛盾升級為法律或暴力層面的衝突。若命局中有官星、印星配合，反而適合在需要處理風險、執法或救援的領域發揮長處，以「替別人擋災」的方式化煞為用。",
+    "recommended_questions": [
+      "白虎對我的感情有何影響？",
+      "日柱的白虎如何影響婚姻？",
+      "我該如何防範意外？",
+      "如何化煞為用？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "83924112-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "bai_hu",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "白虎",
+    "badge_text": "血光",
+    "type": "inauspicious",
+    "short_title": "晚年安全，提早規劃",
+    "summary": "白虎為四柱神煞中的凶煞，主意外傷害、血光、手術、官非、刑責、驚嚇。",
+    "bullet_points": [
+      "後半生在健康與安全層面要格外留心",
+      "子女或晚輩可能從事帶風險或高壓的行業",
+      "及早為自己與家人做好保險、醫療、法律與財務規劃"
+    ],
+    "for_this_position": "白虎坐時柱，多應在中晚年運勢以及子女相關事務上。命主後半生在健康與安全層面要格外留心，如車禍、跌倒、開刀手術等，事前做好檢查與預防往往能把大事化小。子女或晚輩可能從事帶風險或高壓的行業，或性格較衝，容易捲入突發事件；命主既擔心又難以完全干涉。及早為自己與家人做好保險、醫療、法律與財務規劃，能讓白虎從「未知風險」變成「可控風險」，將凶勢降到最低。",
+    "recommended_questions": [
+      "白虎對我的晚年有何影響？",
+      "時柱的白虎如何影響子女？",
+      "我的晚年運勢如何？",
+      "如何做好安全規劃？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "f66cec50-ac7d-4e6a-a908-6de48a42be7a",
+    "shensha_code": "ci_guan",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "詞館",
+    "badge_text": "口才",
+    "type": "auspicious",
+    "short_title": "天生文采斐然",
+    "summary": "代表文章出众、学业有成、口才佳。是文昌贵人的一种强化，主在学术、文书方面有极高造诣。",
+    "bullet_points": [
+      "天生文采斐然，出口成章",
+      "家族有深厚的文化底蕴"
+    ],
+    "for_this_position": "年柱見詞館，多主自小家中有人善言談、喜辯論或常談時事，命主耳濡目染，對語言有興趣。童年可能就展現出話多、反應快、愛問問題的一面。若能好好引導，將口才用在演說、主持、教學或談判，是很好的資源。",
+    "recommended_questions": [
+      "词馆對我的影響是什麼？",
+      "年柱的词馆會如何影響我？",
+      "我該如何善用词馆？",
+      "词馆需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "3ad2be23-e831-47c2-86f0-dba01948853d",
+    "shensha_code": "ci_guan",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "詞館",
+    "badge_text": "口才",
+    "type": "auspicious",
+    "short_title": "学业极佳",
+    "summary": "代表文章出众、学业有成、口才佳。是文昌贵人的一种强化，主在学术、文书方面有极高造诣。",
+    "bullet_points": [
+      "学业极佳，尤其在文科方面，易成为学霸，在考试中名列前茅"
+    ],
+    "for_this_position": "詞館落月柱，象徵在職場與人際中，命主溝通能力突出，擅長談判、簡報、主持會議或寫作。適合從事公關、媒體、法律、銷售、顧問、教育、談判相關工作。要注意言語的分寸與誠信，避免因一時犀利或誇張而傷害信任。",
+    "recommended_questions": [
+      "词馆對我的影響是什麼？",
+      "月柱的词馆會如何影響我？",
+      "我該如何善用词馆？",
+      "词馆需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "dd8c0e58-65a3-489f-b1e1-6061f176513a",
+    "shensha_code": "ci_guan",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "詞館",
+    "badge_text": "口才",
+    "type": "auspicious",
+    "short_title": "自身适合从事文学、教育、研究等工作",
+    "summary": "代表文章出众、学业有成、口才佳。是文昌贵人的一种强化，主在学术、文书方面有极高造诣。",
+    "bullet_points": [
+      "自身适合从事文学、教育、研究等工作，能以文采立身"
+    ],
+    "for_this_position": "日柱見詞館，多主在感情與家庭中善於用言語影響氣氛，有時一張嘴能把冷場救活，也能用幽默化解衝突。但若情緒激動，言詞也容易變成利刃。學會在親密關係中用溫柔表達，而非只講道理，可以讓這顆星變成甜蜜加分項。",
+    "recommended_questions": [
+      "词馆對我的影響是什麼？",
+      "日柱的词馆會如何影響我？",
+      "我該如何善用词馆？",
+      "词馆需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "a389011f-898e-43c0-9d2a-f1d2f8044c42",
+    "shensha_code": "ci_guan",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "詞館",
+    "badge_text": "口才",
+    "type": "auspicious",
+    "short_title": "晚年仍能著书立说",
+    "summary": "代表文章出众、学业有成、口才佳。是文昌贵人的一种强化，主在学术、文书方面有极高造诣。",
+    "bullet_points": [
+      "晚年仍能著书立说，或教授学问",
+      "子女在学业上能有杰出表现"
+    ],
+    "for_this_position": "詞館坐時柱，多庇蔭中晚年在分享、演講、寫作與傳承經驗上發光。晚年可能開啟教學、寫書、開講座或與晚輩聊天說故事的模式。子女或晚輩中，也有人口才好、善表達。此星讓晚景不僅有生活，還有故事與影響力。",
+    "recommended_questions": [
+      "词馆對我的影響是什麼？",
+      "时柱的词馆會如何影響我？",
+      "我該如何善用词馆？",
+      "词馆需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b823550-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "de_xiu_gui_ren",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "德秀貴人",
+    "badge_text": "才華",
+    "type": "auspicious",
+    "short_title": "出身有文化，氣質斯文",
+    "summary": "主才華、品味與氣質，代表文化修養與審美能力，利於文化藝術領域發展。",
+    "bullet_points": [
+      "出身有文化底蘊",
+      "幼年接觸人文藝術",
+      "重名聲與氣質不喜粗俗"
+    ],
+    "for_this_position": "年柱見德秀貴人，多主出身環境較有文化底蘊，家中長輩重視教育與品行，言談舉止不失禮數。幼年便易接觸書畫、音樂或人文氣息濃厚的場域，耳濡目染之下，性格帶幾分斯文與清高。此配置往往讓命主較重名聲與氣質，不喜粗俗之事，人生早期便懂自我要求。若行運相扶，易因家世口碑與自身氣質，而在求學或職場初期獲得優待與機會。",
+    "recommended_questions": [
+      "德秀貴人對我的影響是什麼？",
+      "年柱的德秀貴人會如何影響我？",
+      "我該如何發揮文化才華？",
+      "德秀貴人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b824ef0-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "de_xiu_gui_ren",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "德秀貴人",
+    "badge_text": "才華",
+    "type": "auspicious",
+    "short_title": "思路細膩，以才華取勝",
+    "summary": "主才華、品味與氣質，代表文化修養與審美能力，利於文化藝術領域發展。",
+    "bullet_points": [
+      "利於學業工作人際",
+      "思路細膩審美良好",
+      "適合文化藝術相關行業"
+    ],
+    "for_this_position": "德秀貴人落月柱，格外利於學業、工作與人際氛圍，常遇懂欣賞自己才華的師長或上司。此人多思路細膩、審美良好，做事講究品質與品味，在團隊中容易成為「氣質代表」或形象窗口。職場上若從事設計、文字、教育、文化藝術相關行業，更能發揮優勢。雖未必大富大貴，但往往能在自己擅長的領域中建立口碑，以專業與風格取勝。",
+    "recommended_questions": [
+      "德秀貴人對我的事業有何幫助？",
+      "月柱的德秀貴人如何影響工作？",
+      "我適合什麼行業？",
+      "如何建立專業口碑？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b826d86-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "de_xiu_gui_ren",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "德秀貴人",
+    "badge_text": "才華",
+    "type": "auspicious",
+    "short_title": "內心細膩，婚姻重格調",
+    "summary": "主才華、品味與氣質，代表文化修養與審美能力，利於文化藝術領域發展。",
+    "bullet_points": [
+      "內心細膩有品味",
+      "重精神契合與生活質感",
+      "婚姻看重交流與格調"
+    ],
+    "for_this_position": "日柱主自身與婚姻，德秀貴人臨此，多主命主內心細膩、有自我審美標準，重生活質感，也重精神層面的契合。待人處事偏溫和理性，表面不張揚，骨子裡卻有自己的堅持與品味。感情上較難委屈自己迎合粗鄙之人，容易被有修養、有才華的對象吸引，婚姻關係也較看重交流與格調。只要不過度挑剔，往往能收穫既講感情又講品味的伴侶。",
+    "recommended_questions": [
+      "德秀貴人對我的感情有何影響？",
+      "日柱的德秀貴人如何影響婚姻？",
+      "我會吸引什麼樣的伴侶？",
+      "如何平衡品味與感情？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b827d26-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "de_xiu_gui_ren",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "德秀貴人",
+    "badge_text": "才華",
+    "type": "auspicious",
+    "short_title": "晚年重修養，生活有層次",
+    "summary": "主才華、品味與氣質，代表文化修養與審美能力，利於文化藝術領域發展。",
+    "bullet_points": [
+      "庇蔭晚年與子女",
+      "晚年重精神興趣不甘平庸",
+      "子女具才華眼光有共同話題"
+    ],
+    "for_this_position": "德秀貴人坐時柱，多庇蔭晚年與子女緣，往往晚景重精神與興趣，不甘只為柴米奔波。中晚年有機會重新拾起學習、藝術、寫作或興趣副業，讓生活更有層次。子女或部屬多具才華或審美眼光，與自己有共同話題，願意在精神上互相支持。此配置也象徵，人越到後期越講究內在修養與生活品味，晚運雖未必極富，但多有氣質、有樂子，不致枯燥。",
+    "recommended_questions": [
+      "德秀貴人對我的晚年有何影響？",
+      "時柱的德秀貴人如何影響子女？",
+      "我的晚年生活如何？",
+      "如何培養興趣副業？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "64892ecd-1895-46aa-a8ac-14dcc84ec100",
+    "shensha_code": "diao_ke",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "吊客",
+    "badge_text": "關懷",
+    "type": "inauspicious",
+    "short_title": "早年易有远房亲戚或父母的朋辈去世",
+    "summary": "与丧门类似，主远亲、朋友的丧事，或需前往吊唁的悲伤事件。",
+    "bullet_points": [
+      "早年易有远房亲戚或父母的朋辈去世，需参加丧礼"
+    ],
+    "for_this_position": "年柱見吊客，多主成長過程中見證過他人辛苦或家庭波折，命主因此更懂得體諒別人的不易。雖然難免有沉重記憶，但也讓你比同齡人更有同理心。若能把這份感受力運用在助人工作、陪伴或服務領域，反而成為一種溫柔的力量。",
+    "recommended_questions": [
+      "吊客對我的影響是什麼？",
+      "年柱的吊客會如何影響我？",
+      "我該如何善用吊客？",
+      "吊客需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "433e2153-1f7d-45a2-bbc4-21dec38afe5e",
+    "shensha_code": "diao_ke",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "吊客",
+    "badge_text": "關懷",
+    "type": "inauspicious",
+    "short_title": "同辈朋友、同事中易有不幸消息传来",
+    "summary": "与丧门类似，主远亲、朋友的丧事，或需前往吊唁的悲伤事件。",
+    "bullet_points": [
+      "同辈朋友、同事中易有不幸消息传来，带来悲伤情绪"
+    ],
+    "for_this_position": "吊客落月柱，象徵在職場與人際場域中，命主常成為傾訴對象，別人願意向你吐露煩惱與痛苦。自己也較容易被他人故事觸動。適合從事服務業、醫護、心理、社工、命理、諮商等需要陪伴他人的工作。要注意照顧自己情緒，避免長期替別人承擔過多。",
+    "recommended_questions": [
+      "吊客對我的影響是什麼？",
+      "月柱的吊客會如何影響我？",
+      "我該如何善用吊客？",
+      "吊客需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "e1d58981-e410-4a4e-b013-ad6dc2edea24",
+    "shensha_code": "diao_ke",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "吊客",
+    "badge_text": "關懷",
+    "type": "inauspicious",
+    "short_title": "自身的社交圈中易有丧事",
+    "summary": "与丧门类似，主远亲、朋友的丧事，或需前往吊唁的悲伤事件。",
+    "bullet_points": [
+      "自身的社交圈中易有丧事，或配偶的亲友有亡故之事"
+    ],
+    "for_this_position": "日柱見吊客，多主在感情與家庭關係中，會特別在意對方的傷痕與過往。容易吸引曾受傷、需要被理解的對象，也願意為伴侶分憂。這顆星提醒你在陪伴他人的同時，也要懂得保護自己界線，別讓「拯救」變成壓力與束縛。",
+    "recommended_questions": [
+      "吊客對我的影響是什麼？",
+      "日柱的吊客會如何影響我？",
+      "我該如何善用吊客？",
+      "吊客需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "6a001682-f793-4dda-804a-09e233169ecb",
+    "shensha_code": "diao_ke",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "吊客",
+    "badge_text": "關懷",
+    "type": "inauspicious",
+    "short_title": "晚年易闻听朋友、旧识的噩耗",
+    "summary": "与丧门类似，主远亲、朋友的丧事，或需前往吊唁的悲伤事件。",
+    "bullet_points": [
+      "晚年易闻听朋友、旧识的噩耗，倍感世事无常"
+    ],
+    "for_this_position": "吊客坐時柱，多與中晚年參與探病、送別、陪伴親友度過難關有關。你或許會成為家族、朋友圈中那個穩定、願意在困境時出現的人。這是一種功德，但也需要安排好自己的生活平衡，學會在給予與照顧中找到出口與修復管道。",
+    "recommended_questions": [
+      "吊客對我的影響是什麼？",
+      "时柱的吊客會如何影響我？",
+      "我該如何善用吊客？",
+      "吊客需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "7e8b4c04-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "fu_xing_gui_ren",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "福星贵人",
+    "badge_text": "福氣",
+    "type": "auspicious",
+    "short_title": "祖蔭庇護，長輩照拂",
+    "summary": "福星貴人為四柱神煞中的吉神，主福氣、貴人相助與順遂。",
+    "bullet_points": [
+      "多得長輩庇蔭，早年有福",
+      "家人願意付出資源與時間",
+      "容易遇到賞識自己的師長或前輩"
+    ],
+    "for_this_position": "年柱見福星貴人，多主出身環境尚有福澤，長輩願意承擔與照顧，關鍵時刻不致全然無助。家人雖未必大富大貴，但多肯為命主付出資源與時間。命主早年較容易遇到賞識自己的師長或前輩，讀書、求學、出社會時常有人指路牽線。若能保持謙遜與感恩，這份祖蔭與長輩緣會在後運持續發酵。",
+    "recommended_questions": [
+      "福星貴人對我的影響是什麼？",
+      "年柱的福星貴人會如何影響我？",
+      "我該如何善用福星貴人？",
+      "福星貴人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "7e8bc7f6-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "fu_xing_gui_ren",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "福星贵人",
+    "badge_text": "福氣",
+    "type": "auspicious",
+    "short_title": "職場順遂，貴人扶持",
+    "summary": "福星貴人為四柱神煞中的吉神，主福氣、貴人相助與順遂。",
+    "bullet_points": [
+      "生活比較順遂自在",
+      "人際、工作環境多有照應",
+      "容易遇到願意扶持的同儕、上司或前輩"
+    ],
+    "for_this_position": "福星落月柱，象徵在成長環境與工作職場中，容易遇到願意扶持的同儕、上司或前輩。命主在團隊裡多半不會被刻意排擠，遇到制度變動或部門調整時，也較有機會被留在相對穩當的位置。做事態度若能穩重可靠，貴人更願意為其說話、推薦資源。學會適度表達感謝與配合，他人會更樂於成為命主的助力而非過客。",
+    "recommended_questions": [
+      "福星貴人對我的職場有何幫助？",
+      "月柱的福星貴人如何影響人際？",
+      "我適合什麼工作？",
+      "福星貴人的貴人何時出現？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "7e8bef74-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "fu_xing_gui_ren",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "福星贵人",
+    "badge_text": "福氣",
+    "type": "auspicious",
+    "short_title": "本人福氣，婚姻和諧",
+    "summary": "福星貴人為四柱神煞中的吉神，主福氣、貴人相助與順遂。",
+    "bullet_points": [
+      "本人帶福氣，遇事常有轉機",
+      "性格溫厚親和，容易讓人願意幫忙",
+      "較易遇到能扶持自己的伴侶"
+    ],
+    "for_this_position": "日柱見福星貴人，多主本人帶福氣，遇事常有轉機，不容易陷入絕境。性格多半不算尖刻，與人相處帶幾分溫厚或親和，容易讓人願意幫忙。於感情與婚姻而言，較易遇到在物質或精神上能扶持自己的伴侶，關鍵時刻願意站在自己這一邊。若能主動培養信任與溝通，不僅能減少情感中的孤立感，也能讓這顆吉星的庇佑更加穩固。",
+    "recommended_questions": [
+      "福星貴人對我的感情有何影響？",
+      "日柱的福星貴人如何影響婚姻？",
+      "我的伴侶會是什麼樣的人？",
+      "如何經營好婚姻關係？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "7e8c27dc-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "fu_xing_gui_ren",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "福星贵人",
+    "badge_text": "福氣",
+    "type": "auspicious",
+    "short_title": "晚年福厚，子女孝順",
+    "summary": "福星貴人為四柱神煞中的吉神，主福氣、貴人相助與順遂。",
+    "bullet_points": [
+      "中晚年運勢與子女、後輩緣分相關",
+      "子女或晚輩多有善心或能力",
+      "中晚年仍有機會遇到新的貴人或發展機會"
+    ],
+    "for_this_position": "福星坐時柱，多與中晚年運勢與子女、後輩緣分相關。命主在人生下半場仍有機會遇到新的貴人或發展機會，不至於「少年得志、晚景清冷」。子女或晚輩多有善心或能力，雖各有生活節奏，但在命主需要時常願意伸出援手。若能在平日主動維繫親情與人脈，中晚年不僅物質生活較安穩，精神上也較能感受到陪伴與支持。",
+    "recommended_questions": [
+      "福星貴人對我的晚年有何影響？",
+      "時柱的福星貴人如何影響子女？",
+      "我的晚年運勢如何？",
+      "如何維繫晚年人脈？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "11271f54-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gu_chen",
+    "pillar_type": "year",
+    "gender": "male",
+    "name": "孤辰",
+    "badge_text": "獨立",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "年柱孤辰，自小比較封閉、不愛表達",
+    "bullet_points": null,
+    "for_this_position": "男命年柱孤辰，自小比較封閉、不愛表達，很多事放在心裡。青春期前後容易感到孤單，但也因此培養出強烈的自我世界。長大後寧願少朋友也不願流於表面社交。需要能理解他沈默的伴侶。",
+    "recommended_questions": [
+      "我為何不喜歡社交？",
+      "什麼樣的人適合我？",
+      "如何找到理解我的人？"
+    ],
+    "is_active": 1,
+    "sort_order": 1
+  },
+  {
+    "reading_id": "1126e700-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gu_chen",
+    "pillar_type": "year",
+    "gender": "female",
+    "name": "孤辰",
+    "badge_text": "獨立",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "年柱孤辰，自小內向敏感",
+    "bullet_points": null,
+    "for_this_position": "女命年柱孤辰，自小內向敏感，較難完全融入團體。性格安靜、觀察力強，但內心常覺得被誤解。長大後喜歡獨處、自己恢復能量。適合給她足夠空間的伴侶。若被逼社交，反而情緒更疲倦。",
+    "recommended_questions": [
+      "我為何不喜歡社交？",
+      "什麼樣的人適合我？",
+      "如何找到理解我的人？"
+    ],
+    "is_active": 1,
+    "sort_order": 1
+  },
+  {
+    "reading_id": "112740c4-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gu_chen",
+    "pillar_type": "month",
+    "gender": "male",
+    "name": "孤辰",
+    "badge_text": "獨立",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "月柱孤辰，工作上不喜攀附",
+    "bullet_points": null,
+    "for_this_position": "男命月柱孤辰，工作上不喜攀附，偏向自己解決問題。在人際上冷熱分明，對喜歡的人特別真誠。戀愛中慢熱，需要時間建立信任。要注意避免因過度沉默造成誤會。適合理性成熟型伴侶。",
+    "recommended_questions": [
+      "我的人緣為何不旺？",
+      "如何打開心房？",
+      "適合我的對象是什麼類型？"
+    ],
+    "is_active": 1,
+    "sort_order": 2
+  },
+  {
+    "reading_id": "1126f6a0-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gu_chen",
+    "pillar_type": "month",
+    "gender": "female",
+    "name": "孤辰",
+    "badge_text": "獨立",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "月柱孤辰，職場保持適度距離感",
+    "bullet_points": null,
+    "for_this_position": "女命月柱孤辰，職場與生活中保持適度距離感，不喜過度熱鬧。人際上雖不多言，但講話有分量。戀愛時慢熱，需要時間建立信任。需避免因保護自己而拒絕所有可能的連結。適合溫柔耐心型伴侶。",
+    "recommended_questions": [
+      "我的人緣為何不旺？",
+      "如何打開心房？",
+      "適合我的對象是什麼類型？"
+    ],
+    "is_active": 1,
+    "sort_order": 2
+  },
+  {
+    "reading_id": "11274376-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gu_chen",
+    "pillar_type": "day",
+    "gender": "male",
+    "name": "孤辰",
+    "badge_text": "獨立",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "日柱孤辰，感情內斂，深情但不擅言語",
+    "bullet_points": null,
+    "for_this_position": "日柱孤辰的男性，感情內斂，深情但不擅言語。他愛你不一定說，但會做。他需要的是理解與陪伴，而不是逼問。婚後若能保留部分個人空間，他會越來越安全依附，感情越來越深。",
+    "recommended_questions": [
+      "我的婚姻運如何？",
+      "為何感情總是慢熱？",
+      "如何讓另一半理解我？"
+    ],
+    "is_active": 1,
+    "sort_order": 3
+  },
+  {
+    "reading_id": "1126f952-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gu_chen",
+    "pillar_type": "day",
+    "gender": "female",
+    "name": "孤辰",
+    "badge_text": "獨立",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "日柱孤辰，感情世界深但封閉",
+    "bullet_points": null,
+    "for_this_position": "日柱孤辰的女性，感情世界深但封閉，不輕易交心。婚後也需要個人空間，若伴侶過度依賴，她會感到窒息。她不是不愛，只是愛得細水長流。找到能理解她沉默與節奏的人，比什麼都重要。",
+    "recommended_questions": [
+      "我的婚姻運如何？",
+      "為何感情總是慢熱？",
+      "如何讓另一半理解我？"
+    ],
+    "is_active": 1,
+    "sort_order": 3
+  },
+  {
+    "reading_id": "112745f6-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gu_chen",
+    "pillar_type": "hour",
+    "gender": "male",
+    "name": "孤辰",
+    "badge_text": "獨立",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "時柱孤辰，晚年重心靈自由",
+    "bullet_points": null,
+    "for_this_position": "男命時柱孤辰，晚年重心靈自由，不喜被干擾。子女各自獨立，他也不願增加孩子負擔。與其熱鬧，他更偏愛安靜、有節奏的生活。這顆星象徵後半生更重質量而非人多。",
+    "recommended_questions": [
+      "我的晚年會孤單嗎？",
+      "子女會陪在身邊嗎？",
+      "如何安排晚年生活？"
+    ],
+    "is_active": 1,
+    "sort_order": 4
+  },
+  {
+    "reading_id": "1126fbfa-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gu_chen",
+    "pillar_type": "hour",
+    "gender": "female",
+    "name": "孤辰",
+    "badge_text": "獨立",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "時柱孤辰，晚年喜安靜生活",
+    "bullet_points": null,
+    "for_this_position": "女命時柱孤辰，晚年喜安靜生活，偏向精神與心靈追求，不喜吵雜。子女或晚輩可能走獨立路線，各有軌道。只要彼此保持連結，這顆星代表的是自由與內在豐富，不是孤苦。",
+    "recommended_questions": [
+      "我的晚年會孤單嗎？",
+      "子女會陪在身邊嗎？",
+      "如何安排晚年生活？"
+    ],
+    "is_active": 1,
+    "sort_order": 4
+  },
+  {
+    "reading_id": "838c7dd6-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "gu_luan_sha",
+    "pillar_type": "day",
+    "gender": "male",
+    "name": "孤鸞煞",
+    "badge_text": "孤緣",
+    "type": "neutral",
+    "short_title": "情感自由，責任與自我拉扯",
+    "summary": "孤鸞煞為四柱神煞中的孤緣之星，主情感上的孤獨與緣分不順。",
+    "bullet_points": [
+      "在情感上對自由與空間要求較高，不喜被束縛",
+      "容易吸引帶故事、有個性的對象",
+      "容易在事業、理想與家庭之間拉扯"
+    ],
+    "for_this_position": "日柱見孤鸞煞，多主在情感上對自由與空間要求較高，不喜被束縛，易在事業、理想與家庭之間拉扯。容易吸引帶故事、有個性的對象，感情不走傳統路線。若缺乏承擔與溝通，會讓伴侶產生不安全感，進而導致分離。學會在責任與自我之間找到平衡，是化解孤鸞的關鍵。",
+    "recommended_questions": [
+      "孤鸞煞對我的感情有何影響？",
+      "日柱的孤鸞煞如何影響婚姻？",
+      "我該如何化解孤鸞煞？",
+      "如何平衡責任與自我？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "838cf900-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "gu_luan_sha",
+    "pillar_type": "day",
+    "gender": "female",
+    "name": "孤鸞煞",
+    "badge_text": "孤緣",
+    "type": "neutral",
+    "short_title": "寧缺毋濫，追求理解與尊重",
+    "summary": "孤鸞煞為四柱神煞中的孤緣之星，主情感上的孤獨與緣分不順。",
+    "bullet_points": [
+      "一生在婚戀上較追求「寧缺毋濫」",
+      "內心渴望被理解與尊重，但外在往往展現獨立倔強的一面",
+      "早年感情多有一兩段印象深刻卻難以善終的經歷"
+    ],
+    "for_this_position": "日柱見孤鸞煞，一生在婚戀上較追求「寧缺毋濫」，內心渴望被理解與尊重，但外在往往展現獨立倔強的一面，容易讓人誤以為不需要依靠。早年感情多有一兩段印象深刻卻難以善終的經歷，需要時間學會放下。當能看清自我價值，不再用感情證明自己時，反而更容易迎來珍惜自己的人。",
+    "recommended_questions": [
+      "孤鸞煞對我的感情有何影響？",
+      "日柱的孤鸞煞如何影響婚姻？",
+      "我該如何化解孤鸞煞？",
+      "如何找到真正珍惜我的人？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "1127a4ce-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gua_su",
+    "pillar_type": "year",
+    "gender": "male",
+    "name": "寡宿",
+    "badge_text": "情感",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "年柱寡宿，自小不善表達情緒",
+    "bullet_points": null,
+    "for_this_position": "男命年柱寡宿，自小不善表達情緒，越在乎越沉默。青春期起就屬於內斂不說愛類型。對感情慎重，怕受傷。要遇到願意理解他的伴侶，才能讓他表現出真心。",
+    "recommended_questions": [
+      "我為何不善表達感情？",
+      "如何打開心房？",
+      "什麼樣的人適合我？"
+    ],
+    "is_active": 1,
+    "sort_order": 1
+  },
+  {
+    "reading_id": "11276c20-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gua_su",
+    "pillar_type": "year",
+    "gender": "female",
+    "name": "寡宿",
+    "badge_text": "情感",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "年柱寡宿，自小情感表達較克制",
+    "bullet_points": null,
+    "for_this_position": "女命年柱寡宿，自小在情感表達較克制的家庭長大，習慣把情緒藏起來。長大後外冷內熱，對人好但不會說。感情中怕被辜負，因此常保持距離。遇到真正理解她的人，才能慢慢打開心門。",
+    "recommended_questions": [
+      "我為何不善表達感情？",
+      "如何打開心房？",
+      "什麼樣的人適合我？"
+    ],
+    "is_active": 1,
+    "sort_order": 1
+  },
+  {
+    "reading_id": "1127a744-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gua_su",
+    "pillar_type": "month",
+    "gender": "male",
+    "name": "寡宿",
+    "badge_text": "情感",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "月柱寡宿，人際關係中偏理性、少語",
+    "bullet_points": null,
+    "for_this_position": "男命月柱寡宿，在人際關係中偏理性、少語，不喜麻煩別人。戀愛時容易悶著，不願講需求，也不擅長示愛。若遇強勢對象，壓力更大。合適的是溫柔細心、能慢慢引導他的伴侶。",
+    "recommended_questions": [
+      "我為何總是錯過緣分？",
+      "如何主動表達心意？",
+      "適合我的對象是什麼類型？"
+    ],
+    "is_active": 1,
+    "sort_order": 2
+  },
+  {
+    "reading_id": "11277c1a-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gua_su",
+    "pillar_type": "month",
+    "gender": "female",
+    "name": "寡宿",
+    "badge_text": "情感",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "月柱寡宿，職場人際克制理性",
+    "bullet_points": null,
+    "for_this_position": "女命月柱寡宿，在職場與人際中克制理性，不喜八卦、流言。戀愛中不習慣主動示愛，常會錯過心動對象。她需要的是溫柔而穩定的人，慢慢等待她放下戒心，而不是急於求成。",
+    "recommended_questions": [
+      "我為何總是錯過緣分？",
+      "如何主動表達心意？",
+      "適合我的對象是什麼類型？"
+    ],
+    "is_active": 1,
+    "sort_order": 2
+  },
+  {
+    "reading_id": "1127a88e-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gua_su",
+    "pillar_type": "day",
+    "gender": "male",
+    "name": "寡宿",
+    "badge_text": "情感",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "日柱寡宿，婚後責任重於言語",
+    "bullet_points": null,
+    "for_this_position": "日柱寡宿的男性，婚後責任重於言語，愛藏在行動裡。他會默默付出，但不會說浪漫話。伴侶若能理解他的方式，會感受到安定感；若要求甜言蜜語，他反而無措。",
+    "recommended_questions": [
+      "我的婚姻運如何？",
+      "如何讓另一半理解我？",
+      "為何感情中常感到壓力？"
+    ],
+    "is_active": 1,
+    "sort_order": 3
+  },
+  {
+    "reading_id": "11277ef4-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gua_su",
+    "pillar_type": "day",
+    "gender": "female",
+    "name": "寡宿",
+    "badge_text": "情感",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "日柱寡宿，婚姻中常把苦往心裡吞",
+    "bullet_points": null,
+    "for_this_position": "日柱寡宿的女性，婚姻中常把苦往心裡吞，有憂傷也不願說，只希望以行動維護家庭。伴侶若不細心，很難察覺她內心的孤單。若能與她建立安全感，她會以深沉的忠誠回應。",
+    "recommended_questions": [
+      "我的婚姻運如何？",
+      "如何讓另一半理解我？",
+      "為何感情中常感到孤單？"
+    ],
+    "is_active": 1,
+    "sort_order": 3
+  },
+  {
+    "reading_id": "1127a9a6-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gua_su",
+    "pillar_type": "hour",
+    "gender": "male",
+    "name": "寡宿",
+    "badge_text": "情感",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "時柱寡宿，晚年情感內斂",
+    "bullet_points": null,
+    "for_this_position": "男命時柱寡宿，晚年情感內斂，不喜張揚。子女關係雖深，但表達方式淡。只要願意多互相關心，就能把寡宿轉為沉穩的深情，不會真的孤單。",
+    "recommended_questions": [
+      "我的晚年會孤單嗎？",
+      "如何與子女保持連結？",
+      "晚年如何找到心靈寄託？"
+    ],
+    "is_active": 1,
+    "sort_order": 4
+  },
+  {
+    "reading_id": "11278192-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "gua_su",
+    "pillar_type": "hour",
+    "gender": "female",
+    "name": "寡宿",
+    "badge_text": "情感",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "時柱寡宿，晚年易走內心世界",
+    "bullet_points": null,
+    "for_this_position": "女命時柱寡宿，晚年易走內心世界，不喜麻煩別人。子女與她之間雖有情，但語言上較少甜蜜。只要互動真誠，這顆星代表的是沉穩與安靜的愛，而非冷漠。",
+    "recommended_questions": [
+      "我的晚年會孤單嗎？",
+      "如何與子女保持連結？",
+      "晚年如何找到心靈寄託？"
+    ],
+    "is_active": 1,
+    "sort_order": 4
+  },
+  {
+    "reading_id": "838f8ee0-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "guan_fu",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "官符",
+    "badge_text": "官非",
+    "type": "inauspicious",
+    "short_title": "家族層面，制度規範",
+    "summary": "官符為四柱神煞中的官非之星，主官司是非、法律麻煩、被罰被查、文書錯誤惹禍。",
+    "bullet_points": [
+      "原生家庭或家族層面容易與政府機關、制度規範打交道",
+      "可能有從事公職、軍警司法、稅務審計等",
+      "對「規定、流程、紅線」較敏感"
+    ],
+    "for_this_position": "年柱見官符，多主原生家庭或家族層面容易與政府機關、制度規範打交道，可能有從事公職、軍警司法、稅務審計等，也可能因房產、土地、營業登記等事務與公部門往來頻繁。命主自小對「規定、流程、紅線」較敏感，一方面懂得敬畏制度；另一方面也易因前輩處理不善的文書、借貸或糾紛，間接受到牽連。若行運再觸是非星，宜特別重視家族層面的合約與法律問題。",
+    "recommended_questions": [
+      "官符對我的影響是什麼？",
+      "年柱的官符會如何影響我？",
+      "我該如何防範官非？",
+      "官符需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "838fced2-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "guan_fu",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "官符",
+    "badge_text": "官非",
+    "type": "inauspicious",
+    "short_title": "職場審核，文書錯誤",
+    "summary": "官符為四柱神煞中的官非之星，主官司是非、法律麻煩、被罰被查、文書錯誤惹禍。",
+    "bullet_points": [
+      "在工作職場、同輩圈中，易遇到審核、查帳、稽核、投訴、申訴等情況",
+      "文書錯誤、流程疏忽特別容易引發麻煩",
+      "所處行業可能本身就與制度、合約、法規密切相關"
+    ],
+    "for_this_position": "月柱帶官符，象徵命主在工作職場、同輩圈中，易遇到審核、查帳、稽核、投訴、申訴等情況，文書錯誤、流程疏忽特別容易引發麻煩。所處行業可能本身就與制度、合約、法規密切相關，如金融、保險、地產、醫療、教育、公職等。優點是若能熟悉規章，反而能在這些領域中建立專業威信；缺點是怕麻煩但又逃不掉，所以更需要養成「留紀錄、守流程、慎簽字」的習慣。",
+    "recommended_questions": [
+      "官符對我的職場有何影響？",
+      "月柱的官符如何影響工作？",
+      "我適合什麼工作？",
+      "如何避免文書錯誤？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "838ffae2-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "guan_fu",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "官符",
+    "badge_text": "官非",
+    "type": "inauspicious",
+    "short_title": "個人選擇，法律波折",
+    "summary": "官符為四柱神煞中的官非之星，主官司是非、法律麻煩、被罰被查、文書錯誤惹禍。",
+    "bullet_points": [
+      "在個人選擇與感情婚姻上，容易因證件、程序、法律條款而波折",
+      "伴侶本身也可能從事與法律、公職、行政審核相關的工作",
+      "常因責任、規則、契約感產生拉扯"
+    ],
+    "for_this_position": "日柱見官符，多主命主在個人選擇與感情婚姻上，容易因證件、程序、法律條款而波折，例如婚姻登記、財產分配、合約條款、居留身份、工作簽證等問題。伴侶本身也可能從事與法律、公職、行政審核相關的工作，或是兩人在相處過程中，常因責任、規則、契約感產生拉扯。用得好，是懂得在關係中講清權責、保護彼此；用不好，則因互不信任而過度法律化，讓感情少了溫度。",
+    "recommended_questions": [
+      "官符對我的感情有何影響？",
+      "日柱的官符如何影響婚姻？",
+      "我的伴侶會是什麼樣的人？",
+      "如何平衡法律與感情？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "83901b9e-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "guan_fu",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "官符",
+    "badge_text": "官非",
+    "type": "inauspicious",
+    "short_title": "晚年制度，提早規劃",
+    "summary": "官符為四柱神煞中的官非之星，主官司是非、法律麻煩、被罰被查、文書錯誤惹禍。",
+    "bullet_points": [
+      "後半生易面臨退休制度、保險、遺產、稅務、養老安排等官方制度問題",
+      "子女或晚輩可能與公職、法律、稅務、行政審核等領域有緣",
+      "建議提早規劃文件、財務與法律安排"
+    ],
+    "for_this_position": "時柱帶官符，多應在中晚年以及子女相關事務上。命主後半生易面臨退休制度、保險、遺產、稅務、養老安排等官方制度問題，處理得當則能穩固晚年生活；忽略不管則可能因小疏忽付出高代價。子女或晚輩可能與公職、法律、稅務、行政審核等領域有緣，或在學業與職涯選擇上面對較多制度性的關卡。建議提早規劃文件、財務與法律安排，能將官符的壓力轉成對自己與家人的保護。",
+    "recommended_questions": [
+      "官符對我的晚年有何影響？",
+      "時柱的官符如何影響子女？",
+      "我的晚年運勢如何？",
+      "如何做好法律規劃？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "ce02c2f5-f4c4-468d-9a5a-52b57553eb6a",
+    "shensha_code": "guo_yin_gui_ren",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "國印貴人",
+    "badge_text": "權威",
+    "type": "auspicious",
+    "short_title": "祖上或在政府部门工作",
+    "summary": "代表权力印信、政府机关、不动产。命主诚实可靠，办事公正，有掌权之机。",
+    "bullet_points": [
+      "祖上或在政府部门工作，或家庭与官方、文书打交道多"
+    ],
+    "for_this_position": "年柱見國印，多主出身家族中有人擔任公職、管理職或具專業地位，命主對「權威、資格、證書」概念不陌生。也象徵家人期待你成為有頭有臉的人物。若能善用這種背景，走向正規專業訓練與職涯規劃，較易在體制內建立身份認可。",
+    "recommended_questions": [
+      "国印贵人對我的影響是什麼？",
+      "年柱的国印贵人會如何影響我？",
+      "我該如何善用国印贵人？",
+      "国印贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "9e192250-5e9b-4b2d-bbc2-dae7781b2a7b",
+    "shensha_code": "guo_yin_gui_ren",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "國印貴人",
+    "badge_text": "權威",
+    "type": "auspicious",
+    "short_title": "适合在政府、国企、大机构工作",
+    "summary": "代表权力印信、政府机关、不动产。命主诚实可靠，办事公正，有掌权之机。",
+    "bullet_points": [
+      "适合在政府、国企、大机构工作，青中年时期易掌握实权，管理印信"
+    ],
+    "for_this_position": "國印落月柱，象徵在工作領域中，有機會取得重要職銜、證照或主管角色。命主重視專業與信用，不喜隨便。適合在公職、國企、大公司、專業事務所、教育、法律等需要資格背書的行業發展。只要持續精進，國印會讓你在圈子裡越來越有份量。",
+    "recommended_questions": [
+      "国印贵人對我的影響是什麼？",
+      "月柱的国印贵人會如何影響我？",
+      "我該如何善用国印贵人？",
+      "国印贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "6323c16b-8671-4d9a-87ee-3e2410a27c50",
+    "shensha_code": "guo_yin_gui_ren",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "國印貴人",
+    "badge_text": "權威",
+    "type": "auspicious",
+    "short_title": "自身有领导能力",
+    "summary": "代表权力印信、政府机关、不动产。命主诚实可靠，办事公正，有掌权之机。",
+    "bullet_points": [
+      "自身有领导能力，为人诚信，能得信任",
+      "配偶可能从事公职或管理工作"
+    ],
+    "for_this_position": "日柱見國印，多主個人自尊心與責任感強，對自己角色認同感重。婚姻中可能期望建立一個有秩序、有規劃的家庭，對伴侶的職涯或專業也有一定期待。若能避免過度控制，以共同成長的心態相處，這顆星會讓兩人成為彼此堅實的後盾。",
+    "recommended_questions": [
+      "国印贵人對我的影響是什麼？",
+      "日柱的国印贵人會如何影響我？",
+      "我該如何善用国印贵人？",
+      "国印贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "5c992ea4-8faf-408f-9d84-7599ec755873",
+    "shensha_code": "guo_yin_gui_ren",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "國印貴人",
+    "badge_text": "權威",
+    "type": "auspicious",
+    "short_title": "晚年受人尊敬",
+    "summary": "代表权力印信、政府机关、不动产。命主诚实可靠，办事公正，有掌权之机。",
+    "bullet_points": [
+      "晚年受人尊敬，有社会地位",
+      "子女可能进入公职领域，或从事与法律、文书相关的工作"
+    ],
+    "for_this_position": "國印坐時柱，多庇蔭中晚年與子女、事業收官。晚年在行業與社群中仍保有權威地位，可能擔任顧問、榮譽職務或長輩代表。子女或晚輩中，也容易有人取得高學歷、重要職銜或專業成就。此星使晚景帶有尊嚴與被敬重感。",
+    "recommended_questions": [
+      "国印贵人對我的影響是什麼？",
+      "时柱的国印贵人會如何影響我？",
+      "我該如何善用国印贵人？",
+      "国印贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "1125c33e-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "hong_luan",
+    "pillar_type": "year",
+    "gender": "male",
+    "name": "紅鸞",
+    "badge_text": "桃花",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "年柱紅鸞，自小外貌端正、親和力強",
+    "bullet_points": null,
+    "for_this_position": "男命年柱紅鸞，多主自小外貌端正、有親和力，長輩緣與女性緣都不錯。青春期後容易被暗戀或主動示好。成年後與異性互動自然，容易在熟人圈結識感情對象。要注意不要習慣被追而缺乏判斷力，避免桃花變爛桃花。",
+    "recommended_questions": [
+      "我的桃花運何時最旺？",
+      "如何分辨正緣與爛桃花？",
+      "我適合什麼類型的對象？"
+    ],
+    "is_active": 1,
+    "sort_order": 1
+  },
+  {
+    "reading_id": "112553b8-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "hong_luan",
+    "pillar_type": "year",
+    "gender": "female",
+    "name": "紅鸞",
+    "badge_text": "桃花",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "年柱紅鸞，自小氣質柔美，外緣旺、人緣佳",
+    "bullet_points": null,
+    "for_this_position": "女命年柱紅鸞，主自小氣質柔美討喜，家族或同輩對其婚緣多所關注。青春期後容易被示好，外緣旺、人緣佳。常在親戚朋友介紹下認識對象，適合傳統式緣分。若能保持自我與界線，紅鸞能為她帶來良好名聲與正緣，而非表面曖昧。",
+    "recommended_questions": [
+      "我的桃花運何時最旺？",
+      "如何分辨正緣與爛桃花？",
+      "我適合什麼類型的對象？"
+    ],
+    "is_active": 1,
+    "sort_order": 1
+  },
+  {
+    "reading_id": "1125d3c4-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "hong_luan",
+    "pillar_type": "month",
+    "gender": "male",
+    "name": "紅鸞",
+    "badge_text": "桃花",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "月柱紅鸞，職場與生活圈特別受歡迎",
+    "bullet_points": null,
+    "for_this_position": "男命月柱紅鸞，在職場與生活圈特別受女性歡迎。說話方式、氣質容易讓人感到舒服，因此合作、聚會、專案中常遇喜歡他的女性。此位置多正緣，但若優柔寡斷，也可能讓他陷入選擇困難。若能清楚自己的標準，便能迎來穩定關係。",
+    "recommended_questions": [
+      "職場桃花該如何把握？",
+      "我的正緣會在哪裡出現？",
+      "如何做出正確的感情選擇？"
+    ],
+    "is_active": 1,
+    "sort_order": 2
+  },
+  {
+    "reading_id": "11258630-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "hong_luan",
+    "pillar_type": "month",
+    "gender": "female",
+    "name": "紅鸞",
+    "badge_text": "桃花",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "月柱紅鸞，日常生活圈遇緣分機率最高",
+    "bullet_points": null,
+    "for_this_position": "女命月柱紅鸞，象徵在職場、校園、朋友圈等日常生活圈遇到重要緣分的機率最高。她的氣質親和、自然帶好感度，異性相處時容易被注意。此位置多為實用型桃花，感情能從合作、共事中累積。需留意情緒用事，不要因同情而投入。",
+    "recommended_questions": [
+      "職場桃花該如何把握？",
+      "我的正緣會在哪裡出現？",
+      "如何提升感情運？"
+    ],
+    "is_active": 1,
+    "sort_order": 2
+  },
+  {
+    "reading_id": "1125d6f8-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "hong_luan",
+    "pillar_type": "day",
+    "gender": "male",
+    "name": "紅鸞",
+    "badge_text": "桃花",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "日柱紅鸞，重情重義，婚後顧家",
+    "bullet_points": null,
+    "for_this_position": "日柱紅鸞的男性重情重義，談戀愛認真細膩，願意付出。婚後注重家庭氛圍，是很會照顧伴侶的人。唯一要注意的是感情容易想太多，擔心自己不夠好或怕伴侶失望。若能保持成熟心態，紅鸞會成為他的婚姻福星。",
+    "recommended_questions": [
+      "我的婚姻運勢如何？",
+      "如何成為更好的伴侶？",
+      "我會遇到怎樣的另一半？"
+    ],
+    "is_active": 1,
+    "sort_order": 3
+  },
+  {
+    "reading_id": "112589be-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "hong_luan",
+    "pillar_type": "day",
+    "gender": "female",
+    "name": "紅鸞",
+    "badge_text": "桃花",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "日柱紅鸞，特別重感情，婚姻幸福度高",
+    "bullet_points": null,
+    "for_this_position": "日柱紅鸞的女性特別重感情，談戀愛投入深，婚後重視家庭氣氛與生活儀式感。她容易遇到願意疼她、呵護她的伴侶，但同時也可能因過度感性而感到患得患失。若能在關係中保持理性溝通，紅鸞會讓她的婚姻幸福度很高。",
+    "recommended_questions": [
+      "我的婚姻運勢如何？",
+      "如何經營幸福的感情？",
+      "我會遇到怎樣的另一半？"
+    ],
+    "is_active": 1,
+    "sort_order": 3
+  },
+  {
+    "reading_id": "1125d996-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "hong_luan",
+    "pillar_type": "hour",
+    "gender": "male",
+    "name": "紅鸞",
+    "badge_text": "桃花",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "時柱紅鸞，中晚年魅力不減",
+    "bullet_points": null,
+    "for_this_position": "男命時柱紅鸞，中晚年魅力不減，氣質溫和，有第二春或結識成熟異性的機會。子女桃花也旺，家中容易有喜事。若婚姻穩定，紅鸞轉化為家庭和樂；若人生經歷變化，此位置也象徵中年後再度遇見合適的伴侶。",
+    "recommended_questions": [
+      "我的晚年感情運如何？",
+      "子女的姻緣好嗎？",
+      "中年後還有機會遇到真愛嗎？"
+    ],
+    "is_active": 1,
+    "sort_order": 4
+  },
+  {
+    "reading_id": "11258c8e-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "hong_luan",
+    "pillar_type": "hour",
+    "gender": "female",
+    "name": "紅鸞",
+    "badge_text": "桃花",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "時柱紅鸞，中晚年仍有桃花魅力",
+    "bullet_points": null,
+    "for_this_position": "女命時柱紅鸞，中晚年仍有桃花魅力，對生活有儀式感，喜歡美好與浪漫。子女的婚緣也佳，家中常有喜慶事。若婚姻平穩，她能享受幸福家庭；若婚姻不順，中年後也可能再次遇到值得深交的人。此紅鸞象徵人生後半段仍帶甜味。",
+    "recommended_questions": [
+      "我的晚年感情運如何？",
+      "子女的姻緣好嗎？",
+      "中年後還有機會遇到真愛嗎？"
+    ],
+    "is_active": 1,
+    "sort_order": 4
+  },
+  {
+    "reading_id": "838a23d8-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "hong_yan_sha",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "紅艷煞",
+    "badge_text": "艷情",
+    "type": "neutral",
+    "short_title": "注重外表，人緣佳",
+    "summary": "紅艷煞為四柱神煞中的桃花類神煞，主美貌、情欲與情感糾結，比一般咸池更偏「美貌＋情欲＋情感糾結」。",
+    "bullet_points": [
+      "原生家庭或成長環境中，對「外表、氣質、面子」較為在意",
+      "自小就比較懂得如何展現自己",
+      "在同輩中容易顯眼、受關注"
+    ],
+    "for_this_position": "年柱帶紅艷，多主原生家庭或成長環境中，對「外表、氣質、面子」較為在意，家人對打扮、體面、社交場合有一定講究。命主自小就比較懂得如何展現自己，在同輩中容易顯眼、受關注。這種配置有利人緣與社交，但也容易因為太在意外界評價，而在感情選擇上被外在條件牽著走，需要學會分辨「賞心悅目」與「真正適合」的差別。",
+    "recommended_questions": [
+      "紅艷煞對我的影響是什麼？",
+      "年柱的紅艷煞會如何影響我？",
+      "我該如何善用紅艷煞？",
+      "紅艷煞需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "838a696a-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "hong_yan_sha",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "紅艷煞",
+    "badge_text": "艷情",
+    "type": "neutral",
+    "short_title": "職場異性緣，焦點人物",
+    "summary": "紅艷煞為四柱神煞中的桃花類神煞，主美貌、情欲與情感糾結，比一般咸池更偏「美貌＋情欲＋情感糾結」。",
+    "bullet_points": [
+      "在工作圈、同事群與朋友圈中，異性緣特別明顯",
+      "容易成為大家眼中的焦點人物",
+      "適合在品牌、公關、娛樂、美容、美術設計等與形象、美感有關的行業"
+    ],
+    "for_this_position": "紅艷落月柱，象徵命主在工作圈、同事群與朋友圈中，異性緣特別明顯，容易成為大家眼中的焦點人物。職場或同輩之間不乏曖昧、欣賞與流言，做品牌、公關、娛樂、美容、美術設計等與形象、美感有關的行業會較有優勢。但若分寸拿捏不好，過多混雜私人感情與工作關係，容易招來辦公室戀情、爭風吃醋與是非流言，影響事業穩定。",
+    "recommended_questions": [
+      "紅艷煞對我的職場有何影響？",
+      "月柱的紅艷煞如何影響人際？",
+      "我適合什麼工作？",
+      "如何避免職場感情是非？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "838a9f02-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "hong_yan_sha",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "紅艷煞",
+    "badge_text": "艷情",
+    "type": "neutral",
+    "short_title": "感情豐富，不平凡",
+    "summary": "紅艷煞為四柱神煞中的桃花類神煞，主美貌、情欲與情感糾結，比一般咸池更偏「美貌＋情欲＋情感糾結」。",
+    "bullet_points": [
+      "典型「感情路不平凡」的配置之一",
+      "一生感情經歷較豐富，容易被有魅力的人吸引",
+      "戀愛時投入度高、情緒起伏大"
+    ],
+    "for_this_position": "日柱見紅艷，是典型「感情路不平凡」的配置之一。一生感情經歷較豐富，容易被有魅力的人吸引，也容易成為別人心中的難忘對象。戀愛時投入度高、情緒起伏大，愛得真也愛得累；若命局再逢桃花、咸池等，婚前多段情史、婚後需特別留意界線與誘惑。用得好，是懂得經營浪漫與氛圍的高手；用得不好，則是為情所困、身心耗損，需要靠自律與價值觀來駕馭這份吸引力。",
+    "recommended_questions": [
+      "紅艷煞對我的感情有何影響？",
+      "日柱的紅艷煞如何影響婚姻？",
+      "我的伴侶會是什麼樣的人？",
+      "如何經營好感情關係？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "838abff0-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "hong_yan_sha",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "紅艷煞",
+    "badge_text": "艷情",
+    "type": "neutral",
+    "short_title": "晚年重品味，心態年輕",
+    "summary": "紅艷煞為四柱神煞中的桃花類神煞，主美貌、情欲與情感糾結，比一般咸池更偏「美貌＋情欲＋情感糾結」。",
+    "bullet_points": [
+      "愈到後半生，愈重視生活品味與情感交流",
+      "中晚年仍有被人追求或心態年輕的一面",
+      "子女或晚輩多有才藝、形象佳或走向與美感、表演、有觀眾緣的行業"
+    ],
+    "for_this_position": "紅艷坐時柱，多應在中晚年狀態與子女緣上。命主愈到後半生，愈重視生活品味與情感交流，不願只過枯燥的日子，中晚年仍有被人追求或心態年輕的一面。子女或晚輩多有才藝、形象佳或走向與美感、表演、有觀眾緣的行業。若命局紅艷較重，又行到感情波動大運，需留心中晚年因感情或子女情事牽動心神，影響健康與財務，宜提早建立良好界線與溝通模式。",
+    "recommended_questions": [
+      "紅艷煞對我的晚年有何影響？",
+      "時柱的紅艷煞如何影響子女？",
+      "我的晚年運勢如何？",
+      "如何建立良好的界線與溝通？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "b07d1e2a-4da8-4333-b5a6-3a570753b674",
+    "shensha_code": "hua_gai",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "華蓋",
+    "badge_text": "藝術",
+    "type": "neutral",
+    "short_title": "天性聪颖但孤僻",
+    "summary": "代表艺术才华、孤独、宗教哲学缘分。命主聪明孤傲，喜欢独立思考，但易感孤独。",
+    "bullet_points": [
+      "天性聪颖但孤僻，与祖上缘分可能较浅，或家族有宗教信仰传统"
+    ],
+    "for_this_position": "年柱見華蓋，多主原生家庭氣質稍顯內斂、不那麼熱鬧，命主自小較愛安靜與自處。思考偏向抽象或哲學面，容易對藝術、宗教、命理、設計等領域產生興趣。與同齡人相比，可能顯得早熟或有距離感，但也因此培養出獨特觀點。",
+    "recommended_questions": [
+      "华盖對我的影響是什麼？",
+      "年柱的华盖會如何影響我？",
+      "我該如何善用华盖？",
+      "华盖需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "34b1adf7-c400-4484-873b-7e246c0219e1",
+    "shensha_code": "hua_gai",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "華蓋",
+    "badge_text": "藝術",
+    "type": "neutral",
+    "short_title": "青年时期不善交际",
+    "summary": "代表艺术才华、孤独、宗教哲学缘分。命主聪明孤傲，喜欢独立思考，但易感孤独。",
+    "bullet_points": [
+      "青年时期不善交际，喜欢钻研技艺、哲学，易与僧道、玄学结缘"
+    ],
+    "for_this_position": "華蓋落月柱，象徵在職場與朋友圈中，命主比較不擅長熱鬧寒暄，更適合深度創作或獨立作業。適合從事設計、寫作、研究、手工、藝術創作、專業顧問等工作，在專注與沉思中發光。需注意避免過度自我封閉，適度與人交流能讓靈感與機會更順利流動。",
+    "recommended_questions": [
+      "华盖對我的影響是什麼？",
+      "月柱的华盖會如何影響我？",
+      "我該如何善用华盖？",
+      "华盖需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "9adec791-8024-48dc-acdb-dbdc27a67ee3",
+    "shensha_code": "hua_gai",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "華蓋",
+    "badge_text": "藝術",
+    "type": "neutral",
+    "short_title": "自身才华横溢但知音难觅",
+    "summary": "代表艺术才华、孤独、宗教哲学缘分。命主聪明孤傲，喜欢独立思考，但易感孤独。",
+    "bullet_points": [
+      "自身才华横溢但知音难觅，内心世界丰富而孤独",
+      "婚姻中需要精神共鸣"
+    ],
+    "for_this_position": "日柱見華蓋，多主個人帶點孤傲與潔癖，對感情與婚姻有一套自己的審美與標準。戀愛時重視靈魂共鳴與價值觀一致，不願將就，因此感情進展節奏可能較慢。若能放下部分完美主義，在堅持自我與接納他人之間找到平衡，反而能成就別具風格的關係模式。",
+    "recommended_questions": [
+      "华盖對我的影響是什麼？",
+      "日柱的华盖會如何影響我？",
+      "我該如何善用华盖？",
+      "华盖需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "b41a0c0d-d7b4-4000-8eaf-37484cfea6ae",
+    "shensha_code": "hua_gai",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "華蓋",
+    "badge_text": "藝術",
+    "type": "neutral",
+    "short_title": "晚年喜静",
+    "summary": "代表艺术才华、孤独、宗教哲学缘分。命主聪明孤傲，喜欢独立思考，但易感孤独。",
+    "bullet_points": [
+      "晚年喜静，倾向于精神修养，可能皈依佛道",
+      "子女也可能有特殊才华或性情孤独"
+    ],
+    "for_this_position": "華蓋坐時柱，多庇蔭中晚年精神世界與創作力。晚年不喜太吵雜，偏愛有自己空間，沉浸在閱讀、創作、修行或專業鑽研中。子女或晚輩中，亦有人走藝術、設計、研究或形而上路線。整體晚景較重內心充實感，而非單純外在熱鬧。",
+    "recommended_questions": [
+      "华盖對我的影響是什麼？",
+      "时柱的华盖會如何影響我？",
+      "我該如何善用华盖？",
+      "华盖需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "ecfe1208-c403-4434-b76a-1480ca843e01",
+    "shensha_code": "jian_lu",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "建祿",
+    "badge_text": "自立",
+    "type": "neutral",
+    "short_title": "月柱建禄：身强",
+    "summary": "日主在月柱得临官禄地，代表自身强壮、独立性强、精力充沛，但亦主克财，需奔波劳碌致富。",
+    "bullet_points": [
+      "月柱建禄：身强，独立自主，适合离家发展，白手起家",
+      "有强烈的事业心和竞争力"
+    ],
+    "for_this_position": "命帶建祿，多主性格實在、有肩膀，重視靠自己站穩腳跟。對工作與生活態度積極，不怕辛苦，願意腳踏實地累積成績。在職場中常是那個最能扛事、最可靠的人。感情與家庭中也有很強的責任感，希望自己能成為支柱。需注意的是，別凡事硬撐，學會適度求助與分工，反而能走得更長遠。",
+    "recommended_questions": [
+      "建禄對我的影響是什麼？",
+      "月柱的建禄會如何影響我？",
+      "我該如何善用建禄？",
+      "建禄需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "30e7b53b-93c1-486e-b3eb-1f68ba85fb97",
+    "shensha_code": "jiang_xing",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "將星",
+    "badge_text": "權勢",
+    "type": "auspicious",
+    "short_title": "祖上或父母有领导能力",
+    "summary": "代表领导才能、权威、组织能力。命主有掌权之能，在团体中容易成为核心人物。",
+    "bullet_points": [
+      "祖上或父母有领导能力，或自身在年轻时就展现出管理天赋，"
+    ],
+    "for_this_position": "年柱見將星，多主出身家庭中有人做決策者或習慣扛責任，命主自幼耳濡目染「要扛事」的觀念。從小在同輩中易被推為小領袖，性格中帶幾分好勝與不服輸。成年後在家族或同學圈中，常被期待站出來主持大局或出頭處理問題。",
+    "recommended_questions": [
+      "将星對我的影響是什麼？",
+      "年柱的将星會如何影響我？",
+      "我該如何善用将星？",
+      "将星需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "9797b5f8-a658-426f-9685-a62e6cd3ac0b",
+    "shensha_code": "jiang_xing",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "將星",
+    "badge_text": "權勢",
+    "type": "auspicious",
+    "short_title": "在青中年时期",
+    "summary": "代表领导才能、权威、组织能力。命主有掌权之能，在团体中容易成为核心人物。",
+    "bullet_points": [
+      "在青中年时期，易成为公司、团队中的管理者，握有实权，下属服从"
+    ],
+    "for_this_position": "將星落月柱，象徵職場與團隊中具備帶頭特質，容易被安排在關鍵崗位、專案負責人或對外窗口。命主做事直接，喜歡掌握節奏，但需學習傾聽與協調，以免壓力全攬在自己身上。若能兼具領導與溝通，將星是很好的事業助力，讓你有機會在行業中打出名聲。",
+    "recommended_questions": [
+      "将星對我的影響是什麼？",
+      "月柱的将星會如何影響我？",
+      "我該如何善用将星？",
+      "将星需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "0d7541ae-469f-4b51-9bf3-2bea12e57e63",
+    "shensha_code": "jiang_xing",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "將星",
+    "badge_text": "權勢",
+    "type": "auspicious",
+    "short_title": "自身领导力强",
+    "summary": "代表领导才能、权威、组织能力。命主有掌权之能，在团体中容易成为核心人物。",
+    "bullet_points": [
+      "自身领导力强，不怒自威，能独立创业或掌管一个部门",
+      "配偶能力亦强"
+    ],
+    "for_this_position": "日柱見將星，多主個人自尊心強，重視在伴侶與家庭中的話語權。婚姻關係中容易扛起重大決定，但也可能不自覺比較強勢。若能跟伴侶協調好分工，讓對方也有發揮空間，這顆星會讓家庭運行得有效率，遇到困難時有人站出來擋第一波風雨。",
+    "recommended_questions": [
+      "将星對我的影響是什麼？",
+      "日柱的将星會如何影響我？",
+      "我該如何善用将星？",
+      "将星需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "a8bd2612-cc96-4022-b519-119e09cf4979",
+    "shensha_code": "jiang_xing",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "將星",
+    "badge_text": "權勢",
+    "type": "auspicious",
+    "short_title": "晚年仍具威望",
+    "summary": "代表领导才能、权威、组织能力。命主有掌权之能，在团体中容易成为核心人物。",
+    "bullet_points": [
+      "晚年仍具威望，能指导晚辈",
+      "子女有领导才能，能在其领域出人头地"
+    ],
+    "for_this_position": "將星坐時柱，多庇蔭中晚年與子女、部屬運。晚年仍有掌舵與影響力，在家族、社團或公司中保有一定話語權。子女或晚輩中，也多有人擔任管理職、帶團隊或在專業領域有一定成就。此象使晚景不是悄然淡出，而是以另一種方式持續發揮影響力。",
+    "recommended_questions": [
+      "将星對我的影響是什麼？",
+      "时柱的将星會如何影響我？",
+      "我該如何善用将星？",
+      "将星需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "83877b74-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "jie_sha",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "劫煞",
+    "badge_text": "風險",
+    "type": "neutral",
+    "short_title": "家運波折，適應力強",
+    "summary": "劫煞為四柱神煞中的風險之星，主變動、驟變、意外、損友、破耗，同時有「敢衝、敢拼、適合在變動中求機會」的性質。",
+    "bullet_points": [
+      "原生家庭、家族氣場較多波折與是非",
+      "可能經歷搬遷、財務起落或親族關係不穩",
+      "對風險與變化的感受較敏銳，早早學會自我保護與隨機應變"
+    ],
+    "for_this_position": "年柱見劫煞，多主原生家庭、家族氣場較多波折與是非，可能經歷搬遷、財務起落或親族關係不穩。命主自小在不太安穩的環境中成長，對風險與變化的感受較敏銳，早早學會自我保護與隨機應變。優點是適應力強、不怕換環境；缺點是安全感不足，易不自覺用「先拒絕、先懷疑」的方式面對人事物，需要學會區分真正的危險與內心的焦慮。",
+    "recommended_questions": [
+      "劫煞對我的影響是什麼？",
+      "年柱的劫煞會如何影響我？",
+      "我該如何善用劫煞？",
+      "劫煞需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8387b8be-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "jie_sha",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "劫煞",
+    "badge_text": "風險",
+    "type": "neutral",
+    "short_title": "職場競爭，變動頻仍",
+    "summary": "劫煞為四柱神煞中的風險之星，主變動、驟變、意外、損友、破耗，同時有「敢衝、敢拼、適合在變動中求機會」的性質。",
+    "bullet_points": [
+      "在同輩、人際與職場領域中，常處於競爭激烈或變動頻仍的環境",
+      "容易遇到看似義氣、實則帶來破耗的朋友",
+      "適合在需要衝勁與變化的行業"
+    ],
+    "for_this_position": "月柱帶劫煞，象徵命主在同輩、人際與職場領域中，常處於競爭激烈或變動頻仍的環境。容易遇到看似義氣、實則帶來破耗的朋友，或工作上常被捲入他人的是非與爭奪。適合在需要衝勁與變化的行業，如業務、交易、創業、專案型工作等；若一味衝動，則易因人情、衝動投資或職場衝突帶來損失。懂得選邊站與設界線，是化煞為用的關鍵。",
+    "recommended_questions": [
+      "劫煞對我的職場有何影響？",
+      "月柱的劫煞如何影響人際？",
+      "我適合什麼工作？",
+      "如何將劫煞的風險轉為機會？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8387e6cc-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "jie_sha",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "劫煞",
+    "badge_text": "風險",
+    "type": "neutral",
+    "short_title": "個性冒險，感情搖擺",
+    "summary": "劫煞為四柱神煞中的風險之星，主變動、驟變、意外、損友、破耗，同時有「敢衝、敢拼、適合在變動中求機會」的性質。",
+    "bullet_points": [
+      "個性中帶有冒險與不服輸的一面",
+      "感情與婚姻上，既渴望親密，又害怕被束縛",
+      "配偶或親密關係對象可能個性強烈、帶來生活節奏的劇烈變化"
+    ],
+    "for_this_position": "日柱見劫煞，主個性中帶有冒險與不服輸的一面，遇到壓力時寧願硬扛也不願示弱。感情與婚姻上，既渴望親密，又害怕被束縛，容易在衝動與退縮間搖擺。配偶或親密關係對象可能個性強烈、帶來生活節奏的劇烈變化，一起創業、一起折騰的機率較高。用得好，是能共患難、共打天下的格局；用得不好，則是財務與情緒上的拉扯，需要學會在愛與風險之間畫清界線。",
+    "recommended_questions": [
+      "劫煞對我的感情有何影響？",
+      "日柱的劫煞如何影響婚姻？",
+      "我的伴侶會是什麼樣的人？",
+      "如何經營好感情關係？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8388100c-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "jie_sha",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "劫煞",
+    "badge_text": "風險",
+    "type": "neutral",
+    "short_title": "晚年變動，不服老",
+    "summary": "劫煞為四柱神煞中的風險之星，主變動、驟變、意外、損友、破耗，同時有「敢衝、敢拼、適合在變動中求機會」的性質。",
+    "bullet_points": [
+      "後半生較不甘於按部就班，常有轉行、移居、再創業等念頭",
+      "子女或晚輩多具行動力與個性，喜自由、不喜被規劃",
+      "若能在中晚年提早做好風險管理與健康、財務規劃，劫煞會成為推動改變的力量"
+    ],
+    "for_this_position": "時柱帶劫煞，多與中晚年運勢及子女緣分有關。命主後半生較不甘於按部就班，常有轉行、移居、再創業等念頭，有的人反而在這種變動中迎來第二次高峰。子女或晚輩多具行動力與個性，喜自由、不喜被規劃，人生路上可能走得比較刺激，有時讓命主既驕傲又擔心。若能在中晚年提早做好風險管理與健康、財務規劃，劫煞會成為推動改變的力量，而非意外的來源。",
+    "recommended_questions": [
+      "劫煞對我的晚年有何影響？",
+      "時柱的劫煞如何影響子女？",
+      "我的晚年運勢如何？",
+      "如何做好風險管理？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "837754e2-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "jin_shen",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "金神",
+    "badge_text": "權勢",
+    "type": "auspicious",
+    "short_title": "家風嚴格，性格剛毅",
+    "summary": "金神為四柱神煞中的貴神，主剛毅、果斷與權勢。",
+    "bullet_points": [
+      "成長環境較嚴格、家風重紀律",
+      "長輩多性格強勢，不善溫柔示愛",
+      "自小學會硬撐、不服輸"
+    ],
+    "for_this_position": "年柱見金神，象徵成長環境較嚴格、家風重紀律。長輩多性格強勢，不善溫柔示愛，更多以要求、規範、責任來塑造命主，使其自小學會硬撐、不服輸。內心其實敏感，但習慣用強硬表層保護自己。若能在後天調整情緒表達方式，柔中帶剛，往往更能獲得他人信任與尊重。",
+    "recommended_questions": [
+      "金神對我的影響是什麼？",
+      "年柱的金神會如何影響我？",
+      "我該如何善用金神？",
+      "金神需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8377c634-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "jin_shen",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "金神",
+    "badge_text": "權勢",
+    "type": "auspicious",
+    "short_title": "職場果斷，競爭激烈",
+    "summary": "金神為四柱神煞中的貴神，主剛毅、果斷與權勢。",
+    "bullet_points": [
+      "成長與職場環境競爭激烈",
+      "做事重結果不喜拖泥帶水",
+      "容易成為團隊中負責衝鋒和拍板的人"
+    ],
+    "for_this_position": "金神落月柱，多主成長與職場環境競爭激烈，需要效率、膽識與果斷。命主在人際中偏理性與直接，做事重結果不喜拖泥帶水，容易成為團隊中負責衝鋒和拍板的人。若火旺能鍛金，其強勢可轉為威信；若水重則易與上司同事硬碰硬。練習收放分寸，會讓職場道路更加順遂。",
+    "recommended_questions": [
+      "金神對我的職場有何幫助？",
+      "月柱的金神如何影響人際？",
+      "我適合什麼工作？",
+      "金神的強勢如何轉為威信？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8377f5fa-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "jin_shen",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "金神",
+    "badge_text": "權勢",
+    "type": "auspicious",
+    "short_title": "本質剛毅，外冷內熱",
+    "summary": "金神為四柱神煞中的貴神，主剛毅、果斷與權勢。",
+    "bullet_points": [
+      "本質剛毅，不願委屈自己",
+      "感情中多呈現外冷內熱",
+      "對承諾極為重視"
+    ],
+    "for_this_position": "日柱見金神，代表命主本質剛毅，不願委屈自己，對是非界線分明。感情中多呈現外冷內熱，不善甜言蜜語，但對承諾極為重視。性格帶鋒芒，選擇伴侶時容易希望對方能理解自己的原則感與責任感。若能在關係中適度展現柔軟，將讓伴侶更容易走進其內心，減少衝突與誤會。",
+    "recommended_questions": [
+      "金神對我的感情有何影響？",
+      "日柱的金神如何影響婚姻？",
+      "我的伴侶會是什麼樣的人？",
+      "如何經營好感情關係？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "83782750-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "jin_shen",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "金神",
+    "badge_text": "權勢",
+    "type": "auspicious",
+    "short_title": "晚年堅定，越老越強",
+    "summary": "金神為四柱神煞中的貴神，主剛毅、果斷與權勢。",
+    "bullet_points": [
+      "中晚年思維愈發堅定，行事果斷",
+      "子女多有自己的主見，獨立自主",
+      "表面冷、實則在意，只是不擅表達"
+    ],
+    "for_this_position": "金神坐時柱，多應於晚年運勢與子女互動。命主中晚年思維愈發堅定，行事果斷，有「越老越強」的氣場。子女多有自己的主見，獨立自主但少撒嬌。表面冷、實則在意，只是不擅表達。若能主動開放溝通方式，晚年反而能收獲穩定信任與家人依靠，減少剛硬帶來的距離感。",
+    "recommended_questions": [
+      "金神對我的晚年有何影響？",
+      "時柱的金神如何影響子女？",
+      "我的晚年運勢如何？",
+      "如何改善與子女的溝通？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "837a0f3e-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "jin_yu_gui_ren",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "金輿貴人",
+    "badge_text": "福祿",
+    "type": "auspicious",
+    "short_title": "出身優渥，生活有質感",
+    "summary": "金輿貴人為四柱神煞中的吉神，主福祿、生活品質與體面。",
+    "bullet_points": [
+      "出身環境條件不算太差",
+      "家中重視生活品質與體面",
+      "長輩多疼惜命主，願意在吃穿用度上給予支持"
+    ],
+    "for_this_position": "年柱見金輿，多主出身環境條件不算太差，家中重視生活品質與體面，長輩多疼惜命主，願意在吃穿用度上給予支持。成長過程雖未必大富大貴，但多有貴人照看、不至匱乏。命主自小對「過得好、活得精緻」有基本要求，後天若肯自立打拼，更易在原有基礎上提升階層與生活享受。",
+    "recommended_questions": [
+      "金輿貴人對我的影響是什麼？",
+      "年柱的金輿貴人會如何影響我？",
+      "我該如何善用金輿貴人？",
+      "金輿貴人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "837a7fa0-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "jin_yu_gui_ren",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "金輿貴人",
+    "badge_text": "福祿",
+    "type": "auspicious",
+    "short_title": "職場優渥，品味出眾",
+    "summary": "金輿貴人為四柱神煞中的吉神，主福祿、生活品質與體面。",
+    "bullet_points": [
+      "工作、人際圈中容易遇到條件不錯的人",
+      "職場環境相對不那麼辛苦",
+      "適合在品牌、美學、服務、高端客群相關領域發展"
+    ],
+    "for_this_position": "金輿落月柱，常見命主在工作、人際圈中容易遇到條件不錯、願意提攜自己的人，職場環境相對不那麼辛苦，待遇、福利或資源相對優渥。做事有自己的一套講究，重視氛圍與禮儀，適合在品牌、美學、服務、高端客群相關領域發展。若能兼顧實幹，不只享福，也能憑實力坐上較好的位置。",
+    "recommended_questions": [
+      "金輿貴人對我的職場有何幫助？",
+      "月柱的金輿貴人如何影響人際？",
+      "我適合什麼工作？",
+      "如何提升職場品味與格調？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "837abe0c-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "jin_yu_gui_ren",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "金輿貴人",
+    "badge_text": "福祿",
+    "type": "auspicious",
+    "short_title": "婚姻美滿，生活精緻",
+    "summary": "金輿貴人為四柱神煞中的吉神，主福祿、生活品質與體面。",
+    "bullet_points": [
+      "對感情與婚姻特別加分",
+      "自己或伴侶一方條件不錯",
+      "重視儀式感與生活品質"
+    ],
+    "for_this_position": "日柱見金輿，對感情與婚姻特別加分，多主自己或伴侶一方條件不錯，重視儀式感與生活品質，婚後居家、物質環境較為舒適。命主在親密關係中偏向溫和享受型，喜歡兩人一起吃好、住好、打扮得體。只要不過度沉迷享樂、逃避現實，這顆星往往能帶來「感情穩定＋生活有質感」的福分。",
+    "recommended_questions": [
+      "金輿貴人對我的感情有何影響？",
+      "日柱的金輿貴人如何影響婚姻？",
+      "我的伴侶會是什麼樣的人？",
+      "如何經營有質感的感情生活？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "837ae8dc-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "jin_yu_gui_ren",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "金輿貴人",
+    "badge_text": "福祿",
+    "type": "auspicious",
+    "short_title": "晚年安穩，格調優雅",
+    "summary": "金輿貴人為四柱神煞中的吉神，主福祿、生活品質與體面。",
+    "bullet_points": [
+      "中晚年有機會逐漸轉向享受人生",
+      "物質條件或居住環境比早年改善許多",
+      "子女或晚輩多有品味、重視體面"
+    ],
+    "for_this_position": "金輿坐時柱，多應在中晚年與子女緣分上。中晚年有機會逐漸轉向享受人生，物質條件或居住環境比早年改善許多，不必再為生計過度奔波。子女或晚輩多有品味、重視體面，未來發展有機會在較好的平台或城市生活。若命主願意提早規劃財務與退休安排，晚景往往能過得安穩而不失格調。",
+    "recommended_questions": [
+      "金輿貴人對我的晚年有何影響？",
+      "時柱的金輿貴人如何影響子女？",
+      "我的晚年運勢如何？",
+      "如何規劃有質感的退休生活？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8393fcbe-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "kong_wang",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "空亡",
+    "badge_text": "虛實",
+    "type": "neutral",
+    "short_title": "家族名實不一，情感連結弱",
+    "summary": "空亡為四柱神煞中的虛實之星，主虛、遲、不實、落空、內在化等特質。",
+    "bullet_points": [
+      "原生家庭、家族資源或家世背景帶有「名實不一」的特點",
+      "家族成員之間距離較遠、各有各的生活",
+      "對「根、家族」的感受較複雜"
+    ],
+    "for_this_position": "年柱落空，多主原生家庭、家族資源或家世背景帶有「名實不一」的特點。可能表面上家境不錯、門面體面，實際內部壓力多；也可能家族成員之間距離較遠、各有各的生活，情感連結感偏弱。命主對「根、家族」的感受較複雜，一方面在意血緣與出身，一方面又覺得很難真正依靠。這類配置，常讓人早早產生「要靠自己」的念頭，後天能否補上安全感，多看自身打拼與後來建立的家庭。",
+    "recommended_questions": [
+      "空亡對我的影響是什麼？",
+      "年柱的空亡會如何影響我？",
+      "我該如何化解空亡？",
+      "空亡需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "83945808-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "kong_wang",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "空亡",
+    "badge_text": "虛實",
+    "type": "neutral",
+    "short_title": "職場落空，機會打折",
+    "summary": "空亡為四柱神煞中的虛實之星，主虛、遲、不實、落空、內在化等特質。",
+    "bullet_points": [
+      "成長過程、同輩圈與職場環境中，常有「看起來很好，實際落空」的情況",
+      "起初機會很多、聲勢不錯，但真正落實到結果時，容易因種種變數而打折",
+      "人際上也常遇到「講得熱鬧、實際幫不上忙」的關係"
+    ],
+    "for_this_position": "月柱空亡，象徵成長過程、同輩圈與職場環境中，常有「看起來很好，實際落空」的情況。例如：起初機會很多、聲勢不錯，但真正落實到結果時，容易因種種變數而打折；人際上也常遇到「講得熱鬧、實際幫不上忙」的關係。優點是命主在變化中學會看清人情冷暖，不容易被表面光鮮迷惑；缺點是難免產生「不敢太期待」的習慣，有時會錯失真正值得投入的機會。若能在行動前做好方案與風險評估，空亡反而能成為判斷虛實的敏銳雷達。",
+    "recommended_questions": [
+      "空亡對我的職場有何影響？",
+      "月柱的空亡如何影響人際？",
+      "我適合什麼工作？",
+      "如何判斷虛實？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "83947c2a-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "kong_wang",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "空亡",
+    "badge_text": "虛實",
+    "type": "neutral",
+    "short_title": "表面堅強，內心空虛",
+    "summary": "空亡為四柱神煞中的虛實之星，主虛、遲、不實、落空、內在化等特質。",
+    "bullet_points": [
+      "性格上常帶一點「表面堅強、內心空虛」的矛盾",
+      "在關鍵時刻容易猶豫、退縮，或讓承諾「說得多、落實少」",
+      "在感情上，一生不乏心動與機會，但真正能走到實際、長久穩定的，需經過篩選與時間考驗"
+    ],
+    "for_this_position": "日柱空亡，直接作用在命主本身與感情婚姻。性格上常帶一點「表面堅強、內心空虛」的矛盾，一方面很清楚自己要什麼，一方面又在關鍵時刻容易猶豫、退縮，或讓承諾「說得多、落實少」。在感情上，一生不乏心動與機會，但真正能走到實際、長久穩定的，需經過篩選與時間考驗。有時也主伴侶形象、條件與實際婚姻生活有落差，或婚姻本身帶「不夠踏實」的感受。這顆星不是註定孤單，而是提醒：越是重要的關係與選擇，越要用具體行動去填補，而不是只停留在想像與承諾裡。",
+    "recommended_questions": [
+      "空亡對我的感情有何影響？",
+      "日柱的空亡如何影響婚姻？",
+      "我的伴侶會是什麼樣的人？",
+      "如何填補空亡？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8394a22c-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "kong_wang",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "空亡",
+    "badge_text": "虛實",
+    "type": "neutral",
+    "short_title": "晚年空想，珍惜當下",
+    "summary": "空亡為四柱神煞中的虛實之星，主虛、遲、不實、落空、內在化等特質。",
+    "bullet_points": [
+      "對未來常有許多想法與計畫，理想藍圖豐富",
+      "若缺乏持續執行，容易停留在「想了很多、實際做的不多」",
+      "子女或晚輩方面，可能出現與自己期待不同的發展路線"
+    ],
+    "for_this_position": "時柱落空，多應在中晚年狀態與子女相關事務上。命主對未來常有許多想法與計畫，理想藍圖豐富，但若缺乏持續執行，容易停留在「想了很多、實際做的不多」。中晚年若不及早規劃健康、財務與退休安排，就會有「時間一下子就過去了」的空虛感。子女或晚輩方面，可能出現與自己期待不同的發展路線，或彼此相處時間少於心理上的牽掛，形成「心在一起，實際各忙各的」的狀態。若能提早用具體行動（陪伴、規劃、落實）去取代空想，空亡反而會讓人更懂得珍惜當下，不再把重要的事拖到未來。",
+    "recommended_questions": [
+      "空亡對我的晚年有何影響？",
+      "時柱的空亡如何影響子女？",
+      "我的晚年運勢如何？",
+      "如何珍惜當下？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "837db238-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "kui_gang",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "魁罡",
+    "badge_text": "剛烈",
+    "type": "auspicious",
+    "short_title": "家風強硬，個性早熟",
+    "summary": "魁罡為四柱神煞中的貴神，主剛烈、果決與原則。",
+    "bullet_points": [
+      "原生家庭風格較強硬",
+      "長輩行事果決、重原則",
+      "個性早熟、不輕易服輸"
+    ],
+    "for_this_position": "年柱見魁罡，多主原生家庭風格較強硬，家中長輩行事果決、重原則，有時說話直接不太留情面。命主自小在較嚴格或多是非的氛圍中成長，耳濡目染之下，個性早熟、不輕易服輸，遇事習慣硬扛。若能在後天學會分辨「堅持」與「固執」的界線，既能承接家族的魄力，又不至於重蹈衝突的模式。",
+    "recommended_questions": [
+      "魁罡對我的影響是什麼？",
+      "年柱的魁罡會如何影響我？",
+      "我該如何善用魁罡？",
+      "魁罡需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "837de492-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "kui_gang",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "魁罡",
+    "badge_text": "剛烈",
+    "type": "auspicious",
+    "short_title": "職場果決，敢於擔責",
+    "summary": "魁罡為四柱神煞中的貴神，主剛烈、果決與原則。",
+    "bullet_points": [
+      "在工作環境中扮演「說真話、敢拍板」的角色",
+      "做事重效率與結果，不喜拖泥帶水",
+      "適合在需要決斷與擔責的職位發展"
+    ],
+    "for_this_position": "魁罡落月柱，常見命主在工作環境或同輩關係中扮演「說真話、敢拍板」的角色。做事重效率與結果，不喜拖泥帶水，對是非黑白有強烈判斷，適合在需要決斷與擔責的職位發展，如管理、紀律單位、風控等。若情緒起伏太大，容易與上司同事硬碰硬，被標籤為難搞；學會柔性表達與換位思考，反而更能凸顯其領導價值。",
+    "recommended_questions": [
+      "魁罡對我的職場有何幫助？",
+      "月柱的魁罡如何影響人際？",
+      "我適合什麼工作？",
+      "如何將魁罡的強勢轉為領導力？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "837e086e-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "kui_gang",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "魁罡",
+    "badge_text": "剛烈",
+    "type": "auspicious",
+    "short_title": "性格剛烈，敢愛敢斷",
+    "summary": "魁罡為四柱神煞中的貴神，主剛烈、果決與原則。",
+    "bullet_points": [
+      "本身性格剛烈，有自己的原則線",
+      "對伴侶要求真誠坦白，不耐虛偽敷衍",
+      "遇到不合適的關係，轉身利落不拖泥帶水"
+    ],
+    "for_this_position": "日柱見魁罡，代表命主本身性格剛烈，有自己的原則線，不輕易妥協。感情與婚姻中，對伴侶要求真誠坦白，不耐虛偽敷衍，寧缺毋濫。遇到不合適的關係，轉身利落不拖泥帶水。優點是敢愛敢斷、能在關鍵時刻保護自己；缺點是語氣和態度容易過猛，讓對方感到壓力。若能在堅守界線的同時，多一點溫度，感情路會順暢許多。",
+    "recommended_questions": [
+      "魁罡對我的感情有何影響？",
+      "日柱的魁罡如何影響婚姻？",
+      "我的伴侶會是什麼樣的人？",
+      "如何經營好感情關係？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "837e2ba0-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "kui_gang",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "魁罡",
+    "badge_text": "剛烈",
+    "type": "auspicious",
+    "short_title": "晚年堅定，原則分明",
+    "summary": "魁罡為四柱神煞中的貴神，主剛烈、果決與原則。",
+    "bullet_points": [
+      "隨年歲增長，個性反而更堅定",
+      "對人生方向、價值觀有自己一套標準",
+      "子女或晚輩多具個性與主見"
+    ],
+    "for_this_position": "魁罡坐時柱，多應在中晚年與子女互動上。命主隨年歲增長，個性反而更堅定，不願隨波逐流，對人生方向、價值觀有自己一套標準。子女或晚輩多具個性與主見，不喜被控制，容易在理念上與命主有爭鋒之象。若能在中晚年學會放手、尊重差異，一方面保持自己的氣場與原則，一方面給晚輩空間，反而能收穫彼此欣賞與支持的關係。",
+    "recommended_questions": [
+      "魁罡對我的晚年有何影響？",
+      "時柱的魁罡如何影響子女？",
+      "我的晚年運勢如何？",
+      "如何改善與子女的關係？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "1126b0be-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "liu_xia",
+    "pillar_type": "year",
+    "gender": "male",
+    "name": "流霞",
+    "badge_text": "情動",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "年柱流霞，青春期起情感波動早",
+    "bullet_points": null,
+    "for_this_position": "男命年柱流霞，青春期起情感波動早，容易為美色動心。自小外界誘惑多，感情故事也多。若不自律，易陷入曖昧與爛桃花。若能引導好，把感性轉為藝術、表達、魅力，流霞會成為氣質與吸引力來源。",
+    "recommended_questions": [
+      "如何避免爛桃花？",
+      "我的感情為何波折多？",
+      "如何把桃花變成正緣？"
+    ],
+    "is_active": 1,
+    "sort_order": 1
+  },
+  {
+    "reading_id": "1126590c-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "liu_xia",
+    "pillar_type": "year",
+    "gender": "female",
+    "name": "流霞",
+    "badge_text": "情動",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "年柱流霞，自小感性強、情緒敏銳",
+    "bullet_points": null,
+    "for_this_position": "女命年柱流霞，自小感性強、情緒敏銳，青春期後異性緣特別複雜。容易被熱情、浪漫的對象打動，也易被甜言蜜語吸引。需避免太早投入或衝動戀愛，以免受傷。保持理性與自重能讓這顆星轉化為魅力與直覺。",
+    "recommended_questions": [
+      "如何避免爛桃花？",
+      "我的感情為何波折多？",
+      "如何保護自己不受傷？"
+    ],
+    "is_active": 1,
+    "sort_order": 1
+  },
+  {
+    "reading_id": "1126c22a-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "liu_xia",
+    "pillar_type": "month",
+    "gender": "male",
+    "name": "流霞",
+    "badge_text": "情動",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "月柱流霞，生活圈感情誘惑多",
+    "bullet_points": null,
+    "for_this_position": "男命月柱流霞，在生活圈或職場中最容易遇到讓他心動的對象，感情誘惑多。這位置桃花複雜，不少是短暫或不穩定的緣分。若不把持界線，容易出現情感與名聲麻煩。若能成熟面對，則能吸引氣質型女性。",
+    "recommended_questions": [
+      "職場感情該如何處理？",
+      "如何分辨真心與誘惑？",
+      "這段感情值得投入嗎？"
+    ],
+    "is_active": 1,
+    "sort_order": 2
+  },
+  {
+    "reading_id": "11265da8-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "liu_xia",
+    "pillar_type": "month",
+    "gender": "female",
+    "name": "流霞",
+    "badge_text": "情動",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "月柱流霞，生活圈易遇強烈吸引",
+    "bullet_points": null,
+    "for_this_position": "女命月柱流霞，生活圈中易遇強烈吸引的人，感情波動較大。工作場合、朋友圈、聚會裡容易產生情緒牽動或曖昧。若失去界線，可能捲入口舌或感情糾紛。學會給情緒降溫，才能讓流霞成為靈感與直覺，而非衝動與後悔。",
+    "recommended_questions": [
+      "職場感情該如何處理？",
+      "如何控制自己的情緒？",
+      "這段曖昧值得投入嗎？"
+    ],
+    "is_active": 1,
+    "sort_order": 2
+  },
+  {
+    "reading_id": "1126c52c-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "liu_xia",
+    "pillar_type": "day",
+    "gender": "male",
+    "name": "流霞",
+    "badge_text": "情動",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "日柱流霞，內在情慾旺、情感需求高",
+    "bullet_points": null,
+    "for_this_position": "日柱流霞，內在情慾旺、情感需求高，愛一個人時非常投入。婚後容易因情緒或需求未被理解而悶悶不樂。需學習以理性處理情感衝動。若自律良好，這顆星會讓他深情、敏銳、富魅力；若放縱，則帶來情感風波。",
+    "recommended_questions": [
+      "我的感情為何起伏大？",
+      "如何找到穩定的關係？",
+      "婚後如何經營感情？"
+    ],
+    "is_active": 1,
+    "sort_order": 3
+  },
+  {
+    "reading_id": "11266096-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "liu_xia",
+    "pillar_type": "day",
+    "gender": "female",
+    "name": "流霞",
+    "badge_text": "情動",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "日柱流霞，情慾敏感度高、重感覺",
+    "bullet_points": null,
+    "for_this_position": "日柱流霞，情慾敏感度高、重感覺，戀愛時投入深。這類女性對伴侶渴望浪漫與親密，也容易因情受傷。婚後若伴侶忽略她的情緒，她會感到孤寂。若能保持清醒界線，流霞會讓她在愛情中更懂得自己、也更有魅力。",
+    "recommended_questions": [
+      "我的感情為何起伏大？",
+      "如何找到穩定的關係？",
+      "婚後如何保持激情？"
+    ],
+    "is_active": 1,
+    "sort_order": 3
+  },
+  {
+    "reading_id": "1126c806-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "liu_xia",
+    "pillar_type": "hour",
+    "gender": "male",
+    "name": "流霞",
+    "badge_text": "情動",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "時柱流霞，中晚年仍有吸引力",
+    "bullet_points": null,
+    "for_this_position": "男命時柱流霞，中晚年仍有吸引力，易在興趣圈或社交場合遇到動情的人。若婚姻穩定，這顆星會讓他越來越懂得浪漫與生活品味；若婚姻不順，易出現外緣誘惑。子女也可能情緒敏感、戀愛早熟。",
+    "recommended_questions": [
+      "我的晚年感情運如何？",
+      "如何保持婚姻穩定？",
+      "中年後該注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 4
+  },
+  {
+    "reading_id": "1126651e-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "liu_xia",
+    "pillar_type": "hour",
+    "gender": "female",
+    "name": "流霞",
+    "badge_text": "情動",
+    "type": "neutral",
+    "short_title": null,
+    "summary": "時柱流霞，晚年仍保持感性與浪漫",
+    "bullet_points": null,
+    "for_this_position": "時柱流霞，晚年仍保持感性與浪漫，對生活有品味、不願麻木。子女或晚輩也較情緒敏感。若能在中年後學會情緒管理，這顆星反而讓她越活越有魅力。若婚姻不穩，中晚年恐出現新的感情誘惑，要格外自律。",
+    "recommended_questions": [
+      "我的晚年感情運如何？",
+      "如何保持魅力？",
+      "中年後該注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 4
+  },
+  {
+    "reading_id": "8b82964e-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "long_de_gui_ren",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "龍德貴人",
+    "badge_text": "貴人",
+    "type": "auspicious",
+    "short_title": "祖上有權望，自幼有氣度",
+    "summary": "主權威、氣度與格局，代表貴氣與領導力，容易獲得上層賞識與提拔。",
+    "bullet_points": [
+      "祖上有權望聲名",
+      "早年有長輩指路",
+      "自幼具向上之勢與體面感"
+    ],
+    "for_this_position": "年柱見龍德貴人，多主祖上有權望或聲名，家中長輩做事有擔當、有氣度。命主自幼較有「體面感」，在同輩中不願落於人後，內心帶著一股向上之勢。早年常逢長輩、師長提攜，在關鍵抉擇時有人指路，較少走極端之路。若行運配合，易因出身背景與自身氣場，被視為「可栽培的人」，在學業或事業起步階段較順。",
+    "recommended_questions": [
+      "龍德貴人對我的影響是什麼？",
+      "年柱的龍德貴人會如何影響我？",
+      "我該如何善用這份貴氣？",
+      "龍德貴人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b82ad82-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "long_de_gui_ren",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "龍德貴人",
+    "badge_text": "貴人",
+    "type": "auspicious",
+    "short_title": "職場有格局，易獲賞識",
+    "summary": "主權威、氣度與格局，代表貴氣與領導力，容易獲得上層賞識與提拔。",
+    "bullet_points": [
+      "利於職場格局與人際",
+      "具領導意識能撐場面",
+      "易遇高層貴人賞識"
+    ],
+    "for_this_position": "龍德貴人落月柱，格外利於職場環境與人際格局，主在單位、團隊中較能站上台面，負責對外溝通或主事角色。此人多有領導意識與格局眼光，談吐有分寸，能在關鍵場合替團隊撐場面。工作上常遇位階較高、願意賞識自己的貴人，給予機會與舞台。若能收斂鋒芒、不逞一時之氣，走的是「穩中帶貴」路線，職涯上升通道相對較清晰。",
+    "recommended_questions": [
+      "龍德貴人對我的事業有何幫助？",
+      "月柱的龍德貴人如何影響職場？",
+      "我適合擔任什麼角色？",
+      "如何獲得高層賞識？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b82c772-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "long_de_gui_ren",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "龍德貴人",
+    "badge_text": "貴人",
+    "type": "auspicious",
+    "short_title": "自帶氣場，婚姻互相成就",
+    "summary": "主權威、氣度與格局，代表貴氣與領導力，容易獲得上層賞識與提拔。",
+    "bullet_points": [
+      "自帶氣場有尊嚴",
+      "婚姻重互相成就與前途",
+      "處事有格局不意氣用事"
+    ],
+    "for_this_position": "日柱為自身與婚姻，龍德貴人臨此，多主命主自帶氣場與尊嚴感，不喜低聲下氣，待人有原則。感情中較重身分感與互相成就，期望伴侶有一定能力或前途，兩人一起往上走。婚姻關係若經經營，多有「表面體面、內裡講道理」的風格，遇到矛盾時，宜用理性與格局處理，而非意氣之爭。只要不過度自尊作祟，往往能成為彼此成就的一對。",
+    "recommended_questions": [
+      "龍德貴人對我的感情有何影響？",
+      "日柱的龍德貴人如何影響婚姻？",
+      "我會吸引什麼樣的伴侶？",
+      "如何與伴侶互相成就？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b8309a8-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "long_de_gui_ren",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "龍德貴人",
+    "badge_text": "貴人",
+    "type": "auspicious",
+    "short_title": "晚年仍有機會，子女爭氣",
+    "summary": "主權威、氣度與格局，代表貴氣與領導力，容易獲得上層賞識與提拔。",
+    "bullet_points": [
+      "庇蔭中晚年與子女",
+      "子女上進有氣勢能增光",
+      "晚年仍有上升翻身機會"
+    ],
+    "for_this_position": "龍德貴人坐時柱，多庇蔭中晚年與子女發展，主晚景仍有上升或翻身的機會，不至於早早躺平。子女多帶氣勢或上進心，容易在學業、事業上爭一口氣，替家庭增光。中晚年常逢事業第二春或角色轉換，如創業、管理、帶團隊等，仍有展現領導力的舞台。若能持續修身立德，不貪僥倖之財與捷徑，是越到後期越有分量、越有話語權的格局。",
+    "recommended_questions": [
+      "龍德貴人對我的晚年有何影響？",
+      "時柱的龍德貴人如何影響子女？",
+      "我的晚年事業如何發展？",
+      "如何把握第二春機會？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "eb60d058-9662-4400-8489-a533e6eca463",
+    "shensha_code": "nian_kong_wang",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "年空亡",
+    "badge_text": "變數",
+    "type": "inauspicious",
+    "short_title": "祖上无靠",
+    "summary": "年柱地支空亡，称为\"空根\"，代表祖业飘零，与祖上缘分浅薄，早年生活易有缺失。",
+    "bullet_points": [
+      "祖上无靠，难以继承祖业",
+      "父母对自己的帮助力有限，需自力更生"
+    ],
+    "for_this_position": "年空亡多主原生家庭中，有部分表面期待與實際結果存在落差，命主成長過程對「安全感」議題較敏感。家族資源不一定能完全依靠，反而促使你早早意識到要靠自己。年柱空亡並非絕對不利，而是代表祖上與自己連結較鬆，適合走出家門闖出一片天，在外地或自力更生中找到定位。",
+    "recommended_questions": [
+      "年空亡對我的影響是什麼？",
+      "年柱的年空亡會如何影響我？",
+      "我該如何善用年空亡？",
+      "年空亡需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "d278337d-0c01-42bd-bf68-3e0c3c8d7233",
+    "shensha_code": "pi_ma",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "披麻",
+    "badge_text": "責任",
+    "type": "inauspicious",
+    "short_title": "家中必有戴孝之事",
+    "summary": "主丧事、戴孝，是孝服之象，力量与指向比丧门、吊客更直接。",
+    "bullet_points": [
+      "家中必有戴孝之事，多应在直系长辈"
+    ],
+    "for_this_position": "年柱見披麻，多主原生家庭對傳統禮俗、長幼秩序較為重視，命主從小接觸各種儀式與人情規範。雖不一定感到輕鬆，但早早理解「家族責任」的意義。這顆星也提醒你，對家中長輩的健康與照顧議題，會比一般人更有參與感與責任感。",
+    "recommended_questions": [
+      "披麻對我的影響是什麼？",
+      "年柱的披麻會如何影響我？",
+      "我該如何善用披麻？",
+      "披麻需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "849f6b33-2582-4087-903e-43cacbae687c",
+    "shensha_code": "pi_ma",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "披麻",
+    "badge_text": "責任",
+    "type": "inauspicious",
+    "short_title": "父母或同胞兄弟姐妹有灾厄",
+    "summary": "主丧事、戴孝，是孝服之象，力量与指向比丧门、吊客更直接。",
+    "bullet_points": [
+      "父母或同胞兄弟姐妹有灾厄，需穿孝服"
+    ],
+    "for_this_position": "披麻落月柱，象徵在工作與人際中，常需處理「程序、規矩、傳統」類型的事務，例如行政、法務、人資、禮儀或宗教相關。命主對儀式感與規範有天生敏感度，適合在這些領域發揮。需注意的是，別讓自己一味扛下所有責任，適時分工很重要。",
+    "recommended_questions": [
+      "披麻對我的影響是什麼？",
+      "月柱的披麻會如何影響我？",
+      "我該如何善用披麻？",
+      "披麻需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8ea0952d-9681-44cc-97f5-9d5997728370",
+    "shensha_code": "pi_ma",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "披麻",
+    "badge_text": "責任",
+    "type": "inauspicious",
+    "short_title": "自身或配偶需为至亲戴孝",
+    "summary": "主丧事、戴孝，是孝服之象，力量与指向比丧门、吊客更直接。",
+    "bullet_points": [
+      "自身或配偶需为至亲戴孝，婚姻期间易遇重大丧事"
+    ],
+    "for_this_position": "日柱見披麻，多主在婚姻與家庭中，對長輩與雙方家族責任看得較重。婚後可能需要在照顧父母、處理家務與傳統儀式上付出心力。這顆星並非純粹不吉，而是提醒你提前溝通好角色分工，讓伴侶理解你肩上的壓力，才能共同承擔，而非一人獨撐。",
+    "recommended_questions": [
+      "披麻對我的影響是什麼？",
+      "日柱的披麻會如何影響我？",
+      "我該如何善用披麻？",
+      "披麻需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "059d3b85-b5c5-4b7c-83de-3ffab67a56de",
+    "shensha_code": "pi_ma",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "披麻",
+    "badge_text": "責任",
+    "type": "inauspicious",
+    "short_title": "晚年需为晚辈或配偶戴孝",
+    "summary": "主丧事、戴孝，是孝服之象，力量与指向比丧门、吊客更直接。",
+    "bullet_points": [
+      "晚年需为晚辈或配偶戴孝，是老年丧亲的明显信号"
+    ],
+    "for_this_position": "披麻坐時柱，多與中晚年處理家族儀式、送別與照顧長輩有關。你可能成為家族中主導流程的人，負責安排祭祀、探視、醫療與後事等事宜。若能用平和心看待，這是一種成全與功德，同時也要懂得照顧好自己的身心，必要時尋求專業與親友支援。",
+    "recommended_questions": [
+      "披麻對我的影響是什麼？",
+      "时柱的披麻會如何影響我？",
+      "我該如何善用披麻？",
+      "披麻需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "5629ee9d-5c2e-4057-8572-e469d2fd5c08",
+    "shensha_code": "ri_kong_wang",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "日空亡",
+    "badge_text": "自我",
+    "type": "inauspicious",
+    "short_title": "自身才能发挥受限",
+    "summary": "日柱地支空亡，称为\"空自我\"，代表自身力量不实，心性不定，婚姻不顺，常有空虚之感。",
+    "bullet_points": [
+      "自身才能发挥受限，常怀才不遇",
+      "夫妻宫空亡，婚姻易有名无实，或配偶才能难以施展"
+    ],
+    "for_this_position": "日空亡多主自我認同與感情議題上有較多內在矛盾與起伏。命主容易感到「別人看見的我」與「真正的我」不完全重疊，感情路也可能走一些彎路。這顆星提醒你要花時間了解自己真正想要的是什麼，而不是隨波逐流。當自我穩定後，空亡反而帶來彈性與重新選擇的自由，讓你更有勇氣活成自己喜歡的模樣。",
+    "recommended_questions": [
+      "日空亡對我的影響是什麼？",
+      "日柱的日空亡會如何影響我？",
+      "我該如何善用日空亡？",
+      "日空亡需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "c501db6f-3b2c-4d4d-846b-a3ae8fdc4e0c",
+    "shensha_code": "sang_men",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "喪門",
+    "badge_text": "離別",
+    "type": "inauspicious",
+    "short_title": "早年家中易有丧事",
+    "summary": "主孝服、丧事、哀伤。多代表家中亲属有亡故之忧，带来悲伤之事。",
+    "bullet_points": [
+      "早年家中易有丧事，多与祖辈、父母辈相关",
+      "童年生活带哀伤色彩"
+    ],
+    "for_this_position": "年柱見喪門，多主童年較早接觸「無常」議題，如家族有人生病、離散或生活變動較多。命主因此對離別、生死、失去特別敏感。這並非必然帶來災禍，而是讓你更早思考生命意義。若能將這種體悟轉化為珍惜當下與善待身邊人，反而成為心性的深度來源。",
+    "recommended_questions": [
+      "丧门對我的影響是什麼？",
+      "年柱的丧门會如何影響我？",
+      "我該如何善用丧门？",
+      "丧门需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "f5e374f0-4a6d-4478-b6f1-c24de2cf91ff",
+    "shensha_code": "sang_men",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "喪門",
+    "badge_text": "離別",
+    "type": "inauspicious",
+    "short_title": "青中年时期需注意父母、兄弟姐妹等近亲的健康",
+    "summary": "主孝服、丧事、哀伤。多代表家中亲属有亡故之忧，带来悲伤之事。",
+    "bullet_points": [
+      "青中年时期需注意父母、兄弟姐妹等近亲的健康，易有白事"
+    ],
+    "for_this_position": "喪門落月柱，象徵在職場與人際關係中，容易經歷一些團隊成員出入、部門調整或合作中止。對命主來說，告別不代表失敗，而是必然過程，只是心裡較容易感傷。學會面對結束、好好說再見，可以讓這顆星的能量變得成熟而有韌性。",
+    "recommended_questions": [
+      "丧门對我的影響是什麼？",
+      "月柱的丧门會如何影響我？",
+      "我該如何善用丧门？",
+      "丧门需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "42e41225-8dd6-4579-9038-01d2bb90978d",
+    "shensha_code": "sang_men",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "喪門",
+    "badge_text": "離別",
+    "type": "inauspicious",
+    "short_title": "需格外关注配偶的健康与安全",
+    "summary": "主孝服、丧事、哀伤。多代表家中亲属有亡故之忧，带来悲伤之事。",
+    "bullet_points": [
+      "需格外关注配偶的健康与安全，婚姻生活可能因丧事而蒙上阴影"
+    ],
+    "for_this_position": "日柱見喪門，多主在感情與家庭議題上，特別害怕失去與分離。可能因為早年經歷，對承諾格外謹慎。這顆星提醒你要用健康的方式處理不安感，而非過度黏人或過度退縮。當你能接受關係有其生命週期，就不會在每次變化時都被情緒淹沒。",
+    "recommended_questions": [
+      "丧门對我的影響是什麼？",
+      "日柱的丧门會如何影響我？",
+      "我該如何善用丧门？",
+      "丧门需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "1df3f597-67a7-43c3-ab73-18ece516d62f",
+    "shensha_code": "sang_men",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "喪門",
+    "badge_text": "離別",
+    "type": "inauspicious",
+    "short_title": "晚年需注意子女或自身健康",
+    "summary": "主孝服、丧事、哀伤。多代表家中亲属有亡故之忧，带来悲伤之事。",
+    "bullet_points": [
+      "晚年需注意子女或自身健康，易遭遇晚辈离世的伤痛"
+    ],
+    "for_this_position": "喪門坐時柱，與中晚年面對生老病死、送別親友議題有關。並不代表一定喪事連連，而是人生後半段難免接觸這類場景。若能提早做好保險、財務與醫療規劃，並珍惜與家人相處的時間，這顆星反而會讓你在面對無常時，比別人更從容與坦然。",
+    "recommended_questions": [
+      "丧门對我的影響是什麼？",
+      "时柱的丧门會如何影響我？",
+      "我該如何善用丧门？",
+      "丧门需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "e148e250-d044-11f0-9799-8c902c2c5938",
+    "shensha_code": "shi_e_da_bai",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "十惡大敗",
+    "badge_text": "財敗",
+    "type": "inauspicious",
+    "short_title": "祿神逢空亡，本錢難固守",
+    "summary": "十惡大敗只論日柱，年柱不適用此神煞。",
+    "bullet_points": [
+      "十惡大敗只論日柱",
+      "年柱不適用此神煞",
+      "請查看日柱解讀"
+    ],
+    "for_this_position": "十惡大敗只論日柱，年柱不適用此神煞。此神煞專指日柱逢祿神逢空亡之日，其他三柱不論。",
+    "recommended_questions": [
+      "十惡大敗對我的財運影響是什麼？",
+      "我該如何理財才能避免財來財去？",
+      "十惡大敗的人適合什麼類型的投資？",
+      "如何把十惡大敗轉化為風險意識？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "e1499178-d044-11f0-9799-8c902c2c5938",
+    "shensha_code": "shi_e_da_bai",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "十惡大敗",
+    "badge_text": "財敗",
+    "type": "inauspicious",
+    "short_title": "祿神逢空亡，本錢難固守",
+    "summary": "十惡大敗只論日柱，月柱不適用此神煞。",
+    "bullet_points": [
+      "十惡大敗只論日柱",
+      "月柱不適用此神煞",
+      "請查看日柱解讀"
+    ],
+    "for_this_position": "十惡大敗只論日柱，月柱不適用此神煞。此神煞專指日柱逢祿神逢空亡之日，其他三柱不論。",
+    "recommended_questions": [
+      "十惡大敗對我的財運影響是什麼？",
+      "我該如何理財才能避免財來財去？",
+      "十惡大敗的人適合什麼類型的投資？",
+      "如何把十惡大敗轉化為風險意識？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "e14a09fa-d044-11f0-9799-8c902c2c5938",
+    "shensha_code": "shi_e_da_bai",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "十惡大敗",
+    "badge_text": "財敗",
+    "type": "inauspicious",
+    "short_title": "祿神逢空亡，本錢難固守",
+    "summary": "日柱逢十惡大敗，多主金錢、資源與安全感的課題需用心經營，容易財來財去，但非一定窮困。",
+    "bullet_points": [
+      "祿神逢空亡，賺得到但留不住",
+      "計畫多變，臨門反覆拖延",
+      "提早培養理財觀念可化險為夷"
+    ],
+    "for_this_position": "日柱逢十惡大敗，多主祿神逢空亡，本錢難固守，一生對金錢、資源與安全感的課題，比一般人更需要用心經營。古書言其「家道中落、財來財去」，並非一定窮困，而是容易出現：賺得到、留不住，或是計畫多變、臨門幾步反覆拖延。年少時若不懂節制，易有衝動消費、投機失利、靠感覺做決定之象。若能提早培養理財觀念、保守看待高風險投資，重大選擇多做評估、少憑一時之氣，反而能把這顆煞星當成「風險提示」，在別人鬆懈處保持清醒，久而久之走出屬於自己的穩定路。",
+    "recommended_questions": [
+      "十惡大敗對我的財運影響是什麼？",
+      "我該如何理財才能避免財來財去？",
+      "十惡大敗的人適合什麼類型的投資？",
+      "如何把十惡大敗轉化為風險意識？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "e14ab044-d044-11f0-9799-8c902c2c5938",
+    "shensha_code": "shi_e_da_bai",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "十惡大敗",
+    "badge_text": "財敗",
+    "type": "inauspicious",
+    "short_title": "祿神逢空亡，本錢難固守",
+    "summary": "十惡大敗只論日柱，時柱不適用此神煞。",
+    "bullet_points": [
+      "十惡大敗只論日柱",
+      "時柱不適用此神煞",
+      "請查看日柱解讀"
+    ],
+    "for_this_position": "十惡大敗只論日柱，時柱不適用此神煞。此神煞專指日柱逢祿神逢空亡之日，其他三柱不論。",
+    "recommended_questions": [
+      "十惡大敗對我的財運影響是什麼？",
+      "我該如何理財才能避免財來財去？",
+      "十惡大敗的人適合什麼類型的投資？",
+      "如何把十惡大敗轉化為風險意識？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "4bedb530-47e7-4c0f-87ed-593e2ecd81e2",
+    "shensha_code": "tai_ji_gui_ren",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "太極貴人",
+    "badge_text": "智慧",
+    "type": "auspicious",
+    "short_title": "祖上或有信仰、从事偏门、玄学之人",
+    "summary": "代表对神秘事物、玄学、哲学、宗教有先天悟性和缘分。性格正直专注，喜欢独立思考，有钻研精神，容易在专业领域有所成就。",
+    "bullet_points": [
+      "祖上或有信仰、从事偏门、玄学之人",
+      "自身天生对神秘事物有好奇心和感知力"
+    ],
+    "for_this_position": "年柱見太極，多主出身家庭重精神層面與道德觀，或家中長輩對宗教、哲學、傳統文化有興趣。命主從小對人生意義、是非對錯較敏感，容易思考「為何如此」，不只停留在表面。此象亦主與宗教、命理、醫療、心理等領域容易結緣，早年就有機會接觸相關觀念。",
+    "recommended_questions": [
+      "太极贵人對我的影響是什麼？",
+      "年柱的太极贵人會如何影響我？",
+      "我該如何善用太极贵人？",
+      "太极贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "a9bb25cc-1a37-42ab-a8f9-fdae07348682",
+    "shensha_code": "tai_ji_gui_ren",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "太極貴人",
+    "badge_text": "智慧",
+    "type": "auspicious",
+    "short_title": "青少年时期便展现出对哲学、宗教或特定学科的浓厚兴趣与天赋",
+    "summary": "代表对神秘事物、玄学、哲学、宗教有先天悟性和缘分。性格正直专注，喜欢独立思考，有钻研精神，容易在专业领域有所成就。",
+    "bullet_points": [
+      "青少年时期便展现出对哲学、宗教或特定学科的浓厚兴趣与天赋",
+      "易得此类领域的师长指点"
+    ],
+    "for_this_position": "太極落月柱，象徵命主在職場與日常人際中，常扮演調和、理解與諮詢的角色。對他人情緒、痛點有直覺，適合從事心理諮商、醫護、命理、宗教服務、療癒、顧問等相關工作。做事不喜粗暴，較重內在原則與長遠因果，在團隊中常被視為「有深度」的人。",
+    "recommended_questions": [
+      "太极贵人對我的影響是什麼？",
+      "月柱的太极贵人會如何影響我？",
+      "我該如何善用太极贵人？",
+      "太极贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "f6bf7f97-0093-4ed5-9e30-8cb4f71d9d99",
+    "shensha_code": "tai_ji_gui_ren",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "太極貴人",
+    "badge_text": "智慧",
+    "type": "auspicious",
+    "short_title": "自身有强烈的探索精神",
+    "summary": "代表对神秘事物、玄学、哲学、宗教有先天悟性和缘分。性格正直专注，喜欢独立思考，有钻研精神，容易在专业领域有所成就。",
+    "bullet_points": [
+      "自身有强烈的探索精神，适合从事研究、技术、命理、医学等需要深"
+    ],
+    "for_this_position": "日柱見太極，多主本人帶點神秘與靈性氣質，內心世界豐富，思考層次容易超出同齡。對感情與婚姻不只求形式，更看重心靈契合與價值觀一致。也較容易接觸命理、宗教、心理成長類領域，從中找到安定感。若能善用這份敏感與洞察力，對自己與伴侶的成長都很有幫助。",
+    "recommended_questions": [
+      "太极贵人對我的影響是什麼？",
+      "日柱的太极贵人會如何影響我？",
+      "我該如何善用太极贵人？",
+      "太极贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "b4be51dc-b1bc-466f-b207-241203e97339",
+    "shensha_code": "tai_ji_gui_ren",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "太極貴人",
+    "badge_text": "智慧",
+    "type": "auspicious",
+    "short_title": "晚年对精神世界的追求更甚",
+    "summary": "代表对神秘事物、玄学、哲学、宗教有先天悟性和缘分。性格正直专注，喜欢独立思考，有钻研精神，容易在专业领域有所成就。",
+    "bullet_points": [
+      "晚年对精神世界的追求更甚，可能皈依信仰或深入研究某一门学问",
+      "子女也可能对此类领域感兴趣"
+    ],
+    "for_this_position": "太極坐時柱，多庇蔭晚年精神世界與子女緣。中晚年對修身養性、哲學、命理、宗教、養生等議題特別有感，願意調整生活步調，追求心靈安穩。子女或晚輩中，也容易有人走向專業助人、研究或靈性相關領域。晚景多偏「越活越看得開」的類型，重心更在內在平靜。",
+    "recommended_questions": [
+      "太极贵人對我的影響是什麼？",
+      "时柱的太极贵人會如何影響我？",
+      "我該如何善用太极贵人？",
+      "太极贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "2eade37b-ff81-4c73-a92b-b7ed628df018",
+    "shensha_code": "tao_hua",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "桃花（鹹池）",
+    "badge_text": "桃花",
+    "type": "neutral",
+    "short_title": "长得好看",
+    "summary": "代表魅力、人缘、情感、艺术感受力。为情欲之星，有时也主才华，视搭配而定吉凶。",
+    "bullet_points": [
+      "长得好看，有气质，受人喜爱",
+      "早年就容易展现艺术天赋或吸引他人"
+    ],
+    "for_this_position": "年柱見桃花，多主原生家庭對人情味與社交較不陌生，命主從小就觀察到男女情感互動，對「喜歡、吸引」有早熟理解。長大後在家族、同學圈中易成為被注意的對象，顏值、氣質或說話方式較能吸睛。需留意青春期情感過早投入，以免影響學業與心情穩定。",
+    "recommended_questions": [
+      "桃花（咸池）對我的影響是什麼？",
+      "年柱的桃花（咸池）會如何影響我？",
+      "我該如何善用桃花（咸池）？",
+      "桃花（咸池）需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "2e115533-dbcf-430a-9d47-5397c96e76d3",
+    "shensha_code": "tao_hua",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "桃花（鹹池）",
+    "badge_text": "桃花",
+    "type": "neutral",
+    "short_title": "青年时期人缘极佳",
+    "summary": "代表魅力、人缘、情感、艺术感受力。为情欲之星，有时也主才华，视搭配而定吉凶。",
+    "bullet_points": [
+      "青年时期人缘极佳，异性缘旺盛，善于交际，是社交圈中的焦点"
+    ],
+    "for_this_position": "桃花落月柱，象徵在職場與朋友圈中異性緣明顯，人際互動熱絡。命主常因外型、氣場或談吐，吸引他人靠近，邀約與曖昧機會較多。適合作與美感、表達、服務業相關的工作，但需留意公私界線，避免辦公室戀情與情感糾結影響專業判斷。",
+    "recommended_questions": [
+      "桃花（咸池）對我的影響是什麼？",
+      "月柱的桃花（咸池）會如何影響我？",
+      "我該如何善用桃花（咸池）？",
+      "桃花（咸池）需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "ce207215-df87-4c0a-8243-4a6bc1be413d",
+    "shensha_code": "tao_hua",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "桃花（鹹池）",
+    "badge_text": "桃花",
+    "type": "neutral",
+    "short_title": "自身魅力强大",
+    "summary": "代表魅力、人缘、情感、艺术感受力。为情欲之星，有时也主才华，视搭配而定吉凶。",
+    "bullet_points": [
+      "自身魅力强大，感情丰富，配偶通常外貌出众",
+      "但日坐桃花也需防感情困扰、纠缠"
+    ],
+    "for_this_position": "日柱見桃花，多主本人情感豐富、重感覺，戀愛時投入度高。對伴侶要求既看外在吸引，也在意相處氛圍，容易陷入一見鍾情或短期強烈心動。若能在選擇時多看三觀與長期配合，而非只看荷爾蒙，則這顆星會帶來浪漫與魅力，而非麻煩與後悔。",
+    "recommended_questions": [
+      "桃花（咸池）對我的影響是什麼？",
+      "日柱的桃花（咸池）會如何影響我？",
+      "我該如何善用桃花（咸池）？",
+      "桃花（咸池）需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "99671119-209e-4423-b2dc-fb0f2f544528",
+    "shensha_code": "tao_hua",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "桃花（鹹池）",
+    "badge_text": "桃花",
+    "type": "neutral",
+    "short_title": "晚年仍不乏魅力",
+    "summary": "代表魅力、人缘、情感、艺术感受力。为情欲之星，有时也主才华，视搭配而定吉凶。",
+    "bullet_points": [
+      "晚年仍不乏魅力，子女多半长相好，有艺术才华，在外有好人缘"
+    ],
+    "for_this_position": "桃花坐時柱，多與中晚年感情生活及子女情事相關。晚年仍保有對美與愛的敏感度，不喜生活枯燥，可能在興趣圈、旅遊或社團活動中認識異性朋友。子女在感情表現上也較活躍，追求自由戀愛。需要提醒的是，家庭與情感界線要拿捏分寸，以免無心之舉被誤解。",
+    "recommended_questions": [
+      "桃花（咸池）對我的影響是什麼？",
+      "时柱的桃花（咸池）會如何影響我？",
+      "我該如何善用桃花（咸池）？",
+      "桃花（咸池）需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "6a82b8a5-899a-4593-ab08-05aa9638535a",
+    "shensha_code": "tian_chu_gui_ren",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "天廚貴人",
+    "badge_text": "口福",
+    "type": "auspicious",
+    "short_title": "祖辈家境殷实",
+    "summary": "代表食禄、口福、烹饪才能。命主不愁吃穿，懂得享受生活，或有精湛厨艺。",
+    "bullet_points": [
+      "祖辈家境殷实，有口福",
+      "家庭注重饮食文化"
+    ],
+    "for_this_position": "年柱見天廚，多主出生在不至匱乏的環境，家中重視飲食與生活品質。命主自小嘴巴挑，對味道與環境敏感。長大後特別有口福，容易吃到好東西，也較懂得享受生活。只要懂得節制，這顆星帶來的是幸福感，而非單純的貪嘴。",
+    "recommended_questions": [
+      "天厨贵人對我的影響是什麼？",
+      "年柱的天厨贵人會如何影響我？",
+      "我該如何善用天厨贵人？",
+      "天厨贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "68850091-e97b-4ae1-a134-9705d9e5318d",
+    "shensha_code": "tian_chu_gui_ren",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "天廚貴人",
+    "badge_text": "口福",
+    "type": "auspicious",
+    "short_title": "青中年时期生活优渥",
+    "summary": "代表食禄、口福、烹饪才能。命主不愁吃穿，懂得享受生活，或有精湛厨艺。",
+    "bullet_points": [
+      "青中年时期生活优渥，多参加宴请，或自己善于烹饪"
+    ],
+    "for_this_position": "天廚落月柱，象徵在職場與人際中，常因聚餐、美食、款待而建立良好關係。適合從事餐飲、餐旅、烘焙、宴會、活動企劃等與「吃與享受」相關的行業。命主對服務與氛圍營造有天份，只要兼顧健康與成本，能透過美食與溫度累積口碑。",
+    "recommended_questions": [
+      "天厨贵人對我的影響是什麼？",
+      "月柱的天厨贵人會如何影響我？",
+      "我該如何善用天厨贵人？",
+      "天厨贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "b12d1e2d-c4a2-4bc6-8062-23f24e55669b",
+    "shensha_code": "tian_chu_gui_ren",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "天廚貴人",
+    "badge_text": "口福",
+    "type": "auspicious",
+    "short_title": "自身是美食家",
+    "summary": "代表食禄、口福、烹饪才能。命主不愁吃穿，懂得享受生活，或有精湛厨艺。",
+    "bullet_points": [
+      "自身是美食家，喜欢研究吃喝，配偶也可能厨艺佳"
+    ],
+    "for_this_position": "日柱見天廚，多主在感情與家庭生活中，喜歡用料理、招待與營造氛圍表達愛。婚後家中多香氣四溢，願意為家人準備好吃的，也重視環境舒適。需留意飲食過度放縱，適度安排運動與健康飲食，才能讓這顆星成為幸福的佐料，而非身體負擔。",
+    "recommended_questions": [
+      "天厨贵人對我的影響是什麼？",
+      "日柱的天厨贵人會如何影響我？",
+      "我該如何善用天厨贵人？",
+      "天厨贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "235b1435-67eb-4644-86b8-8112474458d7",
+    "shensha_code": "tian_chu_gui_ren",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "天廚貴人",
+    "badge_text": "口福",
+    "type": "auspicious",
+    "short_title": "晚年生活富足",
+    "summary": "代表食禄、口福、烹饪才能。命主不愁吃穿，懂得享受生活，或有精湛厨艺。",
+    "bullet_points": [
+      "晚年生活富足，享受子女或他人的奉养，有口福"
+    ],
+    "for_this_position": "天廚坐時柱，多庇蔭中晚年的生活品質與子女享樂風格。晚年不願活得太苦，喜歡旅遊、美食、品茶、烹飪或與三五好友聚會。子女也可能對料理、餐飲或生活品味有興趣。此星使晚景偏向「懂得享受、也懂得分享」，精神與物質皆可兼顧。",
+    "recommended_questions": [
+      "天厨贵人對我的影響是什麼？",
+      "时柱的天厨贵人會如何影響我？",
+      "我該如何善用天厨贵人？",
+      "天厨贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "eb068878-a057-4183-a6a6-8c4c84e634c0",
+    "shensha_code": "tian_de_gui_ren",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "天德貴人",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "祖上积德",
+    "summary": "天地德秀之气，化解灾厄的顶级吉神。能化解一切凶煞、官非，代表天道佑护，一生平安，贵人相助。",
+    "bullet_points": [
+      "祖上积德，福泽深厚",
+      "一生大灾大难少，总能化险为夷，有\"天佑\"之象"
+    ],
+    "for_this_position": "年柱見天德，多主祖上積善，家族氣場較正直，不喜歪門邪道。命主早年若遇意外變動或不公情況，常有長輩出面主持公道或暗中幫忙，讓事情往正向結果發展。此星有化煞之力，很多原本可能發展成大麻煩的事，最後雖辛苦，仍能「有驚無險」。",
+    "recommended_questions": [
+      "天德贵人對我的影響是什麼？",
+      "年柱的天德贵人會如何影響我？",
+      "我該如何善用天德贵人？",
+      "天德贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "bce3b983-b223-4fbc-a4e5-30a5a8e02259",
+    "shensha_code": "tian_de_gui_ren",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "天德貴人",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "为人正气凛然",
+    "summary": "天地德秀之气，化解灾厄的顶级吉神。能化解一切凶煞、官非，代表天道佑护，一生平安，贵人相助。",
+    "bullet_points": [
+      "为人正气凛然，受人尊敬",
+      "在社会上行事多遇贵人扶持，能化解事业上的重大危机"
+    ],
+    "for_this_position": "天德落月柱，特別利職場與社交場域中的「正氣人脈」。命主身邊較容易聚集態度正派、願意講原則的同事與上司，在面對制度、規範、是非問題時，不必單打獨鬥。若自身也能堅守底線，不為小利所動，許多職場小人或暗箭，最終會因形勢與貴人出手而化解。",
+    "recommended_questions": [
+      "天德贵人對我的影響是什麼？",
+      "月柱的天德贵人會如何影響我？",
+      "我該如何善用天德贵人？",
+      "天德贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "f5199c9d-fc0c-4017-b8f7-9341afbaef94",
+    "shensha_code": "tian_de_gui_ren",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "天德貴人",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "自身福报深厚",
+    "summary": "天地德秀之气，化解灾厄的顶级吉神。能化解一切凶煞、官非，代表天道佑护，一生平安，贵人相助。",
+    "bullet_points": [
+      "自身福报深厚，心地善良",
+      "是自身的护身符，能保婚姻稳定，配偶有助"
+    ],
+    "for_this_position": "日柱見天德，多主本人重道德感與責任感，寧可自己辛苦，也不願做傷天害理之事。感情與婚姻中，即便遇到誘惑與考驗，也較有能力踩住界線。當關係陷入僵局時，常有長輩或懂事之人出面調停，使局面不至於撕裂到底。此星也讓命主在關鍵選擇上，多半能回到「對得起自己」的一邊。",
+    "recommended_questions": [
+      "天德贵人對我的影響是什麼？",
+      "日柱的天德贵人會如何影響我？",
+      "我該如何善用天德贵人？",
+      "天德贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "7c0b3127-888c-4502-a28e-8ba637a54bb4",
+    "shensha_code": "tian_de_gui_ren",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "天德貴人",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "晚年福寿双全",
+    "summary": "天地德秀之气，化解灾厄的顶级吉神。能化解一切凶煞、官非，代表天道佑护，一生平安，贵人相助。",
+    "bullet_points": [
+      "晚年福寿双全，德高望重",
+      "能庇荫后代，子女事业有成且品行佳"
+    ],
+    "for_this_position": "天德坐時柱，多庇蔭中晚年與子女、部屬運。人生後段遇到重大選擇與風險事件時，只要不貪心，往往能被「看不見的手」推向較安全的道路。子女或晚輩中，亦有人品端正、願意為家人挺身而出。此象也讓晚年更重視行善積德與內在修為，從而累積口碑與福報。",
+    "recommended_questions": [
+      "天德贵人對我的影響是什麼？",
+      "时柱的天德贵人會如何影響我？",
+      "我該如何善用天德贵人？",
+      "天德贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b817f20-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "tian_de_he",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "天德合",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "祖上積德，家風正直",
+    "summary": "天德貴人的配合之星，主正直端方、逢兇化吉，能在關鍵時刻化解災厄。",
+    "bullet_points": [
+      "得祖上積德之福",
+      "幼年有長輩相助不致絕境",
+      "家族重名聲講道義"
+    ],
+    "for_this_position": "天德合臨年柱，多得祖上積德之福，出身雖未必大富貴，但多有人情味、講道義的家庭環境。幼年與少年階段，遇事常有長輩伸手相助，不致走到絕境。此配置也主家族中多正直之人，重名聲、有羞恥心，不喜鋌而走險。若命局與行運配合，常因家族口碑良好而得外界信任，容易在長輩圈、人脈資源中受提攜，逢危多能化解。",
+    "recommended_questions": [
+      "天德合對我的影響是什麼？",
+      "年柱的天德合會如何影響我？",
+      "我該如何善用天德合？",
+      "天德合需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b81b4ae-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "tian_de_he",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "天德合",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "辦事有原則，正氣凜然",
+    "summary": "天德貴人的配合之星，主正直端方、逢兇化吉，能在關鍵時刻化解災厄。",
+    "bullet_points": [
+      "利於工作環境與人際",
+      "多遇正派上司同事",
+      "適合重公信力的行業"
+    ],
+    "for_this_position": "天德合落月柱，格外利於工作環境與日常人際，主在單位、團隊中多遇正派上司與同事，遇到制度、是非問題時，通常能站在較正直的一方，最後也較易得理。此人辦事有原則，心地不壞，雖偶有牴觸與壓力，但多有貴人暗中幫忙，讓困局出現轉機。適合在制度較重、公信力較重要的行業發展，如專業服務、公職、教育等，更能發揮其正氣與公信。",
+    "recommended_questions": [
+      "天德合對我的職場有何幫助？",
+      "月柱的天德合如何影響事業？",
+      "我適合什麼職業？",
+      "天德合的貴人何時出現？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b81f0f4-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "tian_de_he",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "天德合",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "性格端正，婚姻穩健",
+    "summary": "天德貴人的配合之星，主正直端方、逢兇化吉，能在關鍵時刻化解災厄。",
+    "bullet_points": [
+      "性格端正有原則",
+      "感情能避開歧途",
+      "婚姻穩健踏實重承諾"
+    ],
+    "for_this_position": "日柱關乎本人與婚姻，天德合臨此，多主性格端正，有底線、有是非觀，對伴侶與家人願意負責。感情路上即使遇到波折，大多能靠自身正氣與貴人相助，避開最壞的選擇，不至誤入歧途。婚姻中較能吸引品行端正、講道德的對象，共同建立相對健康的家庭氛圍。此人處理情感問題時，雖不見得浪漫，但重承諾、重長遠，適合走穩健踏實的婚姻模式。",
+    "recommended_questions": [
+      "天德合對我的感情有何影響？",
+      "日柱的天德合如何影響婚姻？",
+      "我的伴侶會是什麼樣的人？",
+      "如何經營好婚姻關係？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b821a8e-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "tian_de_he",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "天德合",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "晚年有德，子女正直",
+    "summary": "天德貴人的配合之星，主正直端方、逢兇化吉，能在關鍵時刻化解災厄。",
+    "bullet_points": [
+      "庇蔭晚年與子女",
+      "子女性格正直願意支持",
+      "晚年堅守原則逢兇化吉"
+    ],
+    "for_this_position": "天德合坐時柱，多庇蔭晚年與子女運勢，主晚景有德有福，不易孤苦。子女或部屬多性格正直，願意在關鍵時刻給予支持，不致讓自己獨自扛下所有壓力。人生中後段，作決策時若能堅守原則，不貪捷徑，多能逢凶化吉，躲過一些是非官非或投機風險。亦象徵晚年更重修心行善，樂於助人、分享經驗，反而因此聚攏人氣，精神世界較為充實安穩。",
+    "recommended_questions": [
+      "天德合對我的晚年有何影響？",
+      "時柱的天德合如何影響子女？",
+      "我的晚年運勢如何？",
+      "如何修心行善聚攏人氣？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "837fe224-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "tian_she_ri",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "天赦日",
+    "badge_text": "赦罪",
+    "type": "auspicious",
+    "short_title": "天恩護佑，逢凶化吉",
+    "summary": "天赦日為四柱神煞中的吉日，主天恩護佑、逢凶化吉、解厄赦罪。",
+    "bullet_points": [
+      "一生多受天恩護佑",
+      "遇事雖有波折，往往關鍵時刻能逢凶化吉",
+      "內心多具慈悲與反省力"
+    ],
+    "for_this_position": "日柱逢天赦日，主一生多受天恩護佑，遇事雖有波折，往往關鍵時刻能逢凶化吉、轉危為安。命主內心多具慈悲與反省力，對是非善惡有自覺，遇錯能改，故易得貴人寬待與機會重來。此星不代表「不會出事」，而是即使跌落低谷，也有較強的復原與翻身能力；若命局煞氣較重，天赦常扮演「緩衝與解厄」的角色，能減輕災難程度。",
+    "recommended_questions": [
+      "天赦日對我的影響是什麼？",
+      "日柱的天赦日會如何保護我？",
+      "我該如何善用天赦日？",
+      "天赦日需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "11261a1e-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "tian_xi",
+    "pillar_type": "year",
+    "gender": "male",
+    "name": "天喜",
+    "badge_text": "喜事",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "年柱天喜，自小討喜，長輩緣好",
+    "bullet_points": null,
+    "for_this_position": "男命年柱天喜，多主自小討喜，長輩緣好，也容易受女生注意。青春期後感情開得早，異性緣自然。此位置屬於人氣桃花，但要避免過度享受被追而不務正業。穩定後能遇到適合的伴侶。",
+    "recommended_questions": [
+      "我今年有喜事嗎？",
+      "我的感情運何時開？",
+      "如何把握好姻緣？"
+    ],
+    "is_active": 1,
+    "sort_order": 1
+  },
+  {
+    "reading_id": "1125f3fe-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "tian_xi",
+    "pillar_type": "year",
+    "gender": "female",
+    "name": "天喜",
+    "badge_text": "喜事",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "年柱天喜，自小好氣質、好人緣",
+    "bullet_points": null,
+    "for_this_position": "女命年柱天喜，多主自小有好氣質、好人緣，家中易有婚嫁喜事，或身邊長輩特別重視她的婚緣。青春期後常被追求，感情運比他人更早開。天喜在此屬易有喜事位置，若堅守自我，不急於投入，反能遇到正向的早緣。",
+    "recommended_questions": [
+      "我今年有喜事嗎？",
+      "我的感情運何時開？",
+      "如何把握好姻緣？"
+    ],
+    "is_active": 1,
+    "sort_order": 1
+  },
+  {
+    "reading_id": "112627d4-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "tian_xi",
+    "pillar_type": "month",
+    "gender": "male",
+    "name": "天喜",
+    "badge_text": "喜事",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "月柱天喜，同事同學圈最易遇感情線",
+    "bullet_points": null,
+    "for_this_position": "男命月柱天喜，象徵在同事、同學、朋友圈中最容易遇到感情線。氣質陽光、態度親和，容易成為聚會開心果，因此異性對他有好感、願意靠近。若能保持誠意與原則，天喜會帶來正緣而非曖昧。",
+    "recommended_questions": [
+      "職場上會遇到正緣嗎？",
+      "如何分辨真心與曖昧？",
+      "我的桃花在哪個圈子？"
+    ],
+    "is_active": 1,
+    "sort_order": 2
+  },
+  {
+    "reading_id": "11260010-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "tian_xi",
+    "pillar_type": "month",
+    "gender": "female",
+    "name": "天喜",
+    "badge_text": "喜事",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "月柱天喜，日常場域最容易心動",
+    "bullet_points": null,
+    "for_this_position": "女命月柱天喜，象徵在同事、同學、朋友圈等日常場域中，最容易遇到令人心動的人。人際互動中喜歡散發溫暖氣息，容易帶動氛圍，因此常被視為好相處、好喜歡的類型。適合同心合力型關係，但需避免被熱鬧與追求者迷惑。",
+    "recommended_questions": [
+      "職場上會遇到正緣嗎？",
+      "如何分辨真心與追求？",
+      "我的桃花在哪個圈子？"
+    ],
+    "is_active": 1,
+    "sort_order": 2
+  },
+  {
+    "reading_id": "11263292-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "tian_xi",
+    "pillar_type": "day",
+    "gender": "male",
+    "name": "天喜",
+    "badge_text": "喜事",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "日柱天喜，情感細膩、顧家暖男",
+    "bullet_points": null,
+    "for_this_position": "日柱天喜的男性情感細膩、顧家，是婚姻中的暖男型。談戀愛時懂營造氣氛，也樂於付出。婚後以家為重，願意呵護伴侶與孩子。唯一注意是容易因感情太重而受情緒影響，需要學會多溝通而非悶著。",
+    "recommended_questions": [
+      "我的婚姻會幸福嗎？",
+      "如何成為更好的伴侶？",
+      "我會遇到什麼樣的另一半？"
+    ],
+    "is_active": 1,
+    "sort_order": 3
+  },
+  {
+    "reading_id": "11260178-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "tian_xi",
+    "pillar_type": "day",
+    "gender": "female",
+    "name": "天喜",
+    "badge_text": "喜事",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "日柱天喜，天生有戀愛感與幸福感",
+    "bullet_points": null,
+    "for_this_position": "日柱天喜的女性，天生有戀愛感與幸福感，婚緣多半順利。談戀愛講究氣氛、浪漫、儀式，但內心也渴望務實的安全感。婚後適合經營溫馨之家，對家庭投入多。唯一注意：遇到不成熟的伴侶時，容易用愛掩蓋問題，需保持清醒。",
+    "recommended_questions": [
+      "我的婚姻會幸福嗎？",
+      "如何經營好感情？",
+      "我會遇到什麼樣的另一半？"
+    ],
+    "is_active": 1,
+    "sort_order": 3
+  },
+  {
+    "reading_id": "11263580-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "tian_xi",
+    "pillar_type": "hour",
+    "gender": "male",
+    "name": "天喜",
+    "badge_text": "喜事",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "時柱天喜，中晚年感情運好",
+    "bullet_points": null,
+    "for_this_position": "男命時柱天喜，中晚年感情運仍好，婚姻多穩定和樂。子女婚緣佳，家中常有喜事。若人生曾有婚姻波折，此位置也象徵晚年仍有機會遇見讓自己依靠的對象，後半生幸福感較強。",
+    "recommended_questions": [
+      "我的晚年運勢如何？",
+      "子女的姻緣好嗎？",
+      "中年後還會有驚喜嗎？"
+    ],
+    "is_active": 1,
+    "sort_order": 4
+  },
+  {
+    "reading_id": "11260290-d028-11f0-9799-8c902c2c5938",
+    "shensha_code": "tian_xi",
+    "pillar_type": "hour",
+    "gender": "female",
+    "name": "天喜",
+    "badge_text": "喜事",
+    "type": "auspicious",
+    "short_title": null,
+    "summary": "時柱天喜，後半生幸福",
+    "bullet_points": null,
+    "for_this_position": "女命時柱天喜，多主中後年家庭和樂、喜事不斷，子女婚緣佳，晚年多享福。若感情曾有波折，也可能在中年後迎來真正契合的緣分。天喜在此象徵後半生幸福，人生越往後越甜。",
+    "recommended_questions": [
+      "我的晚年運勢如何？",
+      "子女的姻緣好嗎？",
+      "中年後還會有驚喜嗎？"
+    ],
+    "is_active": 1,
+    "sort_order": 4
+  },
+  {
+    "reading_id": "e2c1e39f-823e-4475-ac44-a4393b56d8c8",
+    "shensha_code": "tian_yi_gui_ren",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "天乙貴人",
+    "badge_text": "貴人",
+    "type": "auspicious",
+    "short_title": "祖上或父母辈中有贵人",
+    "summary": "至吉之神，一切凶煞的克星。代表权力、地位与庇护。命主遇危难时，能获得有权势、有地位之人的帮助，从而逢凶化吉，遇难呈祥。",
+    "bullet_points": [
+      "祖上或父母辈中有贵人，或家境不俗",
+      "早年易得长辈、家族的庇护与福荫"
+    ],
+    "for_this_position": "年柱見天乙貴人，多得祖上積德與長輩護持，家族中常有講義氣、肯提攜後輩之人。命主自幼較少走極端路，遇到關卡多有師長、親友伸手相助，不致陷入絕境。此象亦主家族名聲尚可，在同輩圈中較易受信任，只要自己不自毀前程，人生關鍵節點往往有人幫忙指路。",
+    "recommended_questions": [
+      "天乙贵人對我的影響是什麼？",
+      "年柱的天乙贵人會如何影響我？",
+      "我該如何善用天乙贵人？",
+      "天乙贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8bf41bfc-a1a0-4bee-8729-4f028045964f",
+    "shensha_code": "tian_yi_gui_ren",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "天乙貴人",
+    "badge_text": "貴人",
+    "type": "auspicious",
+    "short_title": "兄弟姐妹、朋友、同辈或直属领导是你的贵人",
+    "summary": "至吉之神，一切凶煞的克星。代表权力、地位与庇护。命主遇危难时，能获得有权势、有地位之人的帮助，从而逢凶化吉，遇难呈祥。",
+    "bullet_points": [
+      "兄弟姐妹、朋友、同辈或直属领导是你的贵人",
+      "青中年发展时期，易得他人相助，事业顺遂"
+    ],
+    "for_this_position": "天乙貴人落月柱，格外利於職場與日常人際，象徵在單位、團隊中常有願意罩你的上司、同事或前輩。遇到制度、轉職、升遷等問題時，容易得到內部人士提醒與支持，讓事情朝較有利方向發展。工作中若能保持專業與誠信，貴人會一次比一次更有份量，幫你打開新的階段。",
+    "recommended_questions": [
+      "天乙贵人對我的影響是什麼？",
+      "月柱的天乙贵人會如何影響我？",
+      "我該如何善用天乙贵人？",
+      "天乙贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "34f095c5-68a8-4fe7-8a3b-0336021d53cd",
+    "shensha_code": "tian_yi_gui_ren",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "天乙貴人",
+    "badge_text": "貴人",
+    "type": "auspicious",
+    "short_title": "配偶是你的天乙贵人",
+    "summary": "至吉之神，一切凶煞的克星。代表权力、地位与庇护。命主遇危难时，能获得有权势、有地位之人的帮助，从而逢凶化吉，遇难呈祥。",
+    "bullet_points": [
+      "配偶是你的天乙贵人，或配偶自身条件佳，能给予你巨大帮助",
+      "自身具备领导才能与贵气，中年运势亨通"
+    ],
+    "for_this_position": "日柱見天乙貴人，多主命主個人氣場溫和而帶福氣，即使偶有衝動錯誤，也較易遇到願意拉一把、給機會的人。感情上，較能吸引品行不錯、肯照顧你的對象，彼此遇到難關時，多有外界伸出援手。只要懂得珍惜與回饋，不濫用他人好意，往往能在跌倒後更穩地站起來。",
+    "recommended_questions": [
+      "天乙贵人對我的影響是什麼？",
+      "日柱的天乙贵人會如何影響我？",
+      "我該如何善用天乙贵人？",
+      "天乙贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "aa040da1-55dc-4b9a-87cb-282dcc0a9c7b",
+    "shensha_code": "tian_yi_gui_ren",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "天乙貴人",
+    "badge_text": "貴人",
+    "type": "auspicious",
+    "short_title": "子女有出息且孝顺",
+    "summary": "至吉之神，一切凶煞的克星。代表权力、地位与庇护。命主遇危难时，能获得有权势、有地位之人的帮助，从而逢凶化吉，遇难呈祥。",
+    "bullet_points": [
+      "子女有出息且孝顺，下属得力",
+      "晚年能得子女、下属的照顾与回报，生活安稳有福"
+    ],
+    "for_this_position": "天乙貴人坐時柱，多庇蔭中晚年與子女運。人生後半段遇到轉職、創業、退休安排等課題時，身邊常出現專業人士或有經驗的前輩指點。子女、晚輩或部屬中，亦常有人願意分擔、扶持，使你不致孤軍奮戰。只要保持開放心態，樂於與人結善緣，晚景多呈現「有人幫、有人敬」的狀態。",
+    "recommended_questions": [
+      "天乙贵人對我的影響是什麼？",
+      "时柱的天乙贵人會如何影響我？",
+      "我該如何善用天乙贵人？",
+      "天乙贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "07e15f6f-882a-4aa1-918c-900cb832cca1",
+    "shensha_code": "wang_shen_natal",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "亡神",
+    "badge_text": "心緒",
+    "type": "inauspicious",
+    "short_title": "祖上可能有官非诉讼历史",
+    "summary": "主心神不宁、城府深、官非牢狱。吉则足智多谋，凶则虚耗破败。",
+    "bullet_points": [
+      "祖上可能有官非诉讼历史，或自身早年易受惊吓，心神不定"
+    ],
+    "for_this_position": "年柱見亡神，多主童年與原生家庭氛圍中，偶有混亂、反覆或讓人摸不著頭緒的情節。命主自幼就有點敏感多想，對「失去、安全」特別在意。長大後容易擔心東擔心西，對突發狀況不安，但也因此學會提早準備與備案，內心比表面看起來更謹慎。",
+    "recommended_questions": [
+      "亡神對我的影響是什麼？",
+      "年柱的亡神會如何影響我？",
+      "我該如何善用亡神？",
+      "亡神需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "b5a807b6-cf30-4d0b-89a0-10e30acc10e5",
+    "shensha_code": "wang_shen_natal",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "亡神",
+    "badge_text": "心緒",
+    "type": "inauspicious",
+    "short_title": "为人机敏但心机深沉",
+    "summary": "主心神不宁、城府深、官非牢狱。吉则足智多谋，凶则虚耗破败。",
+    "bullet_points": [
+      "为人机敏但心机深沉，在事业竞争中易卷入是非，需防法律纠纷"
+    ],
+    "for_this_position": "亡神落月柱，象徵在職場與日常生活細節上，容易因心不在焉而遺漏小事，如檔案、物品、時間搞錯。並非一定「倒霉」，更多是注意力分散所致。若能刻意養成記錄、清單、備份與再次確認的習慣，反而能藉此讓工作流程更有條理，把凶象轉為提醒。",
+    "recommended_questions": [
+      "亡神對我的影響是什麼？",
+      "月柱的亡神會如何影響我？",
+      "我該如何善用亡神？",
+      "亡神需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "367e076f-8d80-4c02-a9ed-8112b71c95b6",
+    "shensha_code": "wang_shen_natal",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "亡神",
+    "badge_text": "心緒",
+    "type": "inauspicious",
+    "short_title": "配偶心机较重",
+    "summary": "主心神不宁、城府深、官非牢狱。吉则足智多谋，凶则虚耗破败。",
+    "bullet_points": [
+      "配偶心机较重，或自身在婚姻中劳心劳力，精神消耗大"
+    ],
+    "for_this_position": "日柱見亡神，多主在感情與自我情緒上容易有迷惘感，常在關係中想太多、反覆確認，怕被忽略或誤解。這顆星也讓命主對離別議題較敏感，遇到感情變化時會深受觸動。學會表達真實感受、尋求支持與調整自我價值感，是化解這顆星壓力的重要關鍵。",
+    "recommended_questions": [
+      "亡神對我的影響是什麼？",
+      "日柱的亡神會如何影響我？",
+      "我該如何善用亡神？",
+      "亡神需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "4fd0cc45-f587-4cad-82ce-1675709c14df",
+    "shensha_code": "wang_shen_natal",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "亡神",
+    "badge_text": "心緒",
+    "type": "inauspicious",
+    "short_title": "晚年需注意官司诉讼",
+    "summary": "主心神不宁、城府深、官非牢狱。吉则足智多谋，凶则虚耗破败。",
+    "bullet_points": [
+      "晚年需注意官司诉讼，或为子女之事耗尽心神"
+    ],
+    "for_this_position": "亡神坐時柱，與中晚年心境與子女議題相關。晚年可能特別在意家人安全與未來安排，容易胡思亂想。子女或晚輩偶有讓你操心之處，但多半比實際情況想得更嚴重。建立清楚的財務與生活規劃、適度分工與信任他人，可減少不必要的焦慮。",
+    "recommended_questions": [
+      "亡神對我的影響是什麼？",
+      "时柱的亡神會如何影響我？",
+      "我該如何善用亡神？",
+      "亡神需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "350b66b3-adc7-47c2-a126-e11619ca0781",
+    "shensha_code": "wen_chang_gui_ren",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "文昌貴人",
+    "badge_text": "才華",
+    "type": "auspicious",
+    "short_title": "天生聪慧",
+    "summary": "主管学识、才华、创造力与考试运。命主通常聪明伶俐，思维敏捷，记忆力强，在学业、考试、文艺创作方面有过人天赋。",
+    "bullet_points": [
+      "天生聪慧，悟性高",
+      "家族有读书传统，或早年学习环境优越，启蒙较早"
+    ],
+    "for_this_position": "年柱見文昌，多主出身環境重視教育與禮儀，家中長輩愛看書、講道理，對命主學習要求不低。童年較易接觸文字、書畫或考試競賽，早早建立起讀書與思考的習慣。此象亦主少年時期在成績、語言表達上有可取之處，只要不懶惰，常能比同齡人更具文采。",
+    "recommended_questions": [
+      "文昌贵人對我的影響是什麼？",
+      "年柱的文昌贵人會如何影響我？",
+      "我該如何善用文昌贵人？",
+      "文昌贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "b7c7c4df-71eb-4b23-9990-1b0c9567b2ff",
+    "shensha_code": "wen_chang_gui_ren",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "文昌貴人",
+    "badge_text": "才華",
+    "type": "auspicious",
+    "short_title": "青少年时期学业优秀",
+    "summary": "主管学识、才华、创造力与考试运。命主通常聪明伶俐，思维敏捷，记忆力强，在学业、考试、文艺创作方面有过人天赋。",
+    "bullet_points": [
+      "青少年时期学业优秀，文采出众，在同学中表现突出",
+      "思维活跃，极利于升学、考证等各类考试"
+    ],
+    "for_this_position": "文昌落月柱，格外利學業與工作中的專業能力。此人頭腦清晰，記憶力佳，容易在考試、升學或專業證照上有佳績。職場中擅長文字、數據、方案撰寫與溝通記錄，適合從事教育、文案、設計、策劃、法律、顧問等行業。只要持續精進，專業知名度與口碑會慢慢累積起來。",
+    "recommended_questions": [
+      "文昌贵人對我的影響是什麼？",
+      "月柱的文昌贵人會如何影響我？",
+      "我該如何善用文昌贵人？",
+      "文昌贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "12798af2-6a98-4a90-aadf-54a2684308f5",
+    "shensha_code": "wen_chang_gui_ren",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "文昌貴人",
+    "badge_text": "才華",
+    "type": "auspicious",
+    "short_title": "自身极具才华与创造力",
+    "summary": "主管学识、才华、创造力与考试运。命主通常聪明伶俐，思维敏捷，记忆力强，在学业、考试、文艺创作方面有过人天赋。",
+    "bullet_points": [
+      "自身极具才华与创造力，适合从事文化、艺术、技术类工作",
+      "配偶也可能有文采，或中年时期靠才华、技艺立身"
+    ],
+    "for_this_position": "日柱見文昌，多主本人心思細膩、好學好問，說話較有條理，願意用思考解決問題。感情中偏理性交流型，重視溝通品質與精神層面的互動，容易被有內涵、有話題深度的伴侶吸引。也象徵在婚姻生活中，喜歡學習、分享新知，一起成長比單純物質更重要。",
+    "recommended_questions": [
+      "文昌贵人對我的影響是什麼？",
+      "日柱的文昌贵人會如何影響我？",
+      "我該如何善用文昌贵人？",
+      "文昌贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "4371610b-fa0c-415b-ac56-661e32a7f583",
+    "shensha_code": "wen_chang_gui_ren",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "文昌貴人",
+    "badge_text": "才華",
+    "type": "auspicious",
+    "short_title": "晚年仍好学不倦",
+    "summary": "主管学识、才华、创造力与考试运。命主通常聪明伶俐，思维敏捷，记忆力强，在学业、考试、文艺创作方面有过人天赋。",
+    "bullet_points": [
+      "晚年仍好学不倦，或热衷于文艺活动",
+      "子女聪明有才华，尤其利于子女在文化、教育领域取得成就"
+    ],
+    "for_this_position": "文昌坐時柱，多利中晚年進修與子女學業。人生後半段仍保有求知慾，不排斥重新學習新技能或開展副業。子女多聰明伶俐、學習能力不差，只要教育方式得當，常能在學業或才藝方面有亮點。晚年生活偏向精神與興趣充實型，而非只圍繞柴米油鹽。",
+    "recommended_questions": [
+      "文昌贵人對我的影響是什麼？",
+      "时柱的文昌贵人會如何影響我？",
+      "我該如何善用文昌贵人？",
+      "文昌贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8384a796-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "yang_ren",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "陽刃",
+    "badge_text": "剛猛",
+    "type": "neutral",
+    "short_title": "家風強硬，個性早熟",
+    "summary": "陽刃為四柱神煞中的剛猛之星，主衝勁、魄力與風險。",
+    "bullet_points": [
+      "原生家庭或長輩氣場較強",
+      "家風重功績與競爭，講求「要爭口氣」",
+      "自小在壓力與較勁氛圍中長大"
+    ],
+    "for_this_position": "年柱見陽刃，多主原生家庭或長輩氣場較強，家風重功績與競爭，講求「要爭口氣」。家中可能有人個性剛烈、說話直接，不太懂溫柔安撫，命主自小在壓力與較勁氛圍中長大，早學會逞強、不願示弱。這種配置若用得好，能承接家族的魄力與衝勁；若失衡，則易重蹈上一代的衝突模式，需要學會在堅持與和解之間找到界線。",
+    "recommended_questions": [
+      "陽刃對我的影響是什麼？",
+      "年柱的陽刃會如何影響我？",
+      "我該如何善用陽刃？",
+      "陽刃需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "838518f2-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "yang_ren",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "陽刃",
+    "badge_text": "剛猛",
+    "type": "neutral",
+    "short_title": "職場衝鋒，敢於擔責",
+    "summary": "陽刃為四柱神煞中的剛猛之星，主衝勁、魄力與風險。",
+    "bullet_points": [
+      "在成長環境、職場與同輩相處中，常扮演「衝在前面」的角色",
+      "做事有行動力、敢扛責任",
+      "適合在需要決斷、敢於承擔風險的領域"
+    ],
+    "for_this_position": "陽刃落月柱，象徵命主在成長環境、職場與同輩相處中，常扮演「衝在前面」的角色。做事有行動力、敢扛責任，不怕得罪人，但說話與作風易過於直白，稍不留意就與同事、上司硬碰硬。適合在需要決斷、敢於承擔風險的領域，例如業務、前線管理、競爭激烈的行業。若能配合良好的情緒管理與溝通技巧，陽刃會成為領導力；反之則變成是非與壓力的來源。",
+    "recommended_questions": [
+      "陽刃對我的職場有何幫助？",
+      "月柱的陽刃如何影響人際？",
+      "我適合什麼工作？",
+      "如何將陽刃的衝勁轉為領導力？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "83856aa0-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "yang_ren",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "陽刃",
+    "badge_text": "剛猛",
+    "type": "neutral",
+    "short_title": "本性剛烈，愛恨分明",
+    "summary": "陽刃為四柱神煞中的剛猛之星，主衝勁、魄力與風險。",
+    "bullet_points": [
+      "本性剛烈要強，心中有自己的原則與底線",
+      "感情與婚姻上，表現為愛恨分明、不願委屈自己",
+      "遇事敢站出來保護自己與家人"
+    ],
+    "for_this_position": "日柱見陽刃，主命主本性剛烈要強，心中有自己的原則與底線，不輕易妥協。感情與婚姻上，表現為愛恨分明、不願委屈自己，對伴侶要求真誠直接，討厭敷衍。優點是遇事敢站出來保護自己與家人；缺點是情緒上來時語氣過猛，容易把關心說成指責，讓對方壓力大。若能在堅持立場的同時學會軟化說話方式，既保留下陽刃的氣魄，又不至於讓感情關係受傷。",
+    "recommended_questions": [
+      "陽刃對我的感情有何影響？",
+      "日柱的陽刃如何影響婚姻？",
+      "我的伴侶會是什麼樣的人？",
+      "如何經營好感情關係？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "838597d2-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "yang_ren",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "陽刃",
+    "badge_text": "剛猛",
+    "type": "neutral",
+    "short_title": "晚年堅定，不服老",
+    "summary": "陽刃為四柱神煞中的剛猛之星，主衝勁、魄力與風險。",
+    "bullet_points": [
+      "愈到後半生，個性愈加不願被束縛",
+      "對生活方式與價值觀有強烈主張",
+      "子女或晚輩多具個性，有自己想走的路"
+    ],
+    "for_this_position": "陽刃坐時柱，多應在中晚年以及子女緣分上。命主愈到後半生，個性愈加不願被束縛，對生活方式與價值觀有強烈主張，適合自行創業、自由業或擁有較大自主權的工作。子女或晚輩多具個性，有自己想走的路，不喜被強壓安排，與命主之間容易在「誰說了算」上有拉扯。若能提早學會尊重差異、把控情緒，陽刃反而能讓晚年保持行動力與不服老的生命力，而不是成為代溝與衝突的源頭。",
+    "recommended_questions": [
+      "陽刃對我的晚年有何影響？",
+      "時柱的陽刃如何影響子女？",
+      "我的晚年運勢如何？",
+      "如何改善與子女的關係？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "ec010d1e-717a-4a84-8863-e4f39d876d66",
+    "shensha_code": "yi_ma",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "驛馬",
+    "badge_text": "奔波",
+    "type": "neutral",
+    "short_title": "祖上或父母有迁移、漂泊的经历",
+    "summary": "代表变动、迁移、奔波、走动。一生命局多动，或职业多动，或环境多变。",
+    "bullet_points": [
+      "祖上或父母有迁移、漂泊的经历",
+      "自身早年可能就有离家、变动环境的机会"
+    ],
+    "for_this_position": "年柱見驛馬，多主祖上或原生家庭有遷移、奔波、外地打拼的背景。命主自幼就對外面的世界充滿好奇，較難安於一隅。成年後容易離開家鄉求學或工作，人生主題與「走動、搬遷、轉換環境」脫不了關係。只要心態積極，奔波常帶來視野與機會。",
+    "recommended_questions": [
+      "驿马對我的影響是什麼？",
+      "年柱的驿马會如何影響我？",
+      "我該如何善用驿马？",
+      "驿马需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "3df13d21-9826-4d48-bddc-b9aaed83e6e3",
+    "shensha_code": "yi_ma",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "驛馬",
+    "badge_text": "奔波",
+    "type": "neutral",
+    "short_title": "青少年时期求学、工作多变动",
+    "summary": "代表变动、迁移、奔波、走动。一生命局多动，或职业多动，或环境多变。",
+    "bullet_points": [
+      "青少年时期求学、工作多变动，或需要经常出差、奔波"
+    ],
+    "for_this_position": "驛馬落月柱，象徵在工作與生活中奔波感強，常因職務、專案、學習而需要出差、移動或切換場域。命主耐不住長期停滯，適合從事需要流動性的行業，如業務、外勤、顧問、旅遊、物流等。需注意的是，長期奔波要照顧好體力與作息，避免因疲累帶來小意外。",
+    "recommended_questions": [
+      "驿马對我的影響是什麼？",
+      "月柱的驿马會如何影響我？",
+      "我該如何善用驿马？",
+      "驿马需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "0ca46e20-de57-48af-83ad-457f3f648625",
+    "shensha_code": "yi_ma",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "驛馬",
+    "badge_text": "奔波",
+    "type": "neutral",
+    "short_title": "自身好动",
+    "summary": "代表变动、迁移、奔波、走动。一生命局多动，或职业多动，或环境多变。",
+    "bullet_points": [
+      "自身好动，不喜静，适合动态工作",
+      "配偶可能是外地人，或婚姻生活伴随聚少离多"
+    ],
+    "for_this_position": "日柱見驛馬，多主本人心性不喜被綁死，對生活、感情與工作的變化持開放態度。婚姻中可能因工作調動、移民、換城市居住等，經歷幾次環境重大轉換。若伴侶能接受這種機動性，兩人反而能一起見識不同世界；若彼此期望一成不變，則需多溝通取得平衡。",
+    "recommended_questions": [
+      "驿马對我的影響是什麼？",
+      "日柱的驿马會如何影響我？",
+      "我該如何善用驿马？",
+      "驿马需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "85ea5ced-53ad-4aa8-885b-21f80a061efe",
+    "shensha_code": "yi_ma",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "驛馬",
+    "badge_text": "奔波",
+    "type": "neutral",
+    "short_title": "晚年多出行、旅游",
+    "summary": "代表变动、迁移、奔波、走动。一生命局多动，或职业多动，或环境多变。",
+    "bullet_points": [
+      "晚年多出行、旅游，或远赴他乡养老",
+      "子女也可能在外地发展"
+    ],
+    "for_this_position": "驛馬坐時柱，多庇蔭中晚年仍有行動力與行程安排。退休後仍不甘只待在家裡，喜歡旅遊、探訪親友、參與活動。子女或晚輩也可能在異地發展，使你有更多遠行探望的機會。此象使晚年生活較不單調，但也要留意交通安全與體力分配。",
+    "recommended_questions": [
+      "驿马對我的影響是什麼？",
+      "时柱的驿马會如何影響我？",
+      "我該如何善用驿马？",
+      "驿马需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "83820da6-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "yin_cha_yang_cuo",
+    "pillar_type": "day",
+    "gender": "male",
+    "name": "陰差陽錯",
+    "badge_text": "情錯",
+    "type": "inauspicious",
+    "short_title": "感情錯位，溝通困難",
+    "summary": "陰差陽錯為四柱神煞中的凶煞，主緣分不對位、溝通錯頻、時間不對。",
+    "bullet_points": [
+      "容易在感情上同時承受「責任」與「欲望」兩邊拉扯",
+      "與伴侶及長輩溝通時，若習慣沉默不說清楚，反而加深誤會",
+      "學會把自己的盤算與顧慮講明白，是化解此煞的關鍵"
+    ],
+    "for_this_position": "日柱見陰差陽錯，主緣分不對位、溝通錯頻、時間不對、對的人在錯的時間。容易在感情上同時承受「責任」與「欲望」兩邊拉扯，一方面想顧全家人與現實，一方面又容易被一時心動牽引。與伴侶及長輩溝通時，若習慣沉默不說清楚，反而加深誤會。學會把自己的盤算與顧慮講明白，是化解此煞的關鍵。",
+    "recommended_questions": [
+      "陰差陽錯對我的感情有何影響？",
+      "日柱的陰差陽錯如何影響婚姻？",
+      "我該如何化解陰差陽錯？",
+      "如何改善感情溝通？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "83827cd2-d051-11f0-9799-8c902c2c5938",
+    "shensha_code": "yin_cha_yang_cuo",
+    "pillar_type": "day",
+    "gender": "female",
+    "name": "陰差陽錯",
+    "badge_text": "情錯",
+    "type": "inauspicious",
+    "short_title": "感情錯位，溝通困難",
+    "summary": "陰差陽錯為四柱神煞中的凶煞，主緣分不對位、溝通錯頻、時間不對。",
+    "bullet_points": [
+      "易在感情中投入真心卻遇到不夠成熟或不夠穩定的對象",
+      "彼此家族、價值觀差異較大，導致婚前婚後有落差感",
+      "學會清楚說出自己需要與底線，能大幅減少「錯愛、錯付」的機率"
+    ],
+    "for_this_position": "日柱見陰差陽錯，主緣分不對位、溝通錯頻、時間不對、對的人在錯的時間。易在感情中投入真心卻遇到不夠成熟或不夠穩定的對象，或是彼此家族、價值觀差異較大，導致婚前婚後有落差感。情緒起伏時若選擇用冷淡或試探的方式表達不滿，往往讓對方更摸不著頭緒。學會清楚說出自己需要與底線，能大幅減少「錯愛、錯付」的機率。",
+    "recommended_questions": [
+      "陰差陽錯對我的感情有何影響？",
+      "日柱的陰差陽錯如何影響婚姻？",
+      "我該如何化解陰差陽錯？",
+      "如何改善感情溝通？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8a4102b8-9c28-4b63-b3fb-98e747a1c37a",
+    "shensha_code": "yue_de_gui_ren",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "月德貴人",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "祖上仁德",
+    "summary": "五行温和之德，代表仁慈、善良、化解灾厄的力量。是消灾增福的贵人，能逢凶化吉，保佑平安。",
+    "bullet_points": [
+      "祖上仁德，家风善良",
+      "早年生活平顺，少有病灾，多得长辈慈爱"
+    ],
+    "for_this_position": "年柱有月德，多主祖上積德，家族中多心地不壞之人。出身不一定顯赫，但遇事常有人情味與互相幫襯。命主幼年即便遭逢波折，仍較容易遇上肯伸手的師長與親戚，使事情往較好的方向收束。此星亦有化煞之意，許多凶象在實際發生時，常會打折或化為小事。",
+    "recommended_questions": [
+      "月德贵人對我的影響是什麼？",
+      "年柱的月德贵人會如何影響我？",
+      "我該如何善用月德贵人？",
+      "月德贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "174bd3d9-57bf-402e-b2a2-68e525cced5d",
+    "shensha_code": "yue_de_gui_ren",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "月德貴人",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "为人心地善良",
+    "summary": "五行温和之德，代表仁慈、善良、化解灾厄的力量。是消灾增福的贵人，能逢凶化吉，保佑平安。",
+    "bullet_points": [
+      "为人心地善良，乐于助人",
+      "在社交圈中人缘好，易得女性长辈或同辈的帮助"
+    ],
+    "for_this_position": "月德落月柱，象徵工作與人際場域中常有溫和型貴人，遇到衝突與誤會時，有人願意在中間調和。命主本身也較易心存善念，即便不完美，仍願意在力所能及時幫助他人。在職場轉換、團隊變動、壓力較大的年份，月德常發揮「逢凶化吉」的效果，讓結果沒有想像那麼糟。",
+    "recommended_questions": [
+      "月德贵人對我的影響是什麼？",
+      "月柱的月德贵人會如何影響我？",
+      "我該如何善用月德贵人？",
+      "月德贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "c6aa2d3f-e8c2-47c9-a423-5bd65496f905",
+    "shensha_code": "yue_de_gui_ren",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "月德貴人",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "自身品行端正",
+    "summary": "五行温和之德，代表仁慈、善良、化解灾厄的力量。是消灾增福的贵人，能逢凶化吉，保佑平安。",
+    "bullet_points": [
+      "自身品行端正，有慈悲心",
+      "配偶性格温和，是你的福气来源之一，能化解婚姻中的矛盾"
+    ],
+    "for_this_position": "日柱見月德，多主個性厚道，對家人與伴侶雖偶有情緒，但終究不捨得真心傷害對方。感情路上縱有挫折，也常因自身善念與外界幫忙，避開最極端的結局。婚姻中較重包容與照顧，只要雙方願意溝通，很多矛盾可以慢慢化解。此星也使命主較有「吃虧是福」的福報感。",
+    "recommended_questions": [
+      "月德贵人對我的影響是什麼？",
+      "日柱的月德贵人會如何影響我？",
+      "我該如何善用月德贵人？",
+      "月德贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "152e8aac-4a79-48ad-9c85-c94e1bfecde2",
+    "shensha_code": "yue_de_gui_ren",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "月德貴人",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "晚年生活安宁慈祥",
+    "summary": "五行温和之德，代表仁慈、善良、化解灾厄的力量。是消灾增福的贵人，能逢凶化吉，保佑平安。",
+    "bullet_points": [
+      "晚年生活安宁慈祥，少病少灾",
+      "子女孝顺仁德，能享子女之福"
+    ],
+    "for_this_position": "月德坐時柱，多庇蔭晚年運與子女緣。中晚年遇到健康、財務或家庭事件時，常會出現願意幫忙的親友、醫護或專業人士。子女與晚輩中，也多有心腸柔軟、懂感恩的一批人，在你需要時伸出援手。整體晚景氣氛偏溫和，不至孤立無援，只要自己仍願意維繫情份。",
+    "recommended_questions": [
+      "月德贵人對我的影響是什麼？",
+      "时柱的月德贵人會如何影響我？",
+      "我該如何善用月德贵人？",
+      "月德贵人需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b7d954a-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "yue_de_he",
+    "pillar_type": "year",
+    "gender": "all",
+    "name": "月德合",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "祖上餘蔭，長輩照拂",
+    "summary": "月德貴人的配合之星，能化解婚姻、人際中的矛盾衝突，帶來和諧與貴人相助。",
+    "bullet_points": [
+      "得祖上餘蔭與長輩照拂",
+      "幼年易遇貴人長輩相助",
+      "家族多熱心之人，較少樹敵"
+    ],
+    "for_this_position": "命帶月德合臨年柱，多得祖上餘蔭與長輩照拂，出身環境較有人情味，不至過分顛沛。幼年易遇和善師長、貴人長輩，在關鍵節點總有人伸手相助。此星亦帶來良好名聲與人緣基礎，家族中多熱心之人，對外較少樹敵。若行運配合，適合善用家族、人脈資源，做橋樑與協調角色，更易被上層看見與提拔。",
+    "recommended_questions": [
+      "月德合對我的影響是什麼？",
+      "年柱的月德合會如何影響我？",
+      "我該如何善用月德合？",
+      "月德合需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b80fc76-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "yue_de_he",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "月德合",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "圓融手腕，化解衝突",
+    "summary": "月德貴人的配合之星，能化解婚姻、人際中的矛盾衝突，帶來和諧與貴人相助。",
+    "bullet_points": [
+      "利於工作環境與人際關係",
+      "善於化解衝突獲得信任",
+      "逢兇化吉常有貴人相助"
+    ],
+    "for_this_position": "月德合落月柱，格外利於工作環境、人際關係與成長歷程。此人多具圓融手腕，懂得在團隊中緩和氣氛、化解衝突，深得同事與上司信任。職場或創業路上，每逢壓力與轉折，常會出現願意拉一把的貴人，使危機化為轉機。成長過程雖不必然一帆風順，但多能「逢兇化吉」，適合從事服務、協調、公關、顧問等需溝通與人情練達的行業。",
+    "recommended_questions": [
+      "月德合對我的職場有何幫助？",
+      "月柱的月德合如何影響人際？",
+      "我適合什麼工作？",
+      "月德合的貴人何時出現？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b8139fc-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "yue_de_he",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "月德合",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "性情溫厚，婚姻和諧",
+    "summary": "月德貴人的配合之星，能化解婚姻、人際中的矛盾衝突，帶來和諧與貴人相助。",
+    "bullet_points": [
+      "性情溫厚重情重義",
+      "感情波折易化干戈為玉帛",
+      "婚姻互相扶持不孤軍作戰"
+    ],
+    "for_this_position": "日柱主自我與婚姻，月德合臨此，多主性情溫厚、重情重義，對伴侶與親近之人常抱包容之心。感情路上即使有波折，也較易化干戈為玉帛，不至走到最壞局面。此星亦使本人在朋友圈中扮演「和事佬」，樂於調停他人是非。婚姻中若能保持坦誠與尊重，往往能吸引懂體諒、肯互相扶持的對象，共同經營生活，遇事有人商量、不孤軍作戰。",
+    "recommended_questions": [
+      "月德合對我的感情有何影響？",
+      "日柱的月德合如何影響婚姻？",
+      "我的伴侶會是什麼樣的人？",
+      "如何經營好婚姻關係？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "8b816652-d01d-11f0-9799-8c902c2c5938",
+    "shensha_code": "yue_de_he",
+    "pillar_type": "hour",
+    "gender": "all",
+    "name": "月德合",
+    "badge_text": "吉神",
+    "type": "auspicious",
+    "short_title": "庇蔭晚景，子女孝順",
+    "summary": "月德貴人的配合之星，能化解婚姻、人際中的矛盾衝突，帶來和諧與貴人相助。",
+    "bullet_points": [
+      "庇蔭晚景與子女緣分",
+      "晚年有後輩照顧不孤寂",
+      "子女性情善良能分憂"
+    ],
+    "for_this_position": "月德合坐時柱，多庇蔭晚景與子女緣分。人生後半段較有「越活越通透」之感，易得後輩、部屬或晚輩照顧扶持，不致孤寂。子女多性情善良，或在關鍵時刻能為自己分憂解勞。此星亦利於個人理想與副業發展，常在中晚年遇到欣賞自己的人，給予機會與資源。只要不自我封閉，願意維繫親情人脈，晚年運多呈穩中帶暖，有貴人、有依靠。",
+    "recommended_questions": [
+      "月德合對我的晚年有何影響？",
+      "時柱的月德合如何影響子女？",
+      "我的晚年運勢如何？",
+      "如何維繫晚年人脈？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "05a63d50-5d27-4cc8-8e3a-a698ca5d96e7",
+    "shensha_code": "yue_kong_wang",
+    "pillar_type": "month",
+    "gender": "all",
+    "name": "月空亡",
+    "badge_text": "起伏",
+    "type": "inauspicious",
+    "short_title": "兄弟姐妹少或感情淡薄",
+    "summary": "月柱地支空亡，称为\"空兄弟\"，代表兄弟姐妹缘薄，同辈助力少，内心孤独，努力易付诸东流。",
+    "bullet_points": [
+      "兄弟姐妹少或感情淡薄，难得助力",
+      "青中年时期事业根基不稳，多成多败"
+    ],
+    "for_this_position": "月空亡多主在工作與人際環境中，容易遇到計畫與實際落差較大的情況。原定安排可能臨時變動，團隊成員進出頻繁。命主須學會彈性與備案，才能在變動中保持穩定。若能接受「沒有永遠不變的工作」，反而能藉此累積應變能力與臨場反應，走出屬於自己的路線。",
+    "recommended_questions": [
+      "月空亡對我的影響是什麼？",
+      "月柱的月空亡會如何影響我？",
+      "我該如何善用月空亡？",
+      "月空亡需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  },
+  {
+    "reading_id": "19e76023-c079-4939-ad8b-8265d2071484",
+    "shensha_code": "zhuan_lu",
+    "pillar_type": "day",
+    "gender": "all",
+    "name": "專祿（歸祿）",
+    "badge_text": "專精",
+    "type": "auspicious",
+    "short_title": "日坐专禄（如甲寅、乙卯等）：自身气场强",
+    "summary": "日主在日支得临官禄地，代表福气深厚、安享富贵、配偶有力，是比建禄更佳的享福之禄。",
+    "bullet_points": [
+      "日坐专禄（如甲寅、乙卯等）：自身气场强，能得一位有能力且帮助"
+    ],
+    "for_this_position": "命帶專祿，多主個性專注、穩定，一旦選定方向便願意長期深耕，不喜三心二意。適合在需要專精與耐力的領域發展，如技術、工藝、研究、專業服務等。對感情與承諾也較專一，不輕易改變立場。若能在堅持中保留一點彈性，願意適度調整策略，往往能在自己擅長的路上走出深度與高度。",
+    "recommended_questions": [
+      "专禄（归禄）對我的影響是什麼？",
+      "日柱的专禄（归禄）會如何影響我？",
+      "我該如何善用专禄（归禄）？",
+      "专禄（归禄）需要注意什麼？"
+    ],
+    "is_active": 1,
+    "sort_order": 0
+  }
+]

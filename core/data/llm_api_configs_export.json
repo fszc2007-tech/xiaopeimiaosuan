@@ -1,0 +1,47 @@
+[
+  {
+    "config_id": "7b95cd5a-c46f-11f0-b39b-599d0b5db05e",
+    "model": "chatgpt",
+    "api_key_encrypted": "d9d9e2b673605e936f926ad396d471160866d2c462c00c73fd1079524ce1714ee8d59e6476bafee2f526408d5df92334937a892ab2d77a8b088e88c778328751:867e4f4f7372b118b391680e2b2146e4:c66adb03c300bb3bafb951b24d0429f8:e313203f038a2e669164e44461b0fbb411020455fa65d0ba7472861e371414da1680ff",
+    "api_url": "https://api.openai.com/v1",
+    "is_enabled": 1,
+    "thinking_mode": 0,
+    "model_name": "gpt-4o",
+    "enable_stream": 1,
+    "temperature": "0.80",
+    "max_tokens": 4000,
+    "is_default": 0,
+    "test_status": "not_tested",
+    "test_message": null
+  },
+  {
+    "config_id": "7b95911e-c46f-11f0-b39b-599d0b5db05e",
+    "model": "deepseek",
+    "api_key_encrypted": "fa8208c4dac658fdb43c7c7584e04f5c2b3483f9c057544de0f7a467d7a5ccf41e06e4eb294605ab86b4c6606a131b53ebe53372261f892ba21c04119d041f4c:03236ac29673d33c98ac6297b54f9903:a18a39a1fbb78cedafe6bd2053102edb:5fdea6f93e49a74488249fbfd5ffa9718ce04efdb49e3a60d48efd9de8e62d2f9bfc95",
+    "api_url": "https://api.deepseek.com",
+    "is_enabled": 1,
+    "thinking_mode": 0,
+    "model_name": "deepseek-chat",
+    "enable_stream": 1,
+    "temperature": "0.80",
+    "max_tokens": 4000,
+    "is_default": 1,
+    "test_status": "success",
+    "test_message": "连接成功"
+  },
+  {
+    "config_id": "7b95ce2c-c46f-11f0-b39b-599d0b5db05e",
+    "model": "qwen",
+    "api_key_encrypted": null,
+    "api_url": "https://dashscope.aliyuncs.com",
+    "is_enabled": 1,
+    "thinking_mode": 0,
+    "model_name": "qwen-max",
+    "enable_stream": 1,
+    "temperature": "0.70",
+    "max_tokens": 4000,
+    "is_default": 0,
+    "test_status": "not_tested",
+    "test_message": null
+  }
+]

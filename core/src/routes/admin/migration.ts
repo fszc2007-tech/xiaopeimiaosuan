@@ -192,6 +192,272 @@ ALTER TABLE shensha_readings
 });
 
 /**
+ * POST /api/v1/admin/migration/import-shensha
+ * 导入神煞数据（从开发环境导出）
+ */
+router.post('/import-shensha', async (req: Request, res: Response) => {
+  try {
+    console.log('[Import Shensha] 开始导入神煞数据...');
+    
+    const { data } = req.body;
+    
+    if (!Array.isArray(data)) {
+      return res.status(400).json({
+        success: false,
+        error: { message: 'data 必须是数组' },
+      });
+    }
+    
+    const pool = getPool();
+    let imported = 0;
+    let updated = 0;
+    let failed = 0;
+    
+    for (const row of data) {
+      try {
+        // 检查记录是否存在
+        const [existing]: any = await pool.query(
+          'SELECT reading_id FROM shensha_readings WHERE reading_id = ?',
+          [row.reading_id]
+        );
+        
+        if (existing.length > 0) {
+          // 更新现有记录
+          await pool.query(
+            `UPDATE shensha_readings SET
+              shensha_code = ?,
+              pillar_type = ?,
+              gender = ?,
+              name = ?,
+              badge_text = ?,
+              type = ?,
+              short_title = ?,
+              summary = ?,
+              bullet_points = ?,
+              for_this_position = ?,
+              recommended_questions = ?,
+              is_active = ?,
+              sort_order = ?,
+              updated_at = NOW()
+            WHERE reading_id = ?`,
+            [
+              row.shensha_code,
+              row.pillar_type,
+              row.gender,
+              row.name,
+              row.badge_text,
+              row.type,
+              row.short_title,
+              row.summary,
+              JSON.stringify(row.bullet_points || []),
+              row.for_this_position,
+              JSON.stringify(row.recommended_questions || []),
+              row.is_active !== undefined ? row.is_active : true,
+              row.sort_order || 0,
+              row.reading_id,
+            ]
+          );
+          updated++;
+        } else {
+          // 插入新记录
+          await pool.query(
+            `INSERT INTO shensha_readings (
+              reading_id,
+              shensha_code,
+              pillar_type,
+              gender,
+              name,
+              badge_text,
+              type,
+              short_title,
+              summary,
+              bullet_points,
+              for_this_position,
+              recommended_questions,
+              is_active,
+              sort_order,
+              created_at,
+              updated_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())`,
+            [
+              row.reading_id,
+              row.shensha_code,
+              row.pillar_type,
+              row.gender,
+              row.name,
+              row.badge_text,
+              row.type,
+              row.short_title,
+              row.summary,
+              JSON.stringify(row.bullet_points || []),
+              row.for_this_position,
+              JSON.stringify(row.recommended_questions || []),
+              row.is_active !== undefined ? row.is_active : true,
+              row.sort_order || 0,
+            ]
+          );
+          imported++;
+        }
+      } catch (error: any) {
+        console.error(`[Import Shensha] 记录 ${row.reading_id} 导入失败:`, error.message);
+        failed++;
+      }
+    }
+    
+    console.log(`[Import Shensha] ✅ 导入完成: ${imported} 新增, ${updated} 更新, ${failed} 失败`);
+    
+    res.json({
+      success: true,
+      data: {
+        imported,
+        updated,
+        failed,
+        total: data.length,
+      },
+    });
+  } catch (error: any) {
+    console.error('[Import Shensha] ❌ 导入失败:', error);
+    res.status(500).json({
+      success: false,
+      error: {
+        code: 'IMPORT_FAILED',
+        message: error.message || '导入失败',
+      },
+    });
+  }
+});
+
+/**
+ * POST /api/v1/admin/migration/update-llm-config
+ * 更新生产环境的 LLM 配置（从开发环境同步）
+ */
+router.post('/update-llm-config', async (req: Request, res: Response) => {
+  try {
+    console.log('[Update LLM Config] 开始更新 LLM 配置...');
+    
+    const { data } = req.body;
+    
+    if (!Array.isArray(data)) {
+      return res.status(400).json({
+        success: false,
+        error: { message: 'data 必须是数组' },
+      });
+    }
+    
+    const pool = getPool();
+    let updated = 0;
+    let inserted = 0;
+    let failed = 0;
+    
+    for (const row of data) {
+      try {
+        // 检查记录是否存在
+        const [existing]: any = await pool.query(
+          'SELECT config_id FROM llm_api_configs WHERE model = ?',
+          [row.model]
+        );
+        
+        if (existing.length > 0) {
+          // 更新现有记录（保留加密的 API Key）
+          await pool.query(
+            `UPDATE llm_api_configs SET
+              api_key_encrypted = ?,
+              api_url = ?,
+              is_enabled = ?,
+              thinking_mode = ?,
+              model_name = ?,
+              enable_stream = ?,
+              temperature = ?,
+              max_tokens = ?,
+              is_default = ?,
+              test_status = ?,
+              test_message = ?,
+              updated_at = NOW()
+            WHERE model = ?`,
+            [
+              row.api_key_encrypted,
+              row.api_url,
+              row.is_enabled !== undefined ? row.is_enabled : false,
+              row.thinking_mode !== undefined ? row.thinking_mode : false,
+              row.model_name,
+              row.enable_stream !== undefined ? row.enable_stream : true,
+              row.temperature || 0.7,
+              row.max_tokens || 4000,
+              row.is_default !== undefined ? row.is_default : false,
+              row.test_status || 'not_tested',
+              row.test_message || null,
+              row.model,
+            ]
+          );
+          updated++;
+        } else {
+          // 插入新记录
+          await pool.query(
+            `INSERT INTO llm_api_configs (
+              config_id,
+              model,
+              api_key_encrypted,
+              api_url,
+              is_enabled,
+              thinking_mode,
+              model_name,
+              enable_stream,
+              temperature,
+              max_tokens,
+              is_default,
+              test_status,
+              test_message,
+              created_at,
+              updated_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())`,
+            [
+              row.config_id,
+              row.model,
+              row.api_key_encrypted,
+              row.api_url,
+              row.is_enabled !== undefined ? row.is_enabled : false,
+              row.thinking_mode !== undefined ? row.thinking_mode : false,
+              row.model_name,
+              row.enable_stream !== undefined ? row.enable_stream : true,
+              row.temperature || 0.7,
+              row.max_tokens || 4000,
+              row.is_default !== undefined ? row.is_default : false,
+              row.test_status || 'not_tested',
+              row.test_message || null,
+            ]
+          );
+          inserted++;
+        }
+      } catch (error: any) {
+        console.error(`[Update LLM Config] 模型 ${row.model} 更新失败:`, error.message);
+        failed++;
+      }
+    }
+    
+    console.log(`[Update LLM Config] ✅ 更新完成: ${inserted} 新增, ${updated} 更新, ${failed} 失败`);
+    
+    res.json({
+      success: true,
+      data: {
+        inserted,
+        updated,
+        failed,
+        total: data.length,
+      },
+    });
+  } catch (error: any) {
+    console.error('[Update LLM Config] ❌ 更新失败:', error);
+    res.status(500).json({
+      success: false,
+      error: {
+        code: 'UPDATE_FAILED',
+        message: error.message || '更新失败',
+      },
+    });
+  }
+});
+
+/**
  * POST /api/v1/admin/migration/045
  * 执行 Migration 045：修复开发和生产环境表结构差异
  */
