@@ -40,9 +40,15 @@ export interface ShenshaReadingDto {
  */
 function fixEncoding(str: string | null | undefined): string {
   if (!str) return '';
+  
+  // 检查是否包含中文（如果已经正确，直接返回）
+  if (/[\u4e00-\u9fa5]/.test(str)) {
+    return str;
+  }
+  
   // 如果字符串长度异常（正常中文应该 <= 10），可能是双重编码
-  // 或者包含乱码字符，尝试修复
-  if (str.length > 10 || /[^\u0000-\u00FF]/.test(str)) {
+  // 或者包含乱码字符（如 æ、–、‡ 等），尝试修复
+  if (str.length > 10 || /[æ–‡˜Œè²´äº]/.test(str)) {
     try {
       // 尝试修复：将 Latin-1 字节重新解释为 UTF-8
       const fixed = Buffer.from(str, 'latin1').toString('utf8');
