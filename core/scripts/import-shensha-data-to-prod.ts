@@ -43,7 +43,7 @@ async function importShenshaDataToProd() {
       process.exit(1);
     }
     
-    const result = await response.json();
+    const result: any = await response.json();
     
     if (result.success) {
       console.log('✅ 数据导入成功！');

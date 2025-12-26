@@ -43,7 +43,7 @@ async function importLLMConfigToProd() {
       process.exit(1);
     }
     
-    const result = await response.json();
+    const result: any = await response.json();
     
     if (result.success) {
       console.log('✅ 配置更新成功！');
