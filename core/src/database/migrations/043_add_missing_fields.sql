@@ -38,4 +38,3 @@ CREATE INDEX idx_pro_expires_at ON users(pro_expires_at);
 -- ===== 3. 验证 =====
 
 SELECT 'Migration 043 completed: Added missing fields to conversations and users tables' AS message;
-
