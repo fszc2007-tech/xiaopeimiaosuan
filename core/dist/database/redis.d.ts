@@ -10,8 +10,10 @@ import { RedisClientType } from 'redis';
 export declare function createRedisConnection(): Promise<RedisClientType>;
 /**
  * 获取 Redis 客户端
+ *
+ * @returns Redis 客户端，如果未初始化则返回 null（用于降级处理）
  */
-export declare function getRedisClient(): RedisClientType;
+export declare function getRedisClient(): RedisClientType | null;
 /**
  * 关闭 Redis 连接
  */

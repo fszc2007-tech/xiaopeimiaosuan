@@ -374,6 +374,7 @@ router.post('/:conversationId/messages', (0, rateLimit_1.createRateLimitMiddlewa
         if (conversationId === 'new') {
             conversationId = (0, uuid_1.v4)();
             const title = message.substring(0, 50) + (message.length > 50 ? '...' : '');
+            // ✅ 完整处理：字段已通过 Migration 043 添加，直接使用
             await pool.query(`INSERT INTO conversations 
         (conversation_id, user_id, chart_profile_id, topic, source, first_question, title, created_at, updated_at, last_message_at) 
         VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW(), NOW())`, [conversationId, userId, chartId, topic || null, source || null, message, title]);

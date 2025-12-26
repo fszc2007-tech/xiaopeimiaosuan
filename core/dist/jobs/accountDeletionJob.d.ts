@@ -61,6 +61,6 @@ declare function anonymizeSubscriptions(connection: PoolConnection, userId: stri
  * - 清除所有 PII
  * - 保留 user_id 和 deleted_at
  */
-declare function setUserTombstone(connection: PoolConnection, userId: string, originalPhone?: string, originalEmail?: string): Promise<void>;
+declare function setUserTombstone(connection: PoolConnection, userId: string, originalPhone?: string): Promise<void>;
 export { deleteUserData, anonymizeSubscriptions, setUserTombstone, BATCH_SIZE, };
 //# sourceMappingURL=accountDeletionJob.d.ts.map

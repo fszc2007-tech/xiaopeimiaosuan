@@ -55,7 +55,8 @@ class FieldMapper {
         return {
             userId: row.user_id,
             phone: row.phone,
-            email: row.email,
+            // 注意：users 表已删除 email 字段（migration 008），不再映射
+            // email: row.email,
             username: row.username, // H5 用戶名登錄（新增）
             appRegion: row.app_region,
             nickname: row.nickname,
@@ -172,7 +173,8 @@ class FieldMapper {
         return {
             adminId: row.admin_id,
             username: row.username,
-            email: row.email,
+            // 注意：users 表已删除 email 字段（migration 008），不再映射
+            // email: row.email,
             role: row.role,
             isActive: row.is_active,
             createdAt: formatDate(row.created_at),

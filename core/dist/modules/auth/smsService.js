@@ -52,20 +52,23 @@ function getSmsClient() {
         return smsClient;
     }
     const SmsClient = tencentcloud.sms.v20210111.Client;
+    // 使用配置中的 region，支持通过环境变量 XIAOPEI_TENCENT_SMS_REGION 控制
+    // 默认值：ap-guangzhou（中国大陆），海外账户可设置为 ap-singapore（国际短信）
+    const region = sms_1.smsConfig.tencentSmsRegion;
     // 打印配置信息（脱敏）
-    console.log('[smsService] Initializing with config (Overseas Account):', {
+    console.log('[smsService] Initializing with config:', {
         secretId: sms_1.smsConfig.tencentSecretId ? `${sms_1.smsConfig.tencentSecretId.substring(0, 8)}***` : 'MISSING',
         secretKey: sms_1.smsConfig.tencentSecretKey ? '***' : 'MISSING',
         appId: sms_1.smsConfig.tencentSmsAppId,
         templateId: sms_1.smsConfig.templateId,
-        region: 'ap-singapore' // 海外账户使用新加坡region（国际短信）
+        region: region, // 从配置读取，支持环境变量控制
     });
     const clientConfig = {
         credential: {
             secretId: sms_1.smsConfig.tencentSecretId,
             secretKey: sms_1.smsConfig.tencentSecretKey,
         },
-        region: 'ap-singapore', // 海外账户国际短信使用新加坡region
+        region: region, // 使用配置中的 region，而不是硬编码
         profile: {
             httpProfile: {
                 endpoint: 'sms.tencentcloudapi.com',
@@ -73,7 +76,7 @@ function getSmsClient() {
         },
     };
     smsClient = new SmsClient(clientConfig);
-    console.log('[smsService] Tencent Cloud SMS client initialized (Overseas Account)');
+    console.log(`[smsService] Tencent Cloud SMS client initialized (Region: ${region})`);
     return smsClient;
 }
 /**

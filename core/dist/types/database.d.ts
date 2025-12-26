@@ -10,7 +10,6 @@ import { RowDataPacket } from 'mysql2';
 export interface UserRow extends RowDataPacket {
     user_id: string;
     phone?: string;
-    email?: string;
     username?: string;
     password_hash?: string;
     password_set: boolean;

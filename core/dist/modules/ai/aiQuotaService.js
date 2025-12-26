@@ -86,6 +86,7 @@ function resetAiCallsIfNeeded(user) {
 async function checkAndCountAIUsage(userId) {
     const pool = (0, connection_1.getPool)();
     // 1. 查詢用戶
+    // ✅ 完整处理：字段已通过 Migration 043 添加，直接使用
     const [rows] = await pool.execute(`SELECT user_id, is_pro, pro_expires_at, pro_plan, created_at, 
             ai_calls_today, ai_calls_date 
      FROM users 

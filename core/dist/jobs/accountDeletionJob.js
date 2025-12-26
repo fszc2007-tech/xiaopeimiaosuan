@@ -170,7 +170,8 @@ async function deleteUserData(userId) {
         // ===== 8. 匿名化訂閱 =====
         await anonymizeSubscriptions(connection, userId);
         // ===== 9. 設置 tombstone =====
-        await setUserTombstone(connection, userId, user.phone, user.email);
+        // 注意：users 表已删除 email 字段（migration 008），只传递 phone
+        await setUserTombstone(connection, userId, user.phone);
         // ===== 10. 記錄審計日誌 =====
         const duration = Date.now() - startTime;
         await recordAuditLog(connection, userId, 'DELETION_EXECUTED', 'SUCCESS', null, null, counts, duration);
@@ -218,11 +219,12 @@ async function anonymizeSubscriptions(connection, userId) {
  * - 清除所有 PII
  * - 保留 user_id 和 deleted_at
  */
-async function setUserTombstone(connection, userId, originalPhone, originalEmail) {
+// 注意：users 表已删除 email 字段（migration 008），只处理 phone
+async function setUserTombstone(connection, userId, originalPhone) {
     // 生成佔位符（確保唯一性）
     const randomSuffix = crypto_1.default.randomBytes(8).toString('hex');
     const phoneReplacement = `deleted_${userId.substring(0, 8)}_${randomSuffix}`;
-    const emailReplacement = `deleted_${userId.substring(0, 8)}_${randomSuffix}@deleted.invalid`;
+    // 注意：users 表已删除 email 字段（migration 008），只保留 phone
     await connection.execute(`UPDATE users SET
       status = 'DELETED',
       deleted_at = UTC_TIMESTAMP(),
@@ -230,7 +232,6 @@ async function setUserTombstone(connection, userId, originalPhone, originalEmail
       delete_scheduled_at = NULL,
       -- 清除 PII
       phone = ?,
-      email = ?,
       nickname = NULL,
       avatar = NULL,
       password_hash = NULL,
@@ -239,7 +240,6 @@ async function setUserTombstone(connection, userId, originalPhone, originalEmail
       token_version = token_version + 1
     WHERE user_id = ?`, [
         originalPhone ? phoneReplacement : null,
-        originalEmail ? emailReplacement : null,
         userId
     ]);
     console.log(`[AccountDeletionJob] 用戶 ${userId} 已設置為 tombstone`);

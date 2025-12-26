@@ -74,7 +74,8 @@ router.post('/force-pro', async (req, res) => {
             // 4. 清除缓存
             (0, requirePro_1.clearProStatusCache)(userId);
             // 5. 查询更新后的用户信息
-            const [userRows] = await connection.execute('SELECT user_id, phone, email, is_pro, pro_plan, pro_expires_at FROM users WHERE user_id = ?', [userId]);
+            // 注意：users 表已删除 email 字段（migration 008）
+            const [userRows] = await connection.execute('SELECT user_id, phone, is_pro, pro_plan, pro_expires_at FROM users WHERE user_id = ?', [userId]);
             const user = userRows[0];
             res.json({
                 success: true,

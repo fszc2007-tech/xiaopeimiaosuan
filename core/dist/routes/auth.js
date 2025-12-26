@@ -109,6 +109,9 @@ const router = (0, express_1.Router)();
  * 请求验证码
  */
 router.post('/request-otp', async (req, res, next) => {
+    // #region agent log
+    console.log('[DEBUG] OTP request received:', JSON.stringify({ body: req.body, hypothesisId: 'C,D' }));
+    // #endregion
     try {
         const { phone, email, region, countryCode } = req.body;
         // 获取客户端 IP（用于限流）
@@ -133,6 +136,9 @@ router.post('/request-otp', async (req, res, next) => {
                 },
             });
         }
+        // #region agent log
+        console.log('[DEBUG] Calling authService.requestOTP:', JSON.stringify({ phone, region, countryCode, hypothesisId: 'D' }));
+        // #endregion
         const result = await authService.requestOTP({
             phone,
             email,
@@ -140,6 +146,9 @@ router.post('/request-otp', async (req, res, next) => {
             countryCode,
             clientIp
         });
+        // #region agent log
+        console.log('[DEBUG] OTP result received:', JSON.stringify({ success: true, hasResult: !!result, hypothesisId: 'D' }));
+        // #endregion
         res.json({
             success: true,
             data: result,
@@ -304,7 +313,7 @@ router.post('/third_party_login', async (req, res, next) => {
         }
         catch (e) { }
     };
-    log({ location: 'auth.ts:third_party_login:entry', message: 'third_party_login endpoint called', data: { provider: req.body?.provider, hasIdToken: !!req.body?.idToken, app_region: req.body?.app_region }, sessionId: 'debug-session', hypothesisId: 'E' });
+    log({ location: 'auth.ts:third_party_login:entry', message: 'third_party_login endpoint called', data: { provider: req.body?.provider, hasIdToken: !!req.body?.idToken, app_region: req.body?.app_region, headersSent: res.headersSent, method: req.method, url: req.url }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'A,B,C,D,E' });
     // #endregion
     try {
         const { provider, idToken, app_region } = req.body;
@@ -327,27 +336,29 @@ router.post('/third_party_login', async (req, res, next) => {
                 },
             });
         }
-        if (!app_region || !['CN', 'HK'].includes(app_region)) {
-            return res.status(400).json({
-                success: false,
-                error: {
-                    code: 'INVALID_REGION',
-                    message: 'app_region 必须是 CN 或 HK',
-                },
-            });
-        }
         // 注意：已移除地区限制，Google 登录全球可用
-        // 原限制代码已删除，app_region 参数仅用于日志/统计
+        // app_region 参数现在是可选的，仅用于日志/统计
+        // 如果未提供，默认为 'HK'
+        const effectiveRegion = app_region || 'HK';
         // 调用对应的第三方登录服务
         let result;
         if (provider === 'google') {
             // #region agent log
             log({ location: 'auth.ts:third_party_login:beforeGoogleLogin', message: 'Calling googleLogin service', data: {}, sessionId: 'debug-session', hypothesisId: 'E' });
             // #endregion
-            result = await thirdPartyAuthService.googleLogin({ idToken, app_region });
-            // #region agent log
-            log({ location: 'auth.ts:third_party_login:afterGoogleLogin', message: 'googleLogin service returned', data: { hasResult: !!result, hasToken: !!result?.token }, sessionId: 'debug-session', hypothesisId: 'E' });
-            // #endregion
+            try {
+                result = await thirdPartyAuthService.googleLogin({ idToken, app_region: effectiveRegion });
+                // #region agent log
+                log({ location: 'auth.ts:third_party_login:afterGoogleLogin', message: 'googleLogin service returned', data: { hasResult: !!result, hasToken: !!result?.token }, sessionId: 'debug-session', hypothesisId: 'E' });
+                // #endregion
+            }
+            catch (googleError) {
+                // #region agent log
+                log({ location: 'auth.ts:third_party_login:googleLoginError', message: 'googleLogin service threw error', data: { errorMessage: googleError?.message, errorCode: googleError?.code }, sessionId: 'debug-session', hypothesisId: 'E' });
+                // #endregion
+                // 重新抛出错误，让外层 catch 处理
+                throw googleError;
+            }
         }
         else if (provider === 'apple') {
             // TODO: 实现 Apple 登录
@@ -359,18 +370,65 @@ router.post('/third_party_login', async (req, res, next) => {
                 },
             });
         }
+        else {
+            // 理论上不会到这里（前面已经验证了 provider），但为了安全起见
+            return res.status(400).json({
+                success: false,
+                error: {
+                    code: 'INVALID_PROVIDER',
+                    message: 'provider 必须是 google 或 apple',
+                },
+            });
+        }
+        // 确保 result 存在
+        if (!result) {
+            console.error('[third_party_login] result is undefined after service call');
+            return res.status(500).json({
+                success: false,
+                error: {
+                    code: 'INTERNAL_ERROR',
+                    message: '登录服务返回空结果',
+                },
+            });
+        }
+        // 确保响应头未发送
+        // #region agent log
+        log({ location: 'auth.ts:third_party_login:beforeResponse', message: 'About to send success response', data: { headersSent: res.headersSent, hasResult: !!result, hasToken: !!result?.token }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'C' });
+        // #endregion
+        if (res.headersSent) {
+            // #region agent log
+            log({ location: 'auth.ts:third_party_login:headersAlreadySent', message: 'Response headers already sent, cannot send response', data: { headersSent: res.headersSent }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'C' });
+            // #endregion
+            console.error('[third_party_login] Response headers already sent');
+            return;
+        }
+        // #region agent log
+        log({ location: 'auth.ts:third_party_login:sendingResponse', message: 'Sending success response', data: { headersSent: res.headersSent }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'C' });
+        // #endregion
         res.json({
             success: true,
             data: result,
         });
+        // #region agent log
+        log({ location: 'auth.ts:third_party_login:responseSent', message: 'Success response sent', data: { headersSent: res.headersSent }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'C' });
+        // #endregion
     }
     catch (error) {
         // #region agent log
-        log({ location: 'auth.ts:third_party_login:catch', message: 'Error caught in third_party_login', data: { errorMessage: error?.message, errorCode: error?.code, errorStack: error?.stack?.substring(0, 300) }, sessionId: 'debug-session', hypothesisId: 'A,B,C,D,E' });
+        log({ location: 'auth.ts:third_party_login:catch', message: 'Error caught in third_party_login', data: { errorMessage: error?.message, errorCode: error?.code, errorName: error?.name, errorStack: error?.stack?.substring(0, 500), headersSent: res.headersSent }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'A,B,C,D,E' });
         // #endregion
+        // 如果响应头已经发送，不能再次发送响应
+        if (res.headersSent) {
+            // #region agent log
+            log({ location: 'auth.ts:third_party_login:catch:headersSent', message: 'Response headers already sent, cannot send error response', data: { errorMessage: error?.message, headersSent: res.headersSent }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'C' });
+            // #endregion
+            console.error('[third_party_login] Response headers already sent, cannot send error response');
+            return;
+        }
         // P2 错误码区分（服务端错误）
         if (error.message?.includes('Invalid Google ID Token') ||
-            error.message?.includes('Token')) {
+            error.message?.includes('Token') ||
+            error.message?.includes('token')) {
             return res.status(401).json({
                 success: false,
                 error: {
@@ -391,15 +449,29 @@ router.post('/third_party_login', async (req, res, next) => {
         }
         // 其他错误
         // #region agent log
-        log({ location: 'auth.ts:third_party_login:500', message: 'Returning 500 error', data: { errorMessage: error?.message, errorCode: error?.code }, sessionId: 'debug-session', hypothesisId: 'A,B,C,D,E' });
+        log({ location: 'auth.ts:third_party_login:500', message: 'Returning 500 error', data: { errorMessage: error?.message, errorCode: error?.code, errorName: error?.name, headersSent: res.headersSent }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'A,B,C,D,E' });
         // #endregion
-        return res.status(500).json({
+        // 记录完整错误信息（开发环境）
+        console.error('[third_party_login] Internal error:', {
+            message: error.message,
+            code: error.code,
+            name: error.name,
+            stack: process.env.NODE_ENV === 'development' ? error.stack : undefined,
+        });
+        // #region agent log
+        log({ location: 'auth.ts:third_party_login:before500Response', message: 'About to send 500 error response', data: { headersSent: res.headersSent }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'C,D' });
+        // #endregion
+        const response = res.status(500).json({
             success: false,
             error: {
                 code: 'INTERNAL_ERROR',
                 message: error.message || '登录失败',
             },
         });
+        // #region agent log
+        log({ location: 'auth.ts:third_party_login:500ResponseSent', message: '500 error response sent', data: { headersSent: res.headersSent }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'C,D' });
+        // #endregion
+        return response;
     }
 });
 // ==========================================

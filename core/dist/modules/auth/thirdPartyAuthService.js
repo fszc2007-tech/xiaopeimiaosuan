@@ -53,10 +53,16 @@ async function verifyGoogleToken(idToken) {
     log({ location: 'thirdPartyAuthService.ts:verifyGoogleToken:entry', message: 'verifyGoogleToken called', data: { idTokenLength: idToken?.length || 0, allowedIdsCount: GOOGLE_ALLOWED_CLIENT_IDS.length }, sessionId: 'debug-session', hypothesisId: 'A,D' });
     // #endregion
     try {
+        // #region agent log
+        log({ location: 'thirdPartyAuthService.ts:verifyGoogleToken:beforeVerifyIdToken', message: 'About to call googleClient.verifyIdToken', data: { idTokenLength: idToken?.length, allowedIdsCount: GOOGLE_ALLOWED_CLIENT_IDS.length }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'A' });
+        // #endregion
         const ticket = await googleClient.verifyIdToken({
             idToken,
             audience: GOOGLE_ALLOWED_CLIENT_IDS, // 支持多个 Client ID
         });
+        // #region agent log
+        log({ location: 'thirdPartyAuthService.ts:verifyGoogleToken:afterVerifyIdToken', message: 'googleClient.verifyIdToken completed', data: { hasTicket: !!ticket }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'A' });
+        // #endregion
         const payload = ticket.getPayload();
         // #region agent log
         log({ location: 'thirdPartyAuthService.ts:verifyGoogleToken:afterVerify', message: 'Token verified, checking payload', data: { hasPayload: !!payload, aud: payload?.aud, iss: payload?.iss }, sessionId: 'debug-session', hypothesisId: 'D' });
@@ -97,6 +103,9 @@ async function verifyGoogleToken(idToken) {
         };
     }
     catch (error) {
+        // #region agent log
+        log({ location: 'thirdPartyAuthService.ts:verifyGoogleToken:catch', message: 'Error in verifyGoogleToken', data: { errorMessage: error?.message, errorCode: error?.code, errorName: error?.name, errorStack: error?.stack?.substring(0, 500) }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'A' });
+        // #endregion
         console.error('[Google Token Verification] ❌ 验证失败:', error.message);
         throw new Error('Invalid Google ID Token');
     }
@@ -137,12 +146,21 @@ async function googleLogin(params) {
     console.log(`[Google Login] 🔑 Request ID: ${requestId}, sub hash: ${subHash}`);
     const pool = (0, connection_1.getPool)();
     // #region agent log
-    log({ location: 'thirdPartyAuthService.ts:googleLogin:beforeConnection', message: 'Getting database connection', data: {}, sessionId: 'debug-session', hypothesisId: 'C' });
+    log({ location: 'thirdPartyAuthService.ts:googleLogin:beforeConnection', message: 'Getting database connection', data: { hasPool: !!pool }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'B' });
     // #endregion
-    const connection = await pool.getConnection();
-    // #region agent log
-    log({ location: 'thirdPartyAuthService.ts:googleLogin:connectionGot', message: 'Database connection obtained', data: {}, sessionId: 'debug-session', hypothesisId: 'C' });
-    // #endregion
+    let connection;
+    try {
+        connection = await pool.getConnection();
+        // #region agent log
+        log({ location: 'thirdPartyAuthService.ts:googleLogin:connectionGot', message: 'Database connection obtained', data: { hasConnection: !!connection }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'B' });
+        // #endregion
+    }
+    catch (dbError) {
+        // #region agent log
+        log({ location: 'thirdPartyAuthService.ts:googleLogin:connectionError', message: 'Failed to get database connection', data: { errorMessage: dbError?.message, errorCode: dbError?.code }, sessionId: 'debug-session', runId: 'run1', hypothesisId: 'B' });
+        // #endregion
+        throw dbError;
+    }
     try {
         await connection.beginTransaction();
         // #region agent log
@@ -198,9 +216,9 @@ async function googleLogin(params) {
         const userId = (0, uuid_1.v4)();
         const identityId = (0, uuid_1.v4)();
         // 3.1 创建用户（不绑定手机号）
-        await connection.query('INSERT INTO users (user_id, email, nickname, avatar_url, app_region, created_at, updated_at) VALUES (?, ?, ?, ?, ?, NOW(), NOW())', [
+        // 注意：users 表已删除 email 字段（migration 008），第三方登录用户不绑定手机号
+        await connection.query('INSERT INTO users (user_id, nickname, avatar_url, app_region, created_at, updated_at) VALUES (?, ?, ?, ?, NOW(), NOW())', [
             userId,
-            providerUserInfo.email || null,
             providerUserInfo.name || providerUserInfo.email?.split('@')[0] || '用户',
             providerUserInfo.picture || null,
             app_region,

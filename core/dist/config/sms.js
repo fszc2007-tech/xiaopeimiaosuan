@@ -16,7 +16,9 @@ exports.smsConfig = {
     tencentSecretId: process.env.XIAOPEI_TENCENT_SECRET_ID || 'IKIDJl3B8sPmxvfGesumTyQqDf6MRM8rOipj',
     tencentSecretKey: process.env.XIAOPEI_TENCENT_SECRET_KEY || 'oG1ayEI9pId3MoHZebO0ShmhaMwPm382',
     tencentSmsAppId: process.env.XIAOPEI_TENCENT_SMS_APP_ID || '2400003800',
-    tencentSmsRegion: process.env.XIAOPEI_TENCENT_SMS_REGION || 'ap-guangzhou',
+    // 默认使用 ap-singapore（国际短信），因为主要服务香港等海外用户
+    // 如果需要中国大陆短信，可以通过环境变量设置为 ap-guangzhou
+    tencentSmsRegion: process.env.XIAOPEI_TENCENT_SMS_REGION || 'ap-singapore',
     // ===== 签名配置（暂时不使用，未申请） =====
     // signNames: {
     //   cn: process.env.XIAOPEI_TENCENT_SMS_SIGN_CN || '小佩命理',

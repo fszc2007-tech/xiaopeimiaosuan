@@ -69,11 +69,10 @@ async function createRedisConnection() {
 }
 /**
  * 获取 Redis 客户端
+ *
+ * @returns Redis 客户端，如果未初始化则返回 null（用于降级处理）
  */
 function getRedisClient() {
-    if (!client) {
-        throw new Error('[Redis] Client not initialized. Call createRedisConnection() first.');
-    }
     return client;
 }
 /**

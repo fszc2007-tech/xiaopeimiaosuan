@@ -128,6 +128,7 @@ async function subscribe(userId, plan) {
  */
 async function getProStatus(userId) {
     const pool = (0, connection_1.getPool)();
+    // ✅ 完整处理：字段已通过 Migration 043 添加，直接使用
     const [rows] = await pool.execute('SELECT is_pro, pro_expires_at, pro_plan FROM users WHERE user_id = ?', [userId]);
     if (rows.length === 0) {
         throw new Error('USER_NOT_FOUND');

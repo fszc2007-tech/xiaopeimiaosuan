@@ -33,9 +33,10 @@ function generateInviteCode() {
 const encryption_1 = require("../../utils/encryption");
 /**
  * Cursor 测试账号配置
+ * 注意：users 表已删除 email 字段（migration 008），改用 phone 作为唯一标识
  */
 const CURSOR_TEST_ACCOUNT = {
-    email: 'cursor_test@xiaopei.com',
+    phone: '+8613800000000', // 使用固定手机号作为测试账号标识
     nickname: 'Cursor 测试账号',
     fixedPasswordDev: 'Cursor@2024', // 开发环境固定密码
 };
@@ -55,9 +56,10 @@ async function getUserList(page = 1, pageSize = 20, keyword) {
     let whereClause = '1=1';
     const params = [];
     if (keyword) {
-        whereClause += ' AND (phone LIKE ? OR email LIKE ? OR nickname LIKE ?)';
+        // 注意：users 表已删除 email 字段（migration 008），只搜索 phone 和 nickname
+        whereClause += ' AND (phone LIKE ? OR nickname LIKE ?)';
         const keywordPattern = `%${keyword}%`;
-        params.push(keywordPattern, keywordPattern, keywordPattern);
+        params.push(keywordPattern, keywordPattern);
     }
     // 查询总数
     const [countRows] = await (0, connection_1.getPool)().query(`SELECT COUNT(*) as total FROM users WHERE ${whereClause}`, params);
@@ -119,24 +121,23 @@ async function createTestUser(data) {
             throw new Error('PHONE_EXISTS');
         }
     }
+    // 注意：users 表已删除 email 字段（migration 008），不再检查 email 重复
+    // 如果 data.email 存在，可以记录到日志但不影响创建流程
     if (data.email) {
-        const [existingRows] = await (0, connection_1.getPool)().query('SELECT * FROM users WHERE email = ?', [data.email]);
-        if (existingRows.length > 0) {
-            throw new Error('EMAIL_EXISTS');
-        }
+        console.warn('[AdminUserService] email field is deprecated, ignoring:', data.email);
     }
     // 2. 哈希密码
     const passwordHash = await bcrypt_1.default.hash(data.password, 10);
     // 3. 生成 user_id
     const userId = (0, uuid_1.v4)();
     // 4. 插入数据库
+    // 注意：users 表已删除 email 字段（migration 008），只保留 phone
     await (0, connection_1.getPool)().query(`INSERT INTO users (
-      user_id, phone, email, password_hash, app_region, nickname,
+      user_id, phone, password_hash, app_region, nickname,
       is_pro, created_at, updated_at
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), NOW())`, [
+    ) VALUES (?, ?, ?, ?, ?, ?, NOW(), NOW())`, [
         userId,
         data.phone || null,
-        data.email || null,
         passwordHash,
         data.appRegion,
         data.nickname || '新用户',
@@ -153,14 +154,15 @@ async function createTestUser(data) {
  * @returns Cursor 测试账号信息
  */
 async function getOrCreateCursorTestAccount(isProduction = false) {
-    // 1. 查询是否已存在
-    const [existingRows] = await (0, connection_1.getPool)().query('SELECT * FROM users WHERE email = ?', [CURSOR_TEST_ACCOUNT.email]);
+    // 1. 查询是否已存在（使用 phone 作为唯一标识）
+    const [existingRows] = await (0, connection_1.getPool)().query('SELECT * FROM users WHERE phone = ?', [CURSOR_TEST_ACCOUNT.phone]);
     if (existingRows.length > 0) {
         // 已存在，返回账号信息（不返回密码）
         const user = fieldMapper_1.FieldMapper.mapUser(existingRows[0]);
         return {
             userId: user.userId,
-            email: user.email,
+            // 注意：users 表已删除 email 字段（migration 008），返回 phone 代替
+            phone: user.phone,
             nickname: user.nickname,
             isPro: user.isPro,
             createdAt: user.createdAt,
@@ -176,12 +178,13 @@ async function getOrCreateCursorTestAccount(isProduction = false) {
         : CURSOR_TEST_ACCOUNT.fixedPasswordDev; // 开发环境：固定密码
     const passwordHash = await bcrypt_1.default.hash(password, 10);
     // 3. 插入数据库
+    // 注意：users 表已删除 email 字段（migration 008），使用 phone 作为唯一标识
     await (0, connection_1.getPool)().query(`INSERT INTO users (
-      user_id, email, password_hash, app_region, nickname, invite_code, 
+      user_id, phone, password_hash, app_region, nickname, invite_code, 
       is_pro, created_at, updated_at
     ) VALUES (?, ?, ?, ?, ?, ?, TRUE, NOW(), NOW())`, [
         userId,
-        CURSOR_TEST_ACCOUNT.email,
+        CURSOR_TEST_ACCOUNT.phone,
         passwordHash,
         'CN', // 默认 CN
         CURSOR_TEST_ACCOUNT.nickname,
@@ -192,7 +195,8 @@ async function getOrCreateCursorTestAccount(isProduction = false) {
     const user = fieldMapper_1.FieldMapper.mapUser(rows[0]);
     return {
         userId: user.userId,
-        email: user.email,
+        // 注意：users 表已删除 email 字段（migration 008），返回 phone 代替
+        phone: user.phone,
         password, // ⚠️ 仅首次创建时返回
         nickname: user.nickname,
         isPro: user.isPro,
@@ -207,8 +211,8 @@ async function getOrCreateCursorTestAccount(isProduction = false) {
  * @returns 新密码（一次性返回）
  */
 async function resetCursorTestAccountPassword(isProduction = false) {
-    // 1. 查询账号是否存在
-    const [existingRows] = await (0, connection_1.getPool)().query('SELECT * FROM users WHERE email = ?', [CURSOR_TEST_ACCOUNT.email]);
+    // 1. 查询账号是否存在（使用 phone 作为唯一标识）
+    const [existingRows] = await (0, connection_1.getPool)().query('SELECT * FROM users WHERE phone = ?', [CURSOR_TEST_ACCOUNT.phone]);
     if (existingRows.length === 0) {
         throw new Error('CURSOR_TEST_ACCOUNT_NOT_FOUND');
     }

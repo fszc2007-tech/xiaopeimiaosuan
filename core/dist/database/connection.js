@@ -18,9 +18,9 @@ async function createConnection() {
     // 判断是否使用 Unix Socket（Cloud Run 生产环境）
     const mysqlHost = process.env.XIAOPEI_MYSQL_HOST || 'localhost';
     const isUnixSocket = mysqlHost.startsWith('/');
-    // 连接池限制：生产环境默认 3，开发环境默认 10
+    // 连接池限制：生产环境默认 15（支持 concurrency 5-10），开发环境默认 10
     const connectionLimit = parseInt(process.env.MYSQL_CONNECTION_LIMIT ||
-        (process.env.NODE_ENV === 'production' ? '3' : '10'));
+        (process.env.NODE_ENV === 'production' ? '15' : '10'));
     pool = promise_1.default.createPool({
         // Cloud Run 使用 Unix Socket，本地开发使用 TCP/IP
         ...(isUnixSocket

@@ -57,6 +57,11 @@ async function checkPhoneRateLimit(phone, scene) {
         return { allowed: true };
     }
     const redis = (0, redis_1.getRedisClient)();
+    // ✅ Redis 不可用时降级处理：允许请求通过（避免短信发送失败）
+    if (!redis) {
+        console.warn(`[rateLimitService] ⚠️ Redis 未初始化，跳过限流检查 (${phone})`);
+        return { allowed: true };
+    }
     // 1 分钟限流：1 条
     const key1m = `sms:rl:1m:${scene}:${phone}`;
     const result1m = await executeRateLimitScript(redis, key1m, 1, 60);
@@ -115,6 +120,11 @@ async function checkIpRateLimit(ip) {
         return { allowed: true };
     }
     const redis = (0, redis_1.getRedisClient)();
+    // ✅ Redis 不可用时降级处理：允许请求通过
+    if (!redis) {
+        console.warn(`[rateLimitService] ⚠️ Redis 未初始化，跳过 IP 限流检查 (${ip})`);
+        return { allowed: true };
+    }
     const key = `sms:rl:ip:1h:${ip}`;
     const limit = 20; // 可以从配置读取
     const ttl = 3600;
@@ -166,6 +176,11 @@ async function executeRateLimitScript(redis, key, limit, ttl) {
  */
 async function rollbackRateLimit(phone, scene) {
     const redis = (0, redis_1.getRedisClient)();
+    // Redis 不可用时直接返回
+    if (!redis) {
+        console.warn(`[rateLimitService] Redis 未初始化，无法回滚限流 (${phone})`);
+        return;
+    }
     const keys = [
         `sms:rl:1m:${scene}:${phone}`,
         `sms:rl:1h:${scene}:${phone}`,
@@ -186,6 +201,14 @@ async function rollbackRateLimit(phone, scene) {
  */
 async function getRateLimitStatus(phone, scene) {
     const redis = (0, redis_1.getRedisClient)();
+    // Redis 不可用时返回 0
+    if (!redis) {
+        return {
+            window1m: 0,
+            window1h: 0,
+            window24h: 0,
+        };
+    }
     const key1m = `sms:rl:1m:${scene}:${phone}`;
     const key1h = `sms:rl:1h:${scene}:${phone}`;
     const key24h = `sms:rl:24h:${scene}:${phone}`;
