@@ -32,7 +32,8 @@ async function checkLLMConfig() {
         api_url,
         is_enabled,
         thinking_mode,
-        api_key_encrypted IS NOT NULL as has_api_key,
+        api_key_encrypted,
+        api_key_encrypted IS NOT NULL AND api_key_encrypted != '' as has_api_key,
         LENGTH(api_key_encrypted) as key_length,
         created_at,
         updated_at
@@ -49,7 +50,7 @@ async function checkLLMConfig() {
         console.log(`   - API URL: ${row.api_url}`);
         console.log(`   - 已启用: ${row.is_enabled ? '是' : '否'}`);
         console.log(`   - 有 API Key: ${row.has_api_key ? '是' : '❌ 否'}`);
-        if (row.has_api_key) {
+        if (row.has_api_key && row.api_key_encrypted) {
           console.log(`   - Key 长度: ${row.key_length} 字符`);
           
           // 尝试解密（检查加密密钥是否正确）
@@ -58,7 +59,10 @@ async function checkLLMConfig() {
             console.log(`   - ✅ 解密成功，Key 前 10 字符: ${decrypted.substring(0, 10)}...`);
           } catch (error: any) {
             console.log(`   - ❌ 解密失败: ${error.message}`);
+            console.log(`   - Key 前 50 字符: ${row.api_key_encrypted.substring(0, 50)}...`);
           }
+        } else {
+          console.log(`   - ⚠️  API Key 字段为空或 NULL`);
         }
         console.log(`   - Thinking 模式: ${row.thinking_mode ? '是' : '否'}`);
         console.log(`   - 创建时间: ${row.created_at}`);
