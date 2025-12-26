@@ -53,8 +53,9 @@ router.post('/043', async (req, res) => {
     try {
         console.log('[Migration 043 API] 开始执行...');
         const pool = (0, connection_1.getPool)();
-        // 读取迁移文件（在 Docker 容器中，使用 src 路径）
-        const migrationPath = path.join(__dirname, '../../src/database/migrations/043_add_missing_fields.sql');
+        // 读取迁移文件（在 Docker 容器中，从 dist 目录回到项目根，然后进入 src）
+        // __dirname 在容器中是 /app/dist/routes/admin，需要回到 /app/src/database/migrations
+        const migrationPath = path.join(__dirname, '../../../src/database/migrations/043_add_missing_fields.sql');
         const sql = fs.readFileSync(migrationPath, 'utf-8');
         // 分割 SQL 语句
         const lines = sql.split('\n');
